@@ -1,0 +1,242 @@
+[
+  {
+    "id": 2,
+    "from": "08:00",
+    "to": "08:45",
+    "duration": "00:45:00",
+    "description": "Welcome & Breakfast",
+    "notes": "",
+    "session": "morning",
+    "category": "networking"
+  },
+  {
+    "id": 3,
+    "from": "08:45",
+    "to": "08:55",
+    "duration": "00:10:00",
+    "description": "Performance (Marvell)",
+    "notes": "",
+    "session": "morning",
+    "category": "other"
+  },
+  {
+    "id": 4,
+    "from": "08:55",
+    "to": "09:00",
+    "duration": "00:05:00",
+    "description": "Opening Speech (QD)",
+    "notes": "",
+    "session": "morning",
+    "category": "keynote"
+  },
+  {
+    "id": 5,
+    "from": "09:00",
+    "to": "09:10",
+    "duration": "00:10:00",
+    "description": "Opening Speech (HCMC: Nguyen Van Duoc)",
+    "notes": "Government - Chairman of HCMC",
+    "session": "morning",
+    "category": "keynote"
+  },
+  {
+    "id": 6,
+    "from": "09:10",
+    "to": "09:20",
+    "duration": "00:10:00",
+    "description": "Opening Speech (HCMC: Ms. Melissa A. Brown)",
+    "notes": "Government - US Consul General in HCMC",
+    "session": "morning",
+    "category": "keynote"
+  },
+  {
+    "id": 7,
+    "from": "09:20",
+    "to": "10:00",
+    "duration": "00:40:00",
+    "description": "Keynote 1 (Marvell: Noam Mizrahi)",
+    "notes": "Industry - IC Design",
+    "session": "morning",
+    "category": "keynote"
+  },
+  {
+    "id": 8,
+    "from": "10:00",
+    "to": "10:40",
+    "duration": "00:40:00",
+    "description": "Keynote 2 (VSAP-LAB: Ms. Nguyen Bich-Yen)",
+    "notes": "Industry - Advanced Packaging",
+    "session": "morning",
+    "category": "keynote"
+  },
+  {
+    "id": 9,
+    "from": "10:40",
+    "to": "11:10",
+    "duration": "00:30:00",
+    "description": "Coffee Break 1",
+    "notes": "",
+    "session": "morning",
+    "category": "networking"
+  },
+  {
+    "id": 10,
+    "from": "11:10",
+    "to": "11:35",
+    "duration": "00:25:00",
+    "description": "Presentation 1 (Intel: Ms. Hien Dao)",
+    "notes": "Industry - IC Fabrication/ATP",
+    "session": "morning",
+    "category": "industry"
+  },
+  {
+    "id": 11,
+    "from": "11:35",
+    "to": "12:00",
+    "duration": "00:25:00",
+    "description": "Presentation 2 (HCMUT: Prof. Nguyen Hoang Trang Hoang)",
+    "notes": "Academia - IC Design (Digital)",
+    "session": "morning",
+    "category": "academia"
+  },
+  {
+    "id": 12,
+    "from": "12:00",
+    "to": "12:25",
+    "duration": "00:25:00",
+    "description": "Presentation 3 (Ampere Computing: Vo Phong)",
+    "notes": "Industry - IC Design",
+    "session": "morning",
+    "category": "industry"
+  },
+  {
+    "id": 13,
+    "from": "12:25",
+    "to": "12:40",
+    "duration": "00:15:00",
+    "description": "Time buffer",
+    "notes": "",
+    "session": "morning",
+    "category": "other"
+  },
+  {
+    "id": 14,
+    "from": "12:40",
+    "to": "13:50",
+    "duration": "01:10:00",
+    "description": "Lunch",
+    "notes": "",
+    "session": "morning",
+    "category": "networking"
+  },
+  {
+    "id": 15,
+    "from": "13:50",
+    "to": "14:30",
+    "duration": "00:40:00",
+    "description": "Keynote 3 (TBD)",
+    "notes": "Government",
+    "session": "afternoon",
+    "category": "keynote"
+  },
+  {
+    "id": 16,
+    "from": "14:30",
+    "to": "14:55",
+    "duration": "00:25:00",
+    "description": "Presentation 4 (Renesas: Tran Dang Khoa Dang)",
+    "notes": "Industry - IC Design",
+    "session": "afternoon",
+    "category": "industry"
+  },
+  {
+    "id": 17,
+    "from": "14:55",
+    "to": "15:20",
+    "duration": "00:25:00",
+    "description": "Presentation 5 (Qualcomm: Vo Thieu Nam)",
+    "notes": "Industry - IC Design",
+    "session": "afternoon",
+    "category": "industry"
+  },
+  {
+    "id": 18,
+    "from": "15:20",
+    "to": "15:35",
+    "duration": "00:15:00",
+    "description": "Time buffer",
+    "notes": "",
+    "session": "afternoon",
+    "category": "other"
+  },
+  {
+    "id": 19,
+    "from": "15:35",
+    "to": "16:05",
+    "duration": "00:30:00",
+    "description": "Coffee Break 2",
+    "notes": "",
+    "session": "afternoon",
+    "category": "networking"
+  },
+  {
+    "id": 20,
+    "from": "16:05",
+    "to": "16:30",
+    "duration": "00:25:00",
+    "description": "Presentation 6 (HUST: Prof. Ms. Nguyen Pham Loan)",
+    "notes": "Academia - IC Design (Analog)",
+    "session": "afternoon",
+    "category": "academia"
+  },
+  {
+    "id": 21,
+    "from": "16:30",
+    "to": "16:55",
+    "duration": "00:25:00",
+    "description": "Presentation 7 (Connexus: Ms. Nguyen Loan)",
+    "notes": "Industry Startup - IC Design",
+    "session": "afternoon",
+    "category": "industry"
+  },
+  {
+    "id": 22,
+    "from": "16:55",
+    "to": "17:35",
+    "duration": "00:40:00",
+    "description": "Panel Discussion",
+    "notes": "Sandeep Brarathi: President of Marvell DCG\nProg. (Ms.) Mai Thi Thanh Nguyen: Chairman of VNU-HCMC\nProf. Thuat Tran Nguyen",
+    "session": "afternoon",
+    "category": "panel"
+  },
+  {
+    "id": 23,
+    "from": "17:35",
+    "to": "17:55",
+    "duration": "00:20:00",
+    "description": "Buffer",
+    "notes": "",
+    "session": "afternoon",
+    "category": "other"
+  },
+  {
+    "id": 24,
+    "from": "17:55",
+    "to": "18:10",
+    "duration": "00:15:00",
+    "description": "Closing Speech (Sandeep Brarathi, Noam Mizrahi, QD)",
+    "notes": "",
+    "session": "afternoon",
+    "category": "keynote"
+  },
+  {
+    "id": 25,
+    "from": "18:10",
+    "to": "20:10",
+    "duration": "02:00:00",
+    "description": "Dinner (40-50 Distinguished Guests)",
+    "notes": "",
+    "session": "evening",
+    "category": "networking"
+  }
+]

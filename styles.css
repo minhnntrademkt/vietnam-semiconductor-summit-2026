@@ -1,0 +1,522 @@
+/* ==========================================================================
+   MARVELL DESIGN SYSTEM - THE 1ST VIETNAM SEMICONDUCTOR SUMMIT 2026
+   Official Style Tokens & Interactive Component Classes
+   ========================================================================== */
+
+:root {
+  /* Brand Primary Colors */
+  --mrvll-blue: #0072ce;
+  --mrvll-blue-hover: #005fa3;
+  --mrvll-blue-light: #e6f1fa;
+  
+  /* Brand Accent Colors */
+  --mrvll-cyan: #00b5e2;
+  --mrvll-lavender: #c8a3ef;
+  --mrvll-teal: #00c7b1;
+  
+  /* Dark Tech Theme Backgrounds */
+  --mrvll-black: #05070a;
+  --mrvll-dark: #0c1017;
+  --mrvll-dark-card: #121824;
+  --mrvll-dark-border: rgba(255, 255, 255, 0.12);
+  
+  /* Light Theme Backgrounds */
+  --mrvll-white: #ffffff;
+  --mrvll-light-gray: #f8fafc;
+  --mrvll-card-light: #ffffff;
+  --mrvll-border-light: rgba(0, 0, 0, 0.1);
+  
+  /* Typography Colors */
+  --mrvll-text-dark: #0f172a;
+  --mrvll-text-muted: #64748b;
+  --mrvll-text-light: #f8fafc;
+  --mrvll-text-light-muted: #94a3b8;
+  
+  /* Functional Status Colors */
+  --mrvll-success: #12b76a;
+  --mrvll-warning: #f79009;
+  --mrvll-error: #d92d20;
+  
+  /* Hierarchical Modern Radius System */
+  --mrvll-radius-sm: 6px;
+  --mrvll-radius: 10px;
+  --mrvll-radius-lg: 14px;
+  --mrvll-radius-xl: 18px;
+}
+
+/* Base Typography Configuration */
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--mrvll-text-dark);
+  background-color: var(--mrvll-white);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c1017;
+}
+::-webkit-scrollbar-thumb {
+  background: #0072ce;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00b5e2;
+}
+
+/* ==========================================================================
+   MARVELL KINETIC CTA BUTTON (Official Pattern)
+   ========================================================================== */
+.mrvll-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--mrvll-blue);
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  padding: 15px 28px;
+  border-radius: var(--mrvll-radius-sm);
+  border: 1px solid var(--mrvll-blue);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.mrvll-btn-primary:hover {
+  background-color: var(--mrvll-blue-hover);
+  border-color: var(--mrvll-blue-hover);
+  box-shadow: 0 4px 20px rgba(0, 114, 206, 0.4);
+}
+
+.mrvll-btn-primary .btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.mrvll-btn-primary:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* White Kinetic Button (Black text on White, for Dark sections) */
+.mrvll-btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: #000000 !important;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  padding: 15px 28px;
+  border-radius: var(--mrvll-radius-sm);
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.mrvll-btn-white:hover {
+  background-color: #f8fafc;
+  border-color: #ffffff;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.35);
+}
+
+.mrvll-btn-white .btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.mrvll-btn-white:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Black Kinetic Button (White text on Black, for Light sections) */
+.mrvll-btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #05070a;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: var(--mrvll-radius-sm);
+  border: 1px solid #05070a;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.mrvll-btn-black:hover {
+  background-color: var(--mrvll-blue);
+  border-color: var(--mrvll-blue);
+  box-shadow: 0 6px 22px rgba(0, 114, 206, 0.35);
+}
+
+.mrvll-btn-black .btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.mrvll-btn-black:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Outline White Button */
+.mrvll-btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  border-radius: var(--mrvll-radius);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.mrvll-btn-outline-white:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.mrvll-btn-outline-white .btn-arrow {
+  transition: transform 0.25s ease-out;
+}
+
+.mrvll-btn-outline-white:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Outline Dark Button */
+.mrvll-btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  color: var(--mrvll-text-dark) !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: var(--mrvll-radius);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.mrvll-btn-outline-dark:hover {
+  border-color: var(--mrvll-blue);
+  color: var(--mrvll-blue) !important;
+}
+
+/* ==========================================================================
+   CONTINUOUS INFINITE LOGO MARQUEE (Marvell Partner Wall)
+   ========================================================================== */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-left {
+  animation: marqueeScrollLeft 32s linear infinite;
+}
+
+.marquee-right {
+  animation: marqueeScrollRight 34s linear infinite;
+}
+
+@keyframes marqueeScrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-partner-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  height: 64px;
+  padding: 0 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease-out;
+}
+
+.marquee-partner-card:hover {
+  border-color: var(--mrvll-blue);
+  box-shadow: 0 4px 14px rgba(0, 114, 206, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   INTERACTIVE FAQ ACCORDION (High-Contrast Style)
+   ========================================================================== */
+.faq-accordion-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+}
+
+.faq-accordion-item.active {
+  border-color: var(--mrvll-blue);
+  box-shadow: 0 4px 14px rgba(0, 114, 206, 0.08);
+}
+
+.faq-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-accordion-chevron {
+  transition: transform 0.3s ease;
+  color: var(--mrvll-blue);
+}
+
+.faq-accordion-item.active .faq-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+  padding: 0 24px;
+}
+
+.faq-accordion-item.active .faq-accordion-body {
+  max-height: 300px;
+  padding: 0 24px 20px 24px;
+}
+
+/* Top Scroll Reading Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0072ce, #00b5e2);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.08s linear;
+}
+
+/* ==========================================================================
+   SEMICONDUCTOR & CHIP AESTHETICS
+   ========================================================================== */
+.chip-grid-bg {
+  background-color: #05070a;
+  background-image: 
+    linear-gradient(rgba(0, 114, 206, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 114, 206, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.chip-glow-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 114, 206, 0.18) 0%, rgba(5, 7, 10, 0) 70%);
+}
+
+.chip-glow-lavender {
+  background: radial-gradient(circle at 50% 50%, rgba(200, 163, 239, 0.15) 0%, rgba(5, 7, 10, 0) 70%);
+}
+
+/* Card Hover Elevation & Modern Softness */
+.mrvll-card {
+  border-radius: var(--mrvll-radius-lg);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mrvll-card:hover {
+  transform: translateY(-4px);
+}
+
+.mrvll-dark-card {
+  background: rgba(16, 23, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--mrvll-radius-lg);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mrvll-dark-card:hover {
+  border-color: var(--mrvll-cyan);
+  box-shadow: 0 16px 36px -10px rgba(0, 181, 226, 0.25);
+}
+
+.mrvll-light-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 114, 206, 0.08);
+  border-radius: var(--mrvll-radius-lg);
+  box-shadow: 0 10px 30px -10px rgba(0, 114, 206, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mrvll-light-card:hover {
+  border-color: var(--mrvll-blue);
+  box-shadow: 0 16px 36px -10px rgba(0, 114, 206, 0.16);
+}
+
+/* Agenda Timeline Specifics */
+.agenda-time-pill {
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tag-industry {
+  background-color: rgba(0, 114, 206, 0.12);
+  color: #0072ce;
+  border: 1px solid rgba(0, 114, 206, 0.25);
+  border-radius: 6px;
+}
+
+.tag-government {
+  background-color: rgba(200, 163, 239, 0.15);
+  color: #9333ea;
+  border: 1px solid rgba(200, 163, 239, 0.35);
+  border-radius: 6px;
+}
+
+.tag-academia {
+  background-color: rgba(0, 199, 177, 0.12);
+  color: #0d9488;
+  border: 1px solid rgba(0, 199, 177, 0.25);
+  border-radius: 6px;
+}
+
+.tag-networking {
+  background-color: rgba(247, 144, 9, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(247, 144, 9, 0.25);
+  border-radius: 6px;
+}
+
+/* Modal Animation & Backdrop */
+.modal-backdrop {
+  background-color: rgba(5, 7, 10, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-content-box {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--mrvll-radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+  animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Speaker Card Interactive Glow */
+.speaker-card {
+  border-radius: var(--mrvll-radius-lg);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.speaker-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--mrvll-cyan) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 181, 226, 0.32);
+}
+
+/* Custom Scrollbar for Modal Dialogs */
+.modal-scroll-y::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-scroll-y::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+.modal-scroll-y::-webkit-scrollbar-thumb {
+  background: var(--mrvll-blue);
+  border-radius: 6px;
+}
+
+

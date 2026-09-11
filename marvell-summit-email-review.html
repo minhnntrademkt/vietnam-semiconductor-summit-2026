@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvell Summit 2026 - Email Workflow & Templates Review Dashboard</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mrvll: {
+              blue: '#0072ce',
+              blueDark: '#005fa3',
+              cyan: '#00b5e2',
+              lavender: '#c8a3ef',
+              dark: '#05070a',
+              cardDark: '#101726'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --mrvll-blue: #0072ce;
+      --mrvll-cyan: #00b5e2;
+      --mrvll-lavender: #c8a3ef;
+      --mrvll-radius-sm: 6px;
+      --mrvll-radius: 10px;
+      --mrvll-radius-lg: 14px;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background-color: #080d17;
+      color: #f8fafc;
+    }
+    .preview-canvas {
+      transition: max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .email-container {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #ffffff;
+      border-radius: var(--mrvll-radius-lg);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.4);
+    }
+    .mrvll-btn-email {
+      display: inline-block;
+      background-color: #0072ce;
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.56px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: var(--mrvll-radius-sm);
+    }
+    .tab-btn.active {
+      background-color: #0072ce;
+      color: #ffffff;
+      border-color: #0072ce;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOP CONTROL HEADER -->
+  <header class="bg-[#05070a] border-b border-slate-800 sticky top-0 z-40 px-4 sm:px-6 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Brand Title -->
+      <div class="flex items-center gap-3.5">
+        <svg class="h-6 w-auto text-[#0072ce]" viewBox="0 0 120 32" fill="currentColor">
+          <path d="M0 0h12v32H0V0zm16 0h12v20l10-20h12v32H38V12L28 32H16V0zm38 0h12v32H54V0zm16 0h12l8 16 8-16h12v32H98V14l-8 16h-4l-8-16v18H70V0z"/>
+        </svg>
+        <div class="h-5 w-px bg-slate-700"></div>
+        <div>
+          <h1 class="text-sm font-extrabold text-white uppercase tracking-wider">Email System Review Dashboard</h1>
+          <span class="text-[11px] text-[#00b5e2] font-mono">The 1st Vietnam Semiconductor Summit 2026</span>
+        </div>
+      </div>
+
+      <!-- Email Tabs Switcher -->
+      <div class="flex items-center gap-2 bg-[#101726] p-1.5 rounded-xl border border-slate-800 text-xs font-bold">
+        <button id="tab-email-1" onclick="switchEmailTab(1)" class="tab-btn active px-3.5 py-2 rounded-lg transition-colors text-slate-300 hover:text-white">
+          <span>EMAIL 1: Application Received</span>
+        </button>
+        <button id="tab-email-2" onclick="switchEmailTab(2)" class="tab-btn px-3.5 py-2 rounded-lg transition-colors text-slate-300 hover:text-white">
+          <span>EMAIL 2: Official Invitation</span>
+        </button>
+        <button id="tab-email-3" onclick="switchEmailTab(3)" class="tab-btn px-3.5 py-2 rounded-lg transition-colors text-slate-300 hover:text-white">
+          <span>EMAIL 3: Digital E-Pass & QR</span>
+        </button>
+      </div>
+
+      <!-- Device Switcher & Back Link -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-[#101726] p-1 rounded-xl border border-slate-800 text-xs font-medium text-slate-400">
+          <button id="btn-desktop" onclick="setDeviceView('desktop')" class="px-3 py-1.5 rounded-lg bg-slate-800 text-white font-semibold">Desktop (640px)</button>
+          <button id="btn-mobile" onclick="setDeviceView('mobile')" class="px-3 py-1.5 rounded-lg hover:text-white">Mobile (390px)</button>
+        </div>
+        <a href="index.html" class="text-xs text-[#00b5e2] hover:underline font-semibold flex items-center gap-1">
+          <span>View Landing Page</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- WORKFLOW SUMMARY BAR -->
+  <section class="bg-[#0e1626] border-b border-slate-800 py-3 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="font-bold text-white uppercase tracking-wider">Automated Delivery Pipeline:</span>
+        <span class="text-slate-300">Submit Form ➔ Email 1 (Acknowledgment) ➔ Executive Review ➔ Email 2 (Official Invitation Approved) ➔ Email 3 (E-Pass Badge & Calendar .ics)</span>
+      </div>
+      <div class="text-[11px] font-mono text-cyan-400">
+        Template Engine: HTML Responsive • Inline CSS Compliant
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL PREVIEW CANVAS AREA -->
+  <main class="flex-1 py-10 px-4 flex items-center justify-center">
+    <div id="preview-wrapper" class="preview-canvas w-full max-w-[640px]">
+
+      <!-- ===================================================================
+           TEMPLATE 1: EMAIL APPLICATION ACKNOWLEDGMENT
+           =================================================================== -->
+      <div id="email-view-1" class="email-container overflow-hidden">
+        
+        <!-- Email Preheader Bar -->
+        <div class="bg-[#05070a] px-6 py-4 flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <svg class="h-5 w-auto text-[#0072ce]" viewBox="0 0 120 32" fill="currentColor">
+              <path d="M0 0h12v32H0V0zm16 0h12v20l10-20h12v32H38V12L28 32H16V0zm38 0h12v32H54V0zm16 0h12l8 16 8-16h12v32H98V14l-8 16h-4l-8-16v18H70V0z"/>
+            </svg>
+            <span class="text-[11px] text-white font-bold tracking-wider uppercase font-mono">VIETNAM SEMICONDUCTOR SUMMIT 2026</span>
+          </div>
+          <span class="text-[10px] text-slate-400 font-mono">CODE: MRVL-VSS-839201</span>
+        </div>
+
+        <!-- Banner Tech Silicon -->
+        <div class="bg-gradient-to-r from-[#0072ce] to-[#005fa3] p-8 text-white text-left">
+          <div class="inline-block bg-white/20 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded tracking-widest mb-3">
+            RSVP APPLICATION ACKNOWLEDGED
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Your Registration Request Has Been Received</h2>
+          <p class="text-blue-100 text-xs sm:text-sm mt-2">The 1st Vietnam Semiconductor Summit 2026 • Marvell Technology</p>
+        </div>
+
+        <!-- Body Content -->
+        <div class="p-6 sm:p-8 space-y-6 text-sm text-slate-700">
+          <p>Dear <strong>Dr. Alex Johnson</strong>,</p>
+          
+          <p class="leading-relaxed">
+            On behalf of <strong>Marvell Technology, Inc.</strong> and the Executive Organizing Committee of <strong>The 1st Vietnam Semiconductor Summit 2026</strong>, we sincerely appreciate your application to participate in this landmark industry gathering.
+          </p>
+
+          <p class="leading-relaxed">
+            Our registration desk has logged your delegate request under the reference code: <strong class="font-mono text-[#0072ce]">MRVL-VSS-839201</strong>.
+          </p>
+
+          <!-- Attendee Information Card -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-2">SUBMITTED ATTENDEE PARTICULARS</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="text-slate-500 block">Attendee Name:</span>
+                <span class="font-bold text-slate-900">Dr. Alex Johnson</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Work Email:</span>
+                <span class="font-semibold text-slate-900">alex.johnson@synopsys.com</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Organization:</span>
+                <span class="font-semibold text-slate-900">Synopsys Silicon Labs</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Requested Pass Tier:</span>
+                <span class="font-bold text-[#0072ce]">Industry & IC Designer Pass</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Alert -->
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1">
+            <span class="font-bold block">Application Status: Under Executive Review (Pending Vetting)</span>
+            <p class="text-amber-800 leading-relaxed">
+              Due to plenary capacity constraints and security protocols, seat allocations are vetted based on technical domain relevance. Official confirmation and formal invitation letters will be issued within <strong>48 business hours</strong>.
+            </p>
+          </div>
+
+          <div class="pt-2 text-center">
+            <a href="index.html#agenda" class="mrvll-btn-email">
+              <span>EXPLORE 24-SESSION AGENDA</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-500 pt-4 border-t border-slate-200">
+            For urgent logistics inquiries, please contact the Summit Secretariat at: <a href="mailto:summit.vietnam@marvell.com" class="text-[#0072ce] underline">summit.vietnam@marvell.com</a>.
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-100 p-6 text-center text-[11px] text-slate-500 border-t border-slate-200 space-y-1">
+          <p class="font-semibold text-slate-700">The 1st Vietnam Semiconductor Summit 2026</p>
+          <p>Host: Marvell Technology, Inc. • Ho Chi Minh City, Vietnam</p>
+          <p>© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           TEMPLATE 2: OFFICIAL INVITATION LETTER (APPROVED)
+           =================================================================== -->
+      <div id="email-view-2" class="email-container overflow-hidden hidden">
+        
+        <!-- Email Preheader Bar -->
+        <div class="bg-[#05070a] px-6 py-4 flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <svg class="h-5 w-auto text-[#0072ce]" viewBox="0 0 120 32" fill="currentColor">
+              <path d="M0 0h12v32H0V0zm16 0h12v20l10-20h12v32H38V12L28 32H16V0zm38 0h12v32H54V0zm16 0h12l8 16 8-16h12v32H98V14l-8 16h-4l-8-16v18H70V0z"/>
+            </svg>
+            <span class="text-[11px] text-white font-bold tracking-wider uppercase font-mono">VIETNAM SEMICONDUCTOR SUMMIT 2026</span>
+          </div>
+          <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950 px-2 py-0.5 rounded border border-emerald-600/40 font-mono">APPROVED</span>
+        </div>
+
+        <!-- Hero Invitation -->
+        <div class="bg-[#0c1017] p-8 text-white text-left border-b border-slate-800 relative">
+          <div class="inline-block bg-[#0072ce] text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded tracking-widest mb-3">
+            OFFICIAL INVITATION LETTER
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Welcome to the 1st Vietnam Semiconductor Summit 2026</h2>
+          <p class="text-cyan-300 text-xs sm:text-sm mt-2 font-mono">Monday, November 23, 2026 • Ho Chi Minh City, Vietnam</p>
+        </div>
+
+        <!-- Body Content -->
+        <div class="p-6 sm:p-8 space-y-6 text-sm text-slate-700">
+          <p>Dear <strong>Dr. Alex Johnson</strong>,</p>
+
+          <p class="leading-relaxed">
+            The Executive Committee of <strong>The 1st Vietnam Semiconductor Summit 2026</strong> and the Executive Leadership of <strong>Marvell Technology</strong> are honored to confirm that <strong>your delegate registration has been officially approved</strong>.
+          </p>
+
+          <p class="leading-relaxed">
+            We look forward to welcoming you alongside over 500 senior technology executives, government leaders, and silicon research fellows as we chart the next decade of semiconductor advancement.
+          </p>
+
+          <!-- Confirmed Seat Allocation Box -->
+          <div class="bg-blue-50/70 rounded-xl border border-blue-200 p-5 space-y-3">
+            <div class="flex items-center justify-between border-b border-blue-200 pb-2">
+              <span class="text-xs font-bold uppercase text-blue-900 tracking-wider">CONFIRMED SEAT PARTICULARS</span>
+              <span class="text-xs font-mono font-bold text-[#0072ce]">PASS: INDUSTRY DELEGATE</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="text-slate-500 block">Delegate Name:</span>
+                <span class="font-bold text-slate-900">Dr. Alex Johnson</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Organization:</span>
+                <span class="font-semibold text-slate-900">Synopsys Silicon Labs</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Schedule:</span>
+                <span class="font-bold text-slate-900">08:00 - 20:10 • Monday, Nov 23, 2026</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Venue:</span>
+                <span class="font-semibold text-slate-900">Grand Ballroom & Tech Tracks (HCMC)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Sessions -->
+          <div class="space-y-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900">KEYNOTE HIGHLIGHTS PREPARED FOR YOU:</h4>
+            <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+              <li><strong>09:30 - 10:15:</strong> Keynote 1 - IC Design & Advanced Silicon Architectures (Noam Mizrahi, CTO Marvell).</li>
+              <li><strong>10:30 - 11:15:</strong> Keynote 2 - Advanced Packaging & Co-Packaged Optics (Ms. Nguyen Bich-Yen, VSAP-LAB).</li>
+              <li><strong>14:00 - 15:30:</strong> Strategic Plenary with HCMC Leadership, U.S. Consulate General & Marvell.</li>
+            </ul>
+          </div>
+
+          <!-- Action CTA -->
+          <div class="pt-2 text-center">
+            <button onclick="switchEmailTab(3)" class="mrvll-btn-email">
+              <span>VIEW DIGITAL E-PASS & QR CODE ➔</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-slate-500 pt-4 border-t border-slate-200">
+            Your personalized Check-in QR badge and digital ticket are available in the next notification below. You can save your badge or download the .ics calendar file.
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-100 p-6 text-center text-[11px] text-slate-500 border-t border-slate-200 space-y-1">
+          <p class="font-semibold text-slate-700">The 1st Vietnam Semiconductor Summit 2026</p>
+          <p>Host: Marvell Technology, Inc. • Ho Chi Minh City, Vietnam</p>
+          <p>© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           TEMPLATE 3: DIGITAL E-PASS BADGE & CALENDAR .ICS
+           =================================================================== -->
+      <div id="email-view-3" class="email-container overflow-hidden hidden">
+        
+        <!-- Email Preheader Bar -->
+        <div class="bg-[#05070a] px-6 py-4 flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <svg class="h-5 w-auto text-[#0072ce]" viewBox="0 0 120 32" fill="currentColor">
+              <path d="M0 0h12v32H0V0zm16 0h12v20l10-20h12v32H38V12L28 32H16V0zm38 0h12v32H54V0zm16 0h12l8 16 8-16h12v32H98V14l-8 16h-4l-8-16v18H70V0z"/>
+            </svg>
+            <span class="text-[11px] text-white font-bold tracking-wider uppercase font-mono">VIETNAM SEMICONDUCTOR SUMMIT 2026</span>
+          </div>
+          <span class="text-[10px] text-cyan-400 font-bold font-mono">OFFICIAL PASS</span>
+        </div>
+
+        <!-- Body Content -->
+        <div class="p-6 sm:p-8 space-y-6 text-sm text-slate-700">
+          <div class="text-center">
+            <span class="text-[10px] font-bold tracking-widest text-[#0072ce] uppercase">OFFICIAL ACCESS CREDENTIAL</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-1">Digital E-Pass & Check-in QR Code</h3>
+            <p class="text-xs text-slate-500 mt-1">Present this verified QR code at the registration gate to collect your RFID summit badge.</p>
+          </div>
+
+          <!-- THE HIGH-TECH E-PASS CARD (MARVELL TECH CANVAS) -->
+          <div class="bg-[#0c1017] rounded-2xl border border-cyan-500/40 p-6 text-white shadow-2xl relative overflow-hidden">
+            
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">VERIFIED DELEGATE CODE</span>
+                <span class="block font-mono text-lg font-extrabold text-[#00b5e2]">MRVL-VSS-839201</span>
+              </div>
+              <span class="text-[10px] font-bold tracking-widest text-[#0072ce] bg-blue-950/90 px-3 py-1 rounded-md border border-blue-500/30 uppercase">INDUSTRY PASS</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 text-xs mb-5">
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">Delegate Name:</span>
+                <span class="font-bold text-white text-sm">Dr. Alex Johnson</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">Email:</span>
+                <span class="font-medium text-slate-300 truncate block">alex.johnson@synopsys.com</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">Organization:</span>
+                <span class="font-medium text-white truncate block">Synopsys Silicon Labs</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">Position:</span>
+                <span class="font-medium text-slate-300 truncate block">Principal IC Architect</span>
+              </div>
+            </div>
+
+            <!-- Dynamic QR Code Container -->
+            <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-[11px] text-slate-400 font-mono text-center sm:text-left">
+                <span class="text-white font-bold">DATE: 23-NOV-2026 (08:00 - 20:10)</span><br>
+                <span>VENUE: HO CHI MINH CITY</span><br>
+                <span class="text-emerald-400 font-semibold">GATE: FAST-TRACK CHECK-IN</span>
+              </div>
+              <div class="w-24 h-24 bg-white p-2 rounded-xl flex items-center justify-center shadow-lg shrink-0">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=MRVL-VSS2026:MRVL-VSS-839201:alex.johnson@synopsys.com" alt="Check-in QR" class="w-full h-full object-contain">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Essential Logistics -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">👔 Dress Code</span>
+              <p class="text-slate-600 leading-relaxed">Business Professional or Business Casual attire.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">⏰ Registration Hours</span>
+              <p class="text-slate-600 leading-relaxed">Reception opens at 07:30 AM on Monday, Nov 23, 2026.</p>
+            </div>
+          </div>
+
+          <!-- 2 Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <button onclick="window.print()" class="mrvll-btn-email flex-1 text-center">
+              <span>PRINT / SAVE PASS (PDF)</span>
+            </button>
+            <button onclick="downloadDemoIcs()" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-[#00b5e2] text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-lg border border-slate-700 transition-colors">
+              <span>ADD TO GOOGLE / APPLE CALENDAR (.ICS)</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-slate-500 pt-4 border-t border-slate-200 text-center">
+            We look forward to welcoming you at The 1st Vietnam Semiconductor Summit 2026!
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-100 p-6 text-center text-[11px] text-slate-500 border-t border-slate-200 space-y-1">
+          <p class="font-semibold text-slate-700">The 1st Vietnam Semiconductor Summit 2026</p>
+          <p>Host: Marvell Technology, Inc. • Ho Chi Minh City, Vietnam</p>
+          <p>© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JAVASCRIPT CONTROLLER -->
+  <script>
+    function switchEmailTab(tabIndex) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === tabIndex) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      for (let i = 1; i <= 3; i++) {
+        const view = document.getElementById('email-view-' + i);
+        if (i === tabIndex) {
+          view.classList.remove('hidden');
+        } else {
+          view.classList.add('hidden');
+        }
+      }
+    }
+
+    function setDeviceView(mode) {
+      const wrapper = document.getElementById('preview-wrapper');
+      const btnDesktop = document.getElementById('btn-desktop');
+      const btnMobile = document.getElementById('btn-mobile');
+
+      if (mode === 'mobile') {
+        wrapper.classList.remove('max-w-[640px]');
+        wrapper.classList.add('max-w-[390px]');
+        btnMobile.classList.add('bg-slate-800', 'text-white', 'font-semibold');
+        btnDesktop.classList.remove('bg-slate-800', 'text-white', 'font-semibold');
+      } else {
+        wrapper.classList.remove('max-w-[390px]');
+        wrapper.classList.add('max-w-[640px]');
+        btnDesktop.classList.add('bg-slate-800', 'text-white', 'font-semibold');
+        btnMobile.classList.remove('bg-slate-800', 'text-white', 'font-semibold');
+      }
+    }
+
+    function downloadDemoIcs() {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Marvell Technology//Vietnam Semiconductor Summit 2026//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        'UID:MRVL-VSS-2026-839201@marvell.com',
+        'DTSTAMP:20260911T000000Z',
+        'DTSTART:20261123T010000Z',
+        'DTEND:20261123T131000Z',
+        'SUMMARY:The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology',
+        'DESCRIPTION:Inaugural Vietnam Semiconductor Summit hosted by Marvell Technology, Inc.\\nRegistration Code: MRVL-VSS-839201\\nDelegate: Dr. Alex Johnson',
+        'LOCATION:Ho Chi Minh City, Vietnam',
+        'STATUS:CONFIRMED',
+        'ORGANIZER;CN=Marvell Technology:MAILTO:events@marvell.com',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\\r\\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'Marvell_Semiconductor_Summit_2026_MRVL-VSS-839201.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
