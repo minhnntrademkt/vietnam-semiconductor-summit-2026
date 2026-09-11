@@ -19,6 +19,7 @@ vietnam-semiconductor-summit-2026/
 ├── app.js                           # Interactive JS (Countdown, Agenda filtering, Bio & RSVP Modals, QR E-Pass, ICS)
 ├── agenda.json                      # 24-session timetable database
 ├── build_site.py                    # Automated HTML compiler and generator script
+├── marvell-logo.svg                 # Official Marvell Technology SVG Vector Brand Asset
 ├── marvell-summit-email-review.html # 3-Step Email Funnel Review Dashboard (Desktop/Mobile preview)
 ├── Code.gs                          # Google Apps Script backend pipeline (Webhook & Gmail Automation)
 ├── PROJECT_SPEC.md                  # Technical specification & Marvell brand guidelines
