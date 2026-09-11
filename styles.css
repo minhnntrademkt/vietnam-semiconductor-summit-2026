@@ -82,6 +82,7 @@ body {
   line-height: 100%;
   letter-spacing: 1.56px;
   text-transform: uppercase;
+  white-space: nowrap;
   padding: 15px 28px;
   border-radius: var(--mrvll-radius-sm);
   border: 1px solid var(--mrvll-blue);
@@ -118,6 +119,7 @@ body {
   line-height: 100%;
   letter-spacing: 1.56px;
   text-transform: uppercase;
+  white-space: nowrap;
   padding: 15px 28px;
   border-radius: var(--mrvll-radius-sm);
   border: 1px solid #ffffff;
@@ -154,6 +156,7 @@ body {
   line-height: 100%;
   letter-spacing: 1.56px;
   text-transform: uppercase;
+  white-space: nowrap;
   padding: 14px 24px;
   border-radius: var(--mrvll-radius-sm);
   border: 1px solid #05070a;

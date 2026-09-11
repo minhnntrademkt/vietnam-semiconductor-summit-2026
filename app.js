@@ -22,9 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const SPEAKER_BIOS = {
   'noam-mizrahi': {
     name: 'Noam Mizrahi',
-    title: 'EVP & Chief Technology Officer (CTO)',
+    title: 'EVP & Corporate Chief Technology Officer (CTO)',
     org: 'Marvell Technology, Inc. (NASDAQ: MRVL)',
     tag: 'STRATEGIC KEYNOTE / IC DESIGN',
+    photo: 'images/speakers/noam-mizrahi.jpg',
     avatarText: 'NM',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Noam Mizrahi is Executive Vice President and Chief Technology Officer (CTO) at Marvell Technology. With over 25 years of engineering leadership, he orchestrates Marvell’s long-term technology vision, pioneering domain-specific compute architectures, advanced multi-die modular packaging (Chiplets), and optical interconnects (CPO) engineered for the accelerated AI cloud era.',
@@ -48,6 +49,7 @@ const SPEAKER_BIOS = {
     title: 'President, Data Center Group (DCG)',
     org: 'Marvell Technology, Inc. (NASDAQ: MRVL)',
     tag: 'PANEL HOST / AI SILICON',
+    photo: 'images/speakers/sandeep-bharathi.jpg',
     avatarText: 'SB',
     colorClass: 'text-[#c8a3ef] border-purple-500/50 bg-purple-950/80',
     bio: 'Sandeep Bharathi leads Marvell’s Data Center Group, spearheading custom compute silicon, high-throughput cloud networking, and optical interconnect storage solutions. He plays a pivotal role in expanding Marvell’s engineering footprint and R&D centers across Ho Chi Minh City and Da Nang.',
@@ -71,9 +73,10 @@ const SPEAKER_BIOS = {
     title: 'Chairman',
     org: 'Ho Chi Minh City People\'s Committee',
     tag: 'GUEST OF HONOR / GOVERNMENT',
+    photo: 'images/speakers/nguyen-van-duoc.jpg',
     avatarText: 'NVD',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Chairman of Ho Chi Minh City People\'s Committee, spearheading the municipal initiative to transform HCMC into a regional center for high-tech innovation, IC design incubation, and microelectronics manufacturing. He champions special regulatory sandbox incentives, tax credits, and talent attraction funds for the semiconductor sector.',
+    bio: 'Chairman of Ho Chi Minh City People\'s Committee (2026–2031 tenure), spearheading the municipal initiative to transform HCMC into a regional center for high-tech innovation, IC design incubation, and microelectronics manufacturing. He champions special regulatory sandbox incentives, tax credits, and talent attraction funds for the semiconductor sector.',
     sessions: [
       {
         time: '08:30 - 09:00',
@@ -94,6 +97,7 @@ const SPEAKER_BIOS = {
     title: 'U.S. Consul General in Ho Chi Minh City',
     org: 'U.S. Diplomatic Mission to Vietnam',
     tag: 'DIPLOMATIC MISSION / STRATEGIC PARTNER',
+    photo: 'images/speakers/melissa-brown.jpg',
     avatarText: 'MB',
     colorClass: 'text-amber-400 border-amber-500/50 bg-amber-950/80',
     bio: 'Senior representative of the United States government in Southern Vietnam, driving forward the U.S.–Vietnam Comprehensive Strategic Partnership in critical emerging technologies, semiconductor supply chain resilience, and workforce capacity initiatives through the International Technology Security and Innovation (ITSI) Fund under the CHIPS and Science Act.',
@@ -113,13 +117,14 @@ const SPEAKER_BIOS = {
     ]
   },
   'nguyen-bich-yen': {
-    name: 'Ms. Nguyen Bich-Yen',
-    title: 'Senior Technical Fellow & Researcher',
-    org: 'VSAP-LAB (Advanced Packaging Consortium)',
+    name: 'Ms. Bich-Yen Nguyen',
+    title: 'Senior Fellow & IEEE Fellow',
+    org: 'Soitec / VSAP-LAB (Advanced Packaging Consortium)',
     tag: 'KEYNOTE 2 / ADVANCED PACKAGING',
-    avatarText: 'NBY',
+    photo: 'images/speakers/bich-yen-nguyen.jpg',
+    avatarText: 'BYN',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Globally recognized pioneer in semiconductor heterogeneous integration with over 30 years of research experience in Silicon Valley and dozens of international patents. She leads research on 2.5D/3D advanced packaging architectures, wafer-level assembly, and Co-Packaged Optics (CPO) for high-density AI accelerators.',
+    bio: 'Globally recognized pioneer in semiconductor heterogeneous integration and SOI technology with over 30 years of research experience in Silicon Valley, 200+ patents, and the IEEE Fellow honor. She leads research on 2.5D/3D advanced packaging architectures, wafer-level assembly, and Co-Packaged Optics (CPO) for high-density AI accelerators.',
     sessions: [
       {
         time: '10:30 - 11:15',
@@ -134,6 +139,7 @@ const SPEAKER_BIOS = {
     title: 'Director of Assembly & Test Engineering',
     org: 'Intel Corporation Vietnam',
     tag: 'INDUSTRY / ATP MANUFACTURING',
+    photo: 'images/speakers/hien-dao.jpg',
     avatarText: 'HD',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Seasoned manufacturing leader with over 18 years overseeing advanced silicon packaging and high-volume test manufacturing (ATP) at Intel Products Vietnam, helping establish the facility as one of the largest and most sophisticated backend manufacturing nodes in Intel’s worldwide network.',
@@ -146,14 +152,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'vo-phong': {
-    name: 'Mr. Vo Phong',
-    title: 'Director of Processor Microarchitecture',
+  'phong-vo': {
+    name: 'Mr. Phong Vo',
+    title: 'General Director',
     org: 'Ampere Computing Vietnam',
     tag: 'INDUSTRY / SERVER ARM CPU',
-    avatarText: 'VP',
+    photo: 'images/speakers/phong-vo.jpg',
+    avatarText: 'PV',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Specialist in energy-efficient cloud-native server ARM microprocessors. He leads a core engineering team in Vietnam designing high-core-count compute engines (up to 192 cores) deployed across global hyperscale cloud infrastructures.',
+    bio: 'General Director of Ampere Vietnam, leading cloud-native server ARM processor engineering. He oversees engineering teams in Vietnam designing energy-efficient, high-core-count compute engines (up to 192 cores) deployed across global hyperscale cloud infrastructures.',
     sessions: [
       {
         time: '14:30 - 15:15',
@@ -163,14 +170,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'tran-dang-khoa': {
-    name: 'Mr. Tran Dang Khoa',
-    title: 'R&D Director, Automotive Microelectronics',
+  'khoa-tran': {
+    name: 'Mr. Khoa Tran',
+    title: 'General Director',
     org: 'Renesas Electronics Vietnam',
     tag: 'INDUSTRY / AUTOMOTIVE IC',
-    avatarText: 'TDK',
+    photo: 'images/speakers/khoa-tran.jpg',
+    avatarText: 'KT',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Automotive semiconductor architect focused on safety-critical MCU/SoC designs, ADAS vehicle control platforms, and ISO 26262 compliant architectures. He has spearheaded the expansion of Renesas R&D operations in Southern Vietnam for over 15 years.',
+    bio: 'General Director of Renesas Electronics Vietnam, leading automotive MCU/SoC designs, ADAS vehicle control platforms, and ISO 26262 compliant architectures. He has spearheaded the expansion of Renesas R&D operations in Southern Vietnam for over 15 years.',
     sessions: [
       {
         time: '15:30 - 16:15',
@@ -180,14 +188,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'vo-thieu-nam': {
-    name: 'Mr. Vo Thieu Nam',
-    title: 'Senior Solutions Consultant, Wireless Silicon',
-    org: 'Qualcomm Technologies Vietnam',
-    tag: 'INDUSTRY / CONNECTIVITY 5G/6G',
-    avatarText: 'VTN',
+  'thieu-phuong-nam': {
+    name: 'Mr. Thieu Phuong Nam',
+    title: 'General Director',
+    org: 'Qualcomm Vietnam, Cambodia & Laos',
+    tag: 'INDUSTRY / CONNECTIVITY 5G/6G & AI',
+    photo: 'images/speakers/thieu-phuong-nam.jpg',
+    avatarText: 'TPN',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Authority on RF Front-End microelectronics, ultra-wideband communications, 5G/6G modem architectures, and on-device Edge AI processing. He actively supports Vietnam’s IoT and telecommunications ecosystem through technical enablement programs.',
+    bio: 'General Director of Qualcomm Vietnam, Cambodia & Laos. With a Ph.D. in semiconductor technology and extensive executive leadership at Intel and IBM, he spearheads Qualcomm’s strategic investments in Vietnam, including the AI R&D Center in Hanoi, 5G Open RAN alliances with Viettel/VNPT, and the Qualcomm Vietnam Innovation Challenge (QVIC).',
     sessions: [
       {
         time: '16:30 - 17:15',
@@ -197,14 +206,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'mai-thi-thanh-nguyen': {
-    name: 'Assoc. Prof. Mai Thi Thanh Nguyen',
-    title: 'Vice Head of Science & Tech / Senior Faculty',
-    org: 'Vietnam National University, Ho Chi Minh City (VNU-HCMC)',
+  'nguyen-thi-thanh-mai': {
+    name: 'Prof. Dr. Nguyen Thi Thanh Mai',
+    title: 'Vice President',
+    org: 'Vietnam National University, Ho Chi Minh City (VNU-HCM)',
     tag: 'ACADEMIA / ECOSYSTEM & TALENT',
-    avatarText: 'MTN',
+    photo: 'images/speakers/nguyen-thi-thanh-mai.jpg',
+    avatarText: 'NTM',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Prominent scientist in MEMS and advanced semiconductor materials. She sits on the executive board for Vietnam’s National Semiconductor Human Resource Development Taskforce, aiming to train 50,000 engineers by 2030 across VNU-HCMC member universities.',
+    bio: 'Vice President of VNU-HCM and eminent scholar. She leads VNU-HCM’s strategic semiconductor initiatives, spearheading university-industry partnerships with Marvell, Synopsys, and FPT to train 50,000 semiconductor and IC design engineers by 2030.',
     sessions: [
       {
         time: '14:00 - 15:30',
@@ -214,14 +224,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'nguyen-hoang-trang': {
-    name: 'Prof. Nguyen Hoang Trang',
-    title: 'Dean of Electrical & Electronics / Director of IC Lab',
+  'hoang-trang': {
+    name: 'Assoc. Prof. Dr. Hoang Trang',
+    title: 'Senior Faculty & IC Design Expert / Hitachi Asia Award',
     org: 'Ho Chi Minh City University of Technology (HCMUT)',
     tag: 'ACADEMIA / DIGITAL IC DESIGN',
-    avatarText: 'NHT',
+    photo: 'images/speakers/hoang-trang.jpg',
+    avatarText: 'HT',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Leading professor in digital IC design, FPGA architectures, and formal ASIC verification. His laboratory has trained multiple generations of elite silicon design engineers now working at Marvell, Intel, Qualcomm, and Renesas.',
+    bio: 'Leading professor in digital IC design, FPGA architectures, and formal ASIC verification at HCMUT. He is the first Vietnamese scientist awarded the prestigious Hitachi Asia Innovation Award in electronics and semiconductor microelectronics, training generations of elite silicon design engineers.',
     sessions: [
       {
         time: '11:15 - 12:00',
@@ -231,14 +242,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'nguyen-pham-loan': {
-    name: 'Prof. Nguyen Pham Loan',
-    title: 'Director, School of Electronics & Telecommunications',
-    org: 'Hanoi University of Science and Technology (HUST)',
+  'pham-nguyen-thanh-loan': {
+    name: 'Assoc. Prof. Dr. Pham Nguyen Thanh Loan',
+    title: 'Head of IC Design & Embedded Systems Laboratory',
+    org: 'Hanoi University of Science and Technology (HUST - SEEE)',
     tag: 'ACADEMIA / ANALOG & RF IC',
-    avatarText: 'NPL',
+    photo: 'images/speakers/pham-nguyen-thanh-loan.jpg',
+    avatarText: 'PTL',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Eminent researcher in analog/mixed-signal integrated circuits and high-frequency microwave communications (RFIC). He represents premier technological universities in Northern Vietnam fostering national research alignment with Southern innovation hubs.',
+    bio: 'Head of the IC Design and Embedded Systems Laboratory at the School of Electrical & Electronic Engineering (SEEE), HUST. She is a foremost researcher in analog/mixed-signal microelectronics, leading national collaborative research in high-frequency wireless communications.',
     sessions: [
       {
         time: '15:00 - 15:45',
@@ -249,6 +261,15 @@ const SPEAKER_BIOS = {
     ]
   }
 };
+
+// Aliases for backwards-compatibility
+SPEAKER_BIOS['dao-thi-thu-hien'] = SPEAKER_BIOS['hien-dao'];
+SPEAKER_BIOS['vo-phong'] = SPEAKER_BIOS['phong-vo'];
+SPEAKER_BIOS['tran-dang-khoa'] = SPEAKER_BIOS['khoa-tran'];
+SPEAKER_BIOS['vo-thieu-nam'] = SPEAKER_BIOS['thieu-phuong-nam'];
+SPEAKER_BIOS['mai-thi-thanh-nguyen'] = SPEAKER_BIOS['nguyen-thi-thanh-mai'];
+SPEAKER_BIOS['nguyen-hoang-trang'] = SPEAKER_BIOS['hoang-trang'];
+SPEAKER_BIOS['nguyen-pham-loan'] = SPEAKER_BIOS['pham-nguyen-thanh-loan'];
 
 // ==========================================================================
 // 2. COUNTDOWN TIMER TO NOV 23, 2026
@@ -310,7 +331,7 @@ function initAgendaTabs() {
       const categoryMatch = (currentCategory === 'all') || (cardCategory === currentCategory);
 
       if (sessionMatch && categoryMatch) {
-        card.style.display = 'flex';
+        card.style.display = '';
         card.classList.remove('hidden');
       } else {
         card.style.display = 'none';
@@ -336,11 +357,11 @@ function initAgendaTabs() {
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
       filterPills.forEach(p => {
-        p.classList.remove('active', 'border-[#0072ce]', 'text-[#0072ce]', 'bg-blue-50', 'font-semibold');
-        p.classList.add('border-slate-300', 'text-slate-600');
+        p.classList.remove('active', 'border-[#0072ce]', 'text-[#0072ce]', 'bg-blue-50', 'font-semibold', 'shadow-sm');
+        p.classList.add('border-slate-200', 'bg-white', 'text-slate-600');
       });
-      pill.classList.add('active', 'border-[#0072ce]', 'text-[#0072ce]', 'bg-blue-50', 'font-semibold');
-      pill.classList.remove('border-slate-300', 'text-slate-600');
+      pill.classList.add('active', 'border-[#0072ce]', 'text-[#0072ce]', 'bg-blue-50', 'font-semibold', 'shadow-sm');
+      pill.classList.remove('border-slate-200', 'bg-white', 'text-slate-600');
 
       currentCategory = pill.getAttribute('data-category');
       applyFilters();
@@ -367,7 +388,26 @@ function initSpeakerBioModal() {
     document.getElementById('speaker-modal-title').innerText = speaker.title;
     document.getElementById('speaker-modal-org').innerText = speaker.org;
     document.getElementById('speaker-modal-tag').innerText = speaker.tag;
-    document.getElementById('speaker-modal-avatar').innerText = speaker.avatarText;
+    
+    const avatarEl = document.getElementById('speaker-modal-avatar');
+    const imgEl = document.getElementById('speaker-modal-img');
+    avatarEl.innerText = speaker.avatarText;
+
+    if (speaker.photo) {
+      if (imgEl) {
+        imgEl.src = speaker.photo;
+        imgEl.alt = speaker.name;
+        imgEl.classList.remove('hidden');
+      }
+      avatarEl.classList.add('hidden');
+    } else {
+      if (imgEl) {
+        imgEl.src = '';
+        imgEl.classList.add('hidden');
+      }
+      avatarEl.classList.remove('hidden');
+    }
+
     document.getElementById('speaker-modal-bio').innerText = speaker.bio;
 
     // Render sessions

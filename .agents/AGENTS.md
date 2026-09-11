@@ -15,9 +15,12 @@
 ## 🛡️ 4 ĐIỀU RĂN KHẮC CỐT GHI TÂM (CORE PRINCIPLES - BẮT BUỘC TUÂN THỦ)
 
 ### 1. TUYỆT ĐỐI KHÔNG TỰ Ý BÀN GIAO / DEPLOY KHI CHƯA CÓ LỆNH "DONE"
-- Mọi thao tác sửa đổi, bổ sung trong phiên làm việc BẮT BUỘC chỉ được preview và kiểm tra trên **Localhost (`http://localhost:8080/`)**.
+- Mọi thao tác sửa đổi, bổ sung trong phiên làm việc BẮT BUỘC chỉ được preview và kiểm tra trên **Localhost (`http://localhost:8080/` hoặc `http://localhost:3000/`)**.
 - Cấm mọi hành vi tự ý commit git hay deploy khi chưa được kiểm duyệt trực quan.
-- **CHỈ KHI NGƯỜI DÙNG BÁO "DONE"** (hoặc "xong", "báo done"), Lead Agent mới được phép chốt phiên bàn giao chính thức.
+- **CHỈ KHI NGƯỜI DÙNG BÁO "DONE"** (hoặc "xong", "báo done"), Lead Agent mới được phép chốt phiên bàn giao chính thức:
+  1. Kiểm tra trạng thái Git (`git status`) đảm bảo sạch sẽ.
+  2. Tạo Git commit chuẩn hóa Conventional Commits (`git add .`, `git commit`).
+  3. Đẩy mã nguồn lên GitHub repository (`git push origin main`). Không deploy hosting.
 
 ### 2. CẤM TỰ SUY DIỄN TÍNH NĂNG RƯỜM RÀ (NO OVER-ENGINEERING UX)
 - Tuyệt đối không tự ý sinh thêm nút bấm thừa thãi, render hàng loạt ô nhập liệu cồng kềnh làm rối mắt người dùng.
