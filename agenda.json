@@ -13,7 +13,7 @@
     "id": 3,
     "from": "08:45",
     "to": "08:55",
-    "description": "Performance (Marvell)",
+    "description": "Opening Performance",
     "session": "morning",
     "category": "other",
     "speaker": null,
@@ -23,7 +23,7 @@
     "id": 4,
     "from": "08:55",
     "to": "09:00",
-    "description": "Opening Speech: Marvell Semiconductor Leadership & Vietnam Vision",
+    "description": "Marvell Semiconductor Leadership & Vietnam Vision",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -39,7 +39,7 @@
     "id": 5,
     "from": "09:00",
     "to": "09:10",
-    "description": "Opening Speech: Strategy for HCMC High-Tech & Silicon Ecosystem",
+    "description": "Strategy for HCMC High-Tech & Silicon Ecosystem",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -55,7 +55,7 @@
     "id": 6,
     "from": "09:10",
     "to": "09:20",
-    "description": "Opening Speech: U.S. - Vietnam Comprehensive Strategic Partnership",
+    "description": "U.S. - Vietnam Comprehensive Strategic Partnership",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -71,7 +71,7 @@
     "id": 7,
     "from": "09:20",
     "to": "10:00",
-    "description": "Presentation: IC Design - Advanced Silicon Architecture Trends",
+    "description": "IC Design - Advanced Silicon Architecture Trends",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -87,7 +87,7 @@
     "id": 8,
     "from": "10:00",
     "to": "10:40",
-    "description": "Presentation: Advanced Packaging & Co-Packaged Optics (CPO)",
+    "description": "Advanced Packaging & Co-Packaged Optics (CPO)",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -103,7 +103,7 @@
     "id": 9,
     "from": "10:40",
     "to": "11:10",
-    "description": "Coffee Break 1",
+    "description": "Coffee Break",
     "session": "morning",
     "category": "networking",
     "speaker": null,
@@ -113,7 +113,7 @@
     "id": 10,
     "from": "11:10",
     "to": "11:35",
-    "description": "Presentation: IC Fabrication & ATP Engineering in Global Supply Chain",
+    "description": "IC Fabrication & ATP Engineering in Global Supply Chain",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -132,7 +132,7 @@
     "id": 11,
     "from": "11:35",
     "to": "12:00",
-    "description": "Presentation: Academic IC Design (Digital) & VLSI Research",
+    "description": "Academic IC Design (Digital) & VLSI Research",
     "session": "morning",
     "category": "academia",
     "speaker": {
@@ -148,7 +148,7 @@
     "id": 12,
     "from": "12:00",
     "to": "12:25",
-    "description": "Presentation: Next-Generation Arm Server Silicon & Cloud Workloads",
+    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -163,16 +163,7 @@
       "logo": "images/partners/ampere.svg"
     }
   },
-  {
-    "id": 13,
-    "from": "12:25",
-    "to": "12:40",
-    "description": "Time buffer",
-    "session": "morning",
-    "category": "other",
-    "speaker": null,
-    "sponsor": null
-  },
+
   {
     "id": 14,
     "from": "12:40",
@@ -187,14 +178,14 @@
     "id": 15,
     "from": "13:50",
     "to": "14:30",
-    "description": "Keynote 3: Government Strategic Vision for National Semiconductor Ecosystem",
+    "description": "Government Strategic Vision for National Semiconductor Ecosystem",
     "session": "afternoon",
     "category": "keynote",
     "speaker": {
       "prefix": "",
       "name": "Government Strategic Vision",
-      "title": "Đang cập nhật",
-      "organization": "Đang cập nhật",
+      "title": "TBU",
+      "organization": "TBU",
       "avatar": ""
     },
     "sponsor": null
@@ -203,7 +194,7 @@
     "id": 16,
     "from": "14:30",
     "to": "14:55",
-    "description": "Presentation: Automotive & Edge AI Silicon Architecture",
+    "description": "Automotive & Edge AI Silicon Architecture",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
@@ -222,7 +213,7 @@
     "id": 17,
     "from": "14:55",
     "to": "15:20",
-    "description": "Presentation: Edge AI & Connectivity Silicon Evolution",
+    "description": "Edge AI & Connectivity Silicon Evolution",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
@@ -237,21 +228,12 @@
       "logo": "images/partners/qualcomm.svg"
     }
   },
-  {
-    "id": 18,
-    "from": "15:20",
-    "to": "15:35",
-    "description": "Time buffer",
-    "session": "afternoon",
-    "category": "other",
-    "speaker": null,
-    "sponsor": null
-  },
+
   {
     "id": 19,
     "from": "15:35",
     "to": "16:05",
-    "description": "Coffee Break 2",
+    "description": "Coffee Break",
     "session": "afternoon",
     "category": "networking",
     "speaker": null,
@@ -261,7 +243,7 @@
     "id": 20,
     "from": "16:05",
     "to": "16:30",
-    "description": "Presentation: Analog IC Design & Mixed-Signal IC Research",
+    "description": "Analog IC Design & Mixed-Signal IC Research",
     "session": "afternoon",
     "category": "academia",
     "speaker": {
@@ -277,14 +259,14 @@
     "id": 21,
     "from": "16:30",
     "to": "16:55",
-    "description": "Presentation: Semiconductor Startup Innovation & Custom Silicon",
+    "description": "Semiconductor Startup Innovation & Custom Silicon",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
       "prefix": "Ms.",
       "name": "Nguyen Loan",
-      "title": "Đang cập nhật",
-      "organization": "Connexus (Đang cập nhật)",
+      "title": "TBU",
+      "organization": "Connexus (TBU)",
       "avatar": ""
     },
     "sponsor": null
@@ -305,16 +287,7 @@
     },
     "sponsor": null
   },
-  {
-    "id": 23,
-    "from": "17:35",
-    "to": "17:55",
-    "description": "Buffer",
-    "session": "afternoon",
-    "category": "other",
-    "speaker": null,
-    "sponsor": null
-  },
+
   {
     "id": 24,
     "from": "17:55",
@@ -326,7 +299,7 @@
       "prefix": "",
       "name": "Ban Tổ chức / Summit Leadership",
       "title": "Closing Strategic Remarks",
-      "organization": "Đang cập nhật",
+      "organization": "TBU",
       "avatar": ""
     },
     "sponsor": null
