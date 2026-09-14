@@ -176,12 +176,48 @@ for item in agenda_data:
 cards_block = "\n".join(agenda_cards_html)
 
 html = f'''<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026</title>
-  <meta name="description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology.">
+  
+  <!-- Canonical & Standard SEO Meta Tags -->
+  <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
+  <meta name="title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta name="thumbnail" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Schema.org for Google & Zalo -->
+  <meta itemprop="name" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
+  <meta itemprop="description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta itemprop="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Open Graph / Facebook / LinkedIn / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
+  <meta property="og:site_name" content="Vietnam Semiconductor Summit 2026">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="og:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
+  <meta property="og:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="og:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta property="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:secure_url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta name="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The 1st Vietnam Semiconductor Summit 2026 Official Banner">
+  <link rel="image_src" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="twitter:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="twitter:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>

@@ -204,12 +204,48 @@ marvell_logo_partner = get_marvell_logo("h-8 w-auto", "#000000")
 marvell_logo_host_card = get_marvell_logo("h-10 sm:h-12 w-auto", "#000000")
 
 html_content = f'''<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology</title>
-  <meta name="description" content="Inaugural Vietnam Semiconductor Summit hosted by Marvell Technology, Inc. Uniting Government leadership, global semiconductor corporations, and premier research universities. 100% Free RSVP.">
+  
+  <!-- Canonical & Standard SEO Meta Tags -->
+  <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/">
+  <meta name="title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta name="thumbnail" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Schema.org for Google & Zalo -->
+  <meta itemprop="name" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta itemprop="description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta itemprop="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Open Graph / Facebook / LinkedIn / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/">
+  <meta property="og:site_name" content="Vietnam Semiconductor Summit 2026">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="og:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta property="og:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="og:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta property="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:secure_url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta name="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The 1st Vietnam Semiconductor Summit 2026 Official Banner">
+  <link rel="image_src" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="twitter:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="twitter:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
