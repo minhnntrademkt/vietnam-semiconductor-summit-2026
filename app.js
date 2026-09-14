@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollProgress();
   initFaqAccordion();
+  initSmartHeader();
+  initBackToTop();
 });
 
 // ==========================================================================
@@ -826,3 +828,62 @@ function initFaqAccordion() {
     });
   });
 }
+
+// ==========================================================================
+// 12. SMART HEADER AUTO-HIDE ON SCROLL DOWN & SHOW ON SCROLL UP
+// ==========================================================================
+function initSmartHeader() {
+  const header = document.getElementById('main-header');
+  if (!header) return;
+
+  let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+  const threshold = 80;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Always show near top
+    if (currentScrollY <= threshold) {
+      header.classList.remove('-translate-y-full');
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    // Scroll down -> hide
+    if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+      header.classList.add('-translate-y-full');
+    } else {
+      // Scroll up -> show
+      header.classList.remove('-translate-y-full');
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+}
+
+// ==========================================================================
+// 13. BACK TO TOP BUTTON
+// ==========================================================================
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('back-to-top-btn');
+  if (!backToTopBtn) return;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollY > 300) {
+      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+

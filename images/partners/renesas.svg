@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 46" fill="none">
+  <!-- Renesas Transparent Logo with Generous Safe ViewBox -->
+  <g>
+    <!-- Renesas Red Graphic Mark -->
+    <path d="M10 35L24 10l14 25H10z" fill="#E60012"/>
+    <path d="M24 19l5 9h-10l5-9z" fill="#FFFFFF"/>
+    <!-- RENESAS Wordmark -->
+    <text x="46" y="32" font-family="'Plus Jakarta Sans', Arial, Helvetica, sans-serif" font-weight="800" font-size="22" letter-spacing="2" fill="#0F172A">RENESAS</text>
+  </g>
+</svg>

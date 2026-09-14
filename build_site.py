@@ -13,30 +13,11 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(base_dir, 'agenda.json'), 'r', encoding='utf-8') as f:
     agenda_data = json.load(f)
 
-def format_duration(dur_str):
-    if not dur_str:
-        return ""
-    parts = dur_str.split(':')
-    if len(parts) >= 2:
-        try:
-            hours = int(parts[0])
-            minutes = int(parts[1])
-            if hours > 0 and minutes > 0:
-                return f"{hours}h {minutes}m"
-            elif hours > 0:
-                return f"{hours} hr"
-            else:
-                return f"{minutes} mins"
-        except ValueError:
-            return dur_str[:5]
-    return dur_str
-
 agenda_cards_html = []
 for item in agenda_data:
-    session = item['session']
-    category = item['category']
+    session = item.get('session', 'morning')
+    category = item.get('category', 'other')
     tag_label = category.upper()
-    dur_formatted = format_duration(item.get('duration', ''))
     
     if category == 'keynote':
         tag_label = 'STRATEGIC KEYNOTE'
@@ -75,42 +56,115 @@ for item in agenda_data:
         icon_color = 'text-slate-500'
         badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>'
 
-    notes_html = ""
-    if item['notes']:
-        notes_html = f'''
-        <div class="mt-3 flex flex-wrap items-center gap-2">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-50/90 border border-slate-200/80 text-xs text-slate-700 font-medium">
-            <svg class="w-3.5 h-3.5 text-[#0072ce] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-            <span>{item['notes']}</span>
-          </span>
+    # Speaker Module (Equal Sized & Structured Academic Rank)
+    speaker_html = ""
+    speaker = item.get('speaker')
+    if speaker and isinstance(speaker, dict) and speaker.get('name'):
+        prefix = speaker.get('prefix', '').strip()
+        name = speaker.get('name', '').strip()
+        title = speaker.get('title', '').strip()
+        org = speaker.get('organization', '').strip()
+        avatar = speaker.get('avatar', '').strip()
+
+        # Split academic rank if present (e.g. Assoc. Prof. or Prof.)
+        academic_tag = ""
+        display_name = name
+        if prefix.startswith("Assoc. Prof."):
+            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>'
+            rem_prefix = prefix.replace("Assoc. Prof.", "").strip()
+            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+        elif prefix.startswith("Prof."):
+            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Prof.</span>'
+            rem_prefix = prefix.replace("Prof.", "").strip()
+            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+        else:
+            display_name = f"{prefix} {name}".strip() if prefix else name
+
+        title_html = f'<div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">{title}</div>' if title else ''
+        # Organization name allows natural wrapping without losing letters
+        org_html = f'<div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">{org}</div>' if org else ''
+
+        if avatar and os.path.exists(os.path.join(base_dir, avatar)):
+            avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
+        else:
+            avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
+
+        speaker_html = f'''
+        <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
+          {avatar_html}
+          <div class="flex flex-col min-w-0 flex-1 justify-center">
+            {academic_tag}
+            <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
+            {title_html}
+            {org_html}
+          </div>
+        </div>
+        '''
+
+    # Sponsor / Co-Host Module (2-Column Layout, Same Row, Matching Height)
+    sponsor_html = ""
+    sponsor = item.get('sponsor')
+    if sponsor and isinstance(sponsor, dict) and sponsor.get('name'):
+        s_name = sponsor.get('name', '').strip()
+        s_logo = sponsor.get('logo', '').strip()
+
+        logo_img_html = ""
+        if s_logo and os.path.exists(os.path.join(base_dir, s_logo)):
+            logo_img_html = f'<img src="{s_logo}" alt="{s_name}" class="h-6 max-h-7 w-auto object-contain shrink-0">'
+        else:
+            logo_img_html = f'<span class="text-xs font-black text-slate-800 tracking-wider uppercase">{s_name}</span>'
+
+        sponsor_html = f'''
+        <div class="inline-flex items-stretch rounded-xl border border-slate-200/90 bg-white shadow-sm shrink-0 min-h-[64px] self-stretch">
+          <!-- Cột 1: Co-Host / Partner: (Canh giữa cột) -->
+          <div class="px-2.5 py-2 bg-slate-50 border-r border-slate-200/80 flex items-center justify-center text-center shrink-0">
+            <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 whitespace-nowrap">
+              Co-Host / Partner:
+            </span>
+          </div>
+
+          <!-- Cột 2: Logo (nền trong suốt) & Tên doanh nghiệp -->
+          <div class="px-3 py-1.5 flex flex-col justify-center gap-1 bg-white">
+            <div class="flex items-center">
+              {logo_img_html}
+            </div>
+            <span class="text-[10px] font-bold text-slate-800 tracking-tight">{s_name}</span>
+          </div>
+        </div>
+        '''
+
+    # Combined Meta Row (Speaker & Co-Host on the same row)
+    meta_row_html = ""
+    if speaker_html or sponsor_html:
+        meta_row_html = f'''
+        <div class="mt-3 flex flex-wrap items-center gap-3">
+          {speaker_html}
+          {sponsor_html}
         </div>
         '''
 
     agenda_cards_html.append(f'''
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 {spine_class} shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="{session}" data-category="{category}">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 {spine_class} shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="{session}" data-category="{category}" data-session-id="{item['id']}">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
-        <!-- Time Column (Zero Wrapping Guarantee) -->
-        <div class="shrink-0 md:w-52 flex flex-row md:flex-col items-center md:items-start justify-between md:justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-5">
+        <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
+        <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
             <svg class="w-4 h-4 {icon_color} shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">{item['from']} &ndash; {item['to']}</span>
           </div>
-          <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-slate-100 text-slate-600 border border-slate-200/60 whitespace-nowrap">
-            <span>{dur_formatted}</span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md {tag_class}">
+            {badge_dot}
+            <span>{tag_label}</span>
           </div>
         </div>
 
-        <!-- Main Session Information -->
-        <div class="flex-1 min-w-0">
-          <div class="flex flex-wrap items-center gap-2 mb-2">
-            <span class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-md {tag_class}">
-              {badge_dot}
-              <span>{tag_label}</span>
-            </span>
-          </div>
-          <h4 class="text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#0072ce] transition-colors">{item['description']}</h4>
-          {notes_html}
+        <!-- Right Column: Title + Combined Meta Row (Speaker & Co-Host Side-by-Side) -->
+        <div class="flex-1 min-w-0 flex flex-col justify-center">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#0072ce] transition-colors">
+            {item['description']}
+          </h3>
+          {meta_row_html}
         </div>
 
       </div>
@@ -143,11 +197,11 @@ MARVELL_SVG_PATH = '''M425.9,98.4l-33.7,53.9l-33.3-53.9H344v91h14.9v-58.6c0-1.1,
 def get_marvell_logo(css_class="h-7 w-auto", fill_color="#0072ce"):
     return f'<svg class="{css_class}" viewBox="0 0 1004 288" fill="{fill_color}" aria-label="Marvell Technology Logo"><path d="{MARVELL_SVG_PATH}"/></svg>'
 
-marvell_logo_header = get_marvell_logo("h-8 sm:h-9 md:h-10 w-auto", "#0072ce")
-marvell_logo_footer = get_marvell_logo("h-7 sm:h-8 w-auto", "#0072ce")
+marvell_logo_header = get_marvell_logo("h-8 sm:h-9 md:h-10 w-auto", "#000000")
+marvell_logo_footer = get_marvell_logo("h-7 sm:h-8 w-auto", "#000000")
 marvell_logo_ticket = get_marvell_logo("h-5 w-auto", "#00b5e2")
-marvell_logo_partner = get_marvell_logo("h-8 w-auto", "#0072ce")
-marvell_logo_host_card = get_marvell_logo("h-10 sm:h-12 w-auto", "#0072ce")
+marvell_logo_partner = get_marvell_logo("h-8 w-auto", "#000000")
+marvell_logo_host_card = get_marvell_logo("h-10 sm:h-12 w-auto", "#000000")
 
 html_content = f'''<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -191,7 +245,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260914_1310">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -201,7 +255,7 @@ html_content = f'''<!DOCTYPE html>
   <!-- =========================================================================
        1. TOP BAR & NAVIGATION (STICKY HEADER - MARVELL CRISP WHITE)
        ========================================================================= -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+  <header id="main-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-transform duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-3 lg:gap-6 xl:gap-8">
       
       <!-- Brand Logo & Summit Title -->
@@ -230,7 +284,7 @@ html_content = f'''<!DOCTYPE html>
       <!-- CTA Register Button (Marvell Black Kinetic Button with Soft Radius) -->
       <div class="hidden sm:flex items-center shrink-0">
         <a href="#register" class="mrvll-btn-black open-rsvp-modal-btn text-xs xl:text-sm py-2.5 px-4 xl:py-3 xl:px-6 whitespace-nowrap">
-          <span>REGISTER FOR FREE</span>
+          <span>Register Now</span>
           <svg class="btn-arrow w-3.5 h-3.5 xl:w-4 xl:h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
@@ -260,7 +314,7 @@ html_content = f'''<!DOCTYPE html>
     </div>
     <div class="mt-auto pt-6 border-t border-slate-200">
       <a href="#register" class="mobile-link mrvll-btn-black w-full justify-center open-rsvp-modal-btn">
-        <span>REGISTER FOR FREE</span>
+        <span>Register Now</span>
         <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </a>
     </div>
@@ -270,10 +324,11 @@ html_content = f'''<!DOCTYPE html>
        2. HERO SECTION (HIGH-CONTRAST PURE BLACK TECH SILICON GLOW)
        ========================================================================= -->
   <section class="relative bg-[#05070a] text-white pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden border-b border-slate-800">
-    <!-- Ambient Chip Grid & Glow -->
-    <div class="absolute inset-0 bg-hero-grid opacity-30 pointer-events-none"></div>
-    <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#0072ce]/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#c8a3ef]/15 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Ambient Chip Background (Submerged Marvell Chip) -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 pointer-events-none" style="background-image: url('images/hero-marvell-chip.jpg?v=20260914_1310');"></div>
+    <div class="absolute inset-0 bg-hero-grid opacity-15 pointer-events-none"></div>
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#0072ce]/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#c8a3ef]/10 rounded-full blur-3xl pointer-events-none"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       
@@ -356,12 +411,8 @@ html_content = f'''<!DOCTYPE html>
       <!-- Hero Action Buttons -->
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#register" class="mrvll-btn-white w-full sm:w-auto justify-center text-sm py-4 px-8 open-rsvp-modal-btn">
-          <span>SECURE YOUR SEAT (FREE RSVP)</span>
+          <span>Register Now</span>
           <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
-        <a href="#agenda" class="mrvll-btn-outline-white w-full sm:w-auto justify-center text-sm py-4 px-8">
-          <span>EXPLORE 24 SESSIONS</span>
-          <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
         </a>
       </div>
 
@@ -843,29 +894,46 @@ html_content = f'''<!DOCTYPE html>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="bg-gradient-to-r from-blue-950/40 via-purple-950/30 to-slate-900/50 p-8 sm:p-12 rounded-2xl border border-blue-500/30 shadow-2xl backdrop-blur-xl">
-        <div class="max-w-3xl">
-          <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-[#00b5e2] text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/30">
-            HIGH-LEVEL STRATEGIC PLENARY
-          </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-            Building Vietnam's National Semiconductor Value Chain 2026–2035
-          </h2>
-          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
-            A milestone roundtable uniting Government policymakers, multinational semiconductor titans, and top university presidents to establish actionable frameworks for IC design incentives, packaging infrastructure, and workforce readiness.
-          </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-7">
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-[#00b5e2] text-xs font-bold uppercase tracking-widest mb-4 border border-blue-500/30">
+              HIGH-LEVEL STRATEGIC PLENARY
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+              Building Vietnam's National Semiconductor Value Chain 2026–2035
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+              A milestone roundtable uniting Government policymakers, multinational semiconductor titans, and top university presidents to establish actionable frameworks for IC design incentives, packaging infrastructure, and workforce readiness.
+            </p>
 
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
-            <div>
-              <span class="text-slate-400 block uppercase font-bold">Time & Venue</span>
-              <span class="font-mono text-cyan-300 font-bold text-sm">14:00 - 15:30 • VIP Hall</span>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
+              <div>
+                <span class="text-slate-400 block uppercase font-bold">Time & Venue</span>
+                <span class="font-mono text-cyan-300 font-bold text-sm">14:00 - 15:30 • VIP Hall</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block uppercase font-bold">Session Chair</span>
+                <span class="text-white font-semibold">Sandeep Bharathi (Marvell DCG)</span>
+              </div>
+              <div>
+                <span class="text-slate-400 block uppercase font-bold">Key Focus</span>
+                <span class="text-emerald-400 font-semibold">Tax, IP Protection & 50K Engineers</span>
+              </div>
             </div>
-            <div>
-              <span class="text-slate-400 block uppercase font-bold">Session Chair</span>
-              <span class="text-white font-semibold">Sandeep Bharathi (Marvell DCG)</span>
-            </div>
-            <div>
-              <span class="text-slate-400 block uppercase font-bold">Key Focus</span>
-              <span class="text-emerald-400 font-semibold">Tax, IP Protection & 50K Engineers</span>
+          </div>
+
+          <!-- Right Column: Cropped Marvell Silicon Showcase -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative group rounded-2xl overflow-hidden border border-blue-500/40 shadow-[0_0_35px_rgba(0,181,226,0.2)] bg-[#05070a]/60 w-full max-w-md">
+              <img src="images/marvell-plenary-chip.jpg" alt="Marvell Advanced Silicon Platform" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#05070a]/80 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-cyan-300">
+                <span class="flex items-center gap-1.5 font-bold uppercase tracking-wider text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2] animate-pulse"></span>
+                  Marvell Silicon Architecture
+                </span>
+                <span class="text-slate-400">Essential Tech</span>
+              </div>
             </div>
           </div>
         </div>
@@ -892,15 +960,15 @@ html_content = f'''<!DOCTYPE html>
       <!-- Session Track Tabs -->
       <div class="flex flex-wrap items-center justify-center gap-2 mb-6 bg-slate-100/90 p-1.5 rounded-xl max-w-xl mx-auto border border-slate-200/60">
         <button class="agenda-tab-btn active px-4 py-2 text-xs font-bold rounded-lg bg-slate-900 text-white shadow-sm transition-all" data-session="all">All Sessions (24)</button>
-        <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="morning">Morning Strategic Track</button>
-        <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="afternoon">Afternoon Technical Tracks</button>
+        <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="morning">Morning Sessions (12)</button>
+        <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="afternoon">Afternoon Technical (12)</button>
       </div>
 
       <!-- Category Filter Pills with Color Dots -->
       <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
         <button class="agenda-filter-pill active inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0072ce] bg-blue-50 text-[#0072ce] font-semibold text-xs transition-all shadow-sm" data-category="all">
           <span class="w-2 h-2 rounded-full bg-[#0072ce]"></span>
-          <span>All Tracks</span>
+          <span>All Sessions</span>
         </button>
         <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="keynote">
           <span class="w-2 h-2 rounded-full bg-[#0072ce]"></span>
@@ -1487,8 +1555,15 @@ html_content = f'''<!DOCTYPE html>
     </div>
   </div>
 
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top-btn" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 p-3 rounded-xl bg-slate-900/90 hover:bg-[#0072ce] text-white shadow-xl border border-slate-700/50 backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center justify-center group cursor-pointer">
+    <svg class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
   <!-- Main JavaScript File -->
-  <script src="app.js"></script>
+  <script src="app.js?v=20260914_1310"></script>
 </body>
 </html>
 '''

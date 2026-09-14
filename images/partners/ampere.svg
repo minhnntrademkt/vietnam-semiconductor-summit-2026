@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 46" fill="none">
+  <!-- Ampere Computing Transparent Logo with Generous Safe ViewBox -->
+  <g>
+    <!-- Geometric Stylized A -->
+    <path d="M10 36L23 8l13 28h-6.2l-6.8-14.5L16.2 36H10z" fill="#0072CE"/>
+    <path d="M17.5 27h11v4h-11z" fill="#00B5E2"/>
+    <!-- AMPERE Wordmark -->
+    <text x="46" y="32" font-family="'Plus Jakarta Sans', Arial, Helvetica, sans-serif" font-weight="800" font-size="22" letter-spacing="2" fill="#0F172A">AMPERE</text>
+  </g>
+</svg>

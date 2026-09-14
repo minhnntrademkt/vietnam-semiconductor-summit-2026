@@ -3,240 +3,342 @@
     "id": 2,
     "from": "08:00",
     "to": "08:45",
-    "duration": "00:45:00",
     "description": "Welcome & Breakfast",
-    "notes": "",
     "session": "morning",
-    "category": "networking"
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 3,
     "from": "08:45",
     "to": "08:55",
-    "duration": "00:10:00",
     "description": "Performance (Marvell)",
-    "notes": "",
     "session": "morning",
-    "category": "other"
+    "category": "other",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 4,
     "from": "08:55",
     "to": "09:00",
-    "duration": "00:05:00",
-    "description": "Opening Speech (QD)",
-    "notes": "",
+    "description": "Opening Speech: Marvell Semiconductor Leadership & Vietnam Vision",
     "session": "morning",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Dr.",
+      "name": "Le Quang Dam",
+      "title": "General Manager",
+      "organization": "Marvell Technology Vietnam",
+      "avatar": "images/speakers/le-quang-dam.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 5,
     "from": "09:00",
     "to": "09:10",
-    "duration": "00:10:00",
-    "description": "Opening Speech (HCMC: Nguyen Van Duoc)",
-    "notes": "Government - Chairman of HCMC",
+    "description": "Opening Speech: Strategy for HCMC High-Tech & Silicon Ecosystem",
     "session": "morning",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Nguyen Van Duoc",
+      "title": "Chairman",
+      "organization": "Ho Chi Minh City People's Committee",
+      "avatar": "images/speakers/nguyen-van-duoc.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 6,
     "from": "09:10",
     "to": "09:20",
-    "duration": "00:10:00",
-    "description": "Opening Speech (HCMC: Ms. Melissa A. Brown)",
-    "notes": "Government - US Consul General in HCMC",
+    "description": "Opening Speech: U.S. - Vietnam Comprehensive Strategic Partnership",
     "session": "morning",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Melissa A. Brown",
+      "title": "U.S. Consul General",
+      "organization": "U.S. Consulate General in Ho Chi Minh City",
+      "avatar": "images/speakers/melissa-brown.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 7,
     "from": "09:20",
     "to": "10:00",
-    "duration": "00:40:00",
-    "description": "Keynote 1 (Marvell: Noam Mizrahi)",
-    "notes": "Industry - IC Design",
+    "description": "Presentation: IC Design - Advanced Silicon Architecture Trends",
     "session": "morning",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Noam Mizrahi",
+      "title": "Executive VP & Corporate Chief Technology Officer (CTO)",
+      "organization": "Marvell Technology, Inc.",
+      "avatar": "images/speakers/noam-mizrahi.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 8,
     "from": "10:00",
     "to": "10:40",
-    "duration": "00:40:00",
-    "description": "Keynote 2 (VSAP-LAB: Ms. Nguyen Bich-Yen)",
-    "notes": "Industry - Advanced Packaging",
+    "description": "Presentation: Advanced Packaging & Co-Packaged Optics (CPO)",
     "session": "morning",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Bich-Yen Nguyen",
+      "title": "Senior Fellow (IEEE Fellow)",
+      "organization": "Soitec / VSAP-LAB",
+      "avatar": "images/speakers/bich-yen-nguyen.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 9,
     "from": "10:40",
     "to": "11:10",
-    "duration": "00:30:00",
     "description": "Coffee Break 1",
-    "notes": "",
     "session": "morning",
-    "category": "networking"
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 10,
     "from": "11:10",
     "to": "11:35",
-    "duration": "00:25:00",
-    "description": "Presentation 1 (Intel: Ms. Hien Dao)",
-    "notes": "Industry - IC Fabrication/ATP",
+    "description": "Presentation: IC Fabrication & ATP Engineering in Global Supply Chain",
     "session": "morning",
-    "category": "industry"
+    "category": "industry",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Hien Dao",
+      "title": "Director of Assembly & Test Engineering",
+      "organization": "Intel Corporation",
+      "avatar": "images/speakers/hien-dao.jpg"
+    },
+    "sponsor": {
+      "name": "Intel Corporation",
+      "logo": "images/partners/intel.svg"
+    }
   },
   {
     "id": 11,
     "from": "11:35",
     "to": "12:00",
-    "duration": "00:25:00",
-    "description": "Presentation 2 (HCMUT: Prof. Nguyen Hoang Trang Hoang)",
-    "notes": "Academia - IC Design (Digital)",
+    "description": "Presentation: Academic IC Design (Digital) & VLSI Research",
     "session": "morning",
-    "category": "academia"
+    "category": "academia",
+    "speaker": {
+      "prefix": "Assoc. Prof. Dr.",
+      "name": "Hoang Trang",
+      "title": "Head of IC Design Lab",
+      "organization": "HCMUT (Bach Khoa HCMC)",
+      "avatar": "images/speakers/hoang-trang.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 12,
     "from": "12:00",
     "to": "12:25",
-    "duration": "00:25:00",
-    "description": "Presentation 3 (Ampere Computing: Vo Phong)",
-    "notes": "Industry - IC Design",
+    "description": "Presentation: Next-Generation Arm Server Silicon & Cloud Workloads",
     "session": "morning",
-    "category": "industry"
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Phong Vo",
+      "title": "General Director",
+      "organization": "Ampere Computing Vietnam",
+      "avatar": "images/speakers/phong-vo.jpg"
+    },
+    "sponsor": {
+      "name": "Ampere Computing LLC",
+      "logo": "images/partners/ampere.svg"
+    }
   },
   {
     "id": 13,
     "from": "12:25",
     "to": "12:40",
-    "duration": "00:15:00",
     "description": "Time buffer",
-    "notes": "",
     "session": "morning",
-    "category": "other"
+    "category": "other",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 14,
     "from": "12:40",
     "to": "13:50",
-    "duration": "01:10:00",
-    "description": "Lunch",
-    "notes": "",
+    "description": "Lunch & Networking Banquet",
     "session": "morning",
-    "category": "networking"
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 15,
     "from": "13:50",
     "to": "14:30",
-    "duration": "00:40:00",
-    "description": "Keynote 3 (TBD)",
-    "notes": "Government",
+    "description": "Keynote 3: Government Strategic Vision for National Semiconductor Ecosystem",
     "session": "afternoon",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "",
+      "name": "Government Strategic Vision",
+      "title": "Đang cập nhật",
+      "organization": "Đang cập nhật",
+      "avatar": ""
+    },
+    "sponsor": null
   },
   {
     "id": 16,
     "from": "14:30",
     "to": "14:55",
-    "duration": "00:25:00",
-    "description": "Presentation 4 (Renesas: Tran Dang Khoa Dang)",
-    "notes": "Industry - IC Design",
+    "description": "Presentation: Automotive & Edge AI Silicon Architecture",
     "session": "afternoon",
-    "category": "industry"
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Khoa Tran",
+      "title": "General Director",
+      "organization": "Renesas Electronics Vietnam",
+      "avatar": "images/speakers/khoa-tran.jpg"
+    },
+    "sponsor": {
+      "name": "Renesas Electronics Corporation",
+      "logo": "images/partners/renesas.svg"
+    }
   },
   {
     "id": 17,
     "from": "14:55",
     "to": "15:20",
-    "duration": "00:25:00",
-    "description": "Presentation 5 (Qualcomm: Vo Thieu Nam)",
-    "notes": "Industry - IC Design",
+    "description": "Presentation: Edge AI & Connectivity Silicon Evolution",
     "session": "afternoon",
-    "category": "industry"
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Thieu Phuong Nam",
+      "title": "General Director",
+      "organization": "Qualcomm Vietnam, Cambodia & Laos",
+      "avatar": "images/speakers/thieu-phuong-nam.jpg"
+    },
+    "sponsor": {
+      "name": "Qualcomm Technologies, Inc.",
+      "logo": "images/partners/qualcomm.svg"
+    }
   },
   {
     "id": 18,
     "from": "15:20",
     "to": "15:35",
-    "duration": "00:15:00",
     "description": "Time buffer",
-    "notes": "",
     "session": "afternoon",
-    "category": "other"
+    "category": "other",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 19,
     "from": "15:35",
     "to": "16:05",
-    "duration": "00:30:00",
     "description": "Coffee Break 2",
-    "notes": "",
     "session": "afternoon",
-    "category": "networking"
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 20,
     "from": "16:05",
     "to": "16:30",
-    "duration": "00:25:00",
-    "description": "Presentation 6 (HUST: Prof. Ms. Nguyen Pham Loan)",
-    "notes": "Academia - IC Design (Analog)",
+    "description": "Presentation: Analog IC Design & Mixed-Signal IC Research",
     "session": "afternoon",
-    "category": "academia"
+    "category": "academia",
+    "speaker": {
+      "prefix": "Assoc. Prof. Dr.",
+      "name": "Pham Nguyen Thanh Loan",
+      "title": "Head of IC Design & Embedded Systems Lab",
+      "organization": "HUST (Bach Khoa Hanoi)",
+      "avatar": "images/speakers/pham-nguyen-thanh-loan.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 21,
     "from": "16:30",
     "to": "16:55",
-    "duration": "00:25:00",
-    "description": "Presentation 7 (Connexus: Ms. Nguyen Loan)",
-    "notes": "Industry Startup - IC Design",
+    "description": "Presentation: Semiconductor Startup Innovation & Custom Silicon",
     "session": "afternoon",
-    "category": "industry"
+    "category": "industry",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Nguyen Loan",
+      "title": "Đang cập nhật",
+      "organization": "Connexus (Đang cập nhật)",
+      "avatar": ""
+    },
+    "sponsor": null
   },
   {
     "id": 22,
     "from": "16:55",
     "to": "17:35",
-    "duration": "00:40:00",
-    "description": "Panel Discussion",
-    "notes": "Sandeep Brarathi: President of Marvell DCG\nProg. (Ms.) Mai Thi Thanh Nguyen: Chairman of VNU-HCMC\nProf. Thuat Tran Nguyen",
+    "description": "Strategic Plenary Panel: Building Vietnam's National Semiconductor Value Chain",
     "session": "afternoon",
-    "category": "panel"
+    "category": "panel",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Sandeep Bharathi",
+      "title": "President, Data Center Group (DCG) - Panel Chair",
+      "organization": "Marvell Technology, Inc.",
+      "avatar": "images/speakers/sandeep-bharathi.jpg"
+    },
+    "sponsor": null
   },
   {
     "id": 23,
     "from": "17:35",
     "to": "17:55",
-    "duration": "00:20:00",
     "description": "Buffer",
-    "notes": "",
     "session": "afternoon",
-    "category": "other"
+    "category": "other",
+    "speaker": null,
+    "sponsor": null
   },
   {
     "id": 24,
     "from": "17:55",
     "to": "18:10",
-    "duration": "00:15:00",
-    "description": "Closing Speech (Sandeep Brarathi, Noam Mizrahi, QD)",
-    "notes": "",
+    "description": "Closing Strategic Remarks",
     "session": "afternoon",
-    "category": "keynote"
+    "category": "keynote",
+    "speaker": {
+      "prefix": "",
+      "name": "Ban Tổ chức / Summit Leadership",
+      "title": "Closing Strategic Remarks",
+      "organization": "Đang cập nhật",
+      "avatar": ""
+    },
+    "sponsor": null
   },
   {
     "id": 25,
     "from": "18:10",
     "to": "20:10",
-    "duration": "02:00:00",
-    "description": "Dinner (40-50 Distinguished Guests)",
-    "notes": "",
+    "description": "VIP Gala Dinner (Distinguished Delegates & Guests)",
     "session": "evening",
-    "category": "networking"
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
   }
 ]
