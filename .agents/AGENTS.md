@@ -18,9 +18,10 @@
 - Mọi thao tác sửa đổi, bổ sung trong phiên làm việc BẮT BUỘC chỉ được preview và kiểm tra trên **Localhost (`http://localhost:8080/` hoặc `http://localhost:3000/`)**.
 - Cấm mọi hành vi tự ý commit git hay deploy khi chưa được kiểm duyệt trực quan.
 - **CHỈ KHI NGƯỜI DÙNG BÁO "DONE"** (hoặc "xong", "báo done"), Lead Agent mới được phép chốt phiên bàn giao chính thức:
-  1. Kiểm tra trạng thái Git (`git status`) đảm bảo sạch sẽ.
-  2. Tạo Git commit chuẩn hóa Conventional Commits (`git add .`, `git commit`).
-  3. Đẩy mã nguồn lên GitHub repository (`git push origin main`). Không deploy hosting.
+  1. **Nâng version query string (`?v=YYYYMMDD_HHMM`)**: Bắt buộc cập nhật version cho `styles.css` và `app.js` trong `index.html`, `build_site.py`, `agenda.html`, `build_agenda.py` để ép xóa cache trình duyệt (Cache Busting).
+  2. Kiểm tra trạng thái Git (`git status`) đảm bảo sạch sẽ.
+  3. Tạo Git commit chuẩn hóa Conventional Commits (`git add .`, `git commit`).
+  4. Đẩy mã nguồn lên GitHub repository (`git push origin main`). Không deploy hosting.
 
 ### 2. CẤM TỰ SUY DIỄN TÍNH NĂNG RƯỜM RÀ (NO OVER-ENGINEERING UX)
 - Tuyệt đối không tự ý sinh thêm nút bấm thừa thãi, render hàng loạt ô nhập liệu cồng kềnh làm rối mắt người dùng.

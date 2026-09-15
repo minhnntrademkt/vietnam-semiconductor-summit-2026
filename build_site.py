@@ -281,7 +281,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20260914_1310">
+  <link rel="stylesheet" href="styles.css?v=20260915_1125">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -1599,7 +1599,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20260914_1310"></script>
+  <script src="app.js?v=20260915_1125"></script>
 </body>
 </html>
 '''
