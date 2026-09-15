@@ -210,13 +210,13 @@ const SPEAKER_BIOS = {
   },
   'nguyen-thi-thanh-mai': {
     name: 'Prof. Dr. Nguyen Thi Thanh Mai',
-    title: 'Vice President',
+    title: 'President',
     org: 'Vietnam National University, Ho Chi Minh City (VNU-HCM)',
     tag: 'ACADEMIA / ECOSYSTEM & TALENT',
     photo: 'images/speakers/nguyen-thi-thanh-mai.jpg',
     avatarText: 'NTM',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Vice President of VNU-HCM and eminent scholar. She leads VNU-HCM’s strategic semiconductor initiatives, spearheading university-industry partnerships with Marvell, Synopsys, and FPT to train 50,000 semiconductor and IC design engineers by 2030.',
+    bio: 'President of VNU-HCM and eminent scholar. She leads VNU-HCM’s strategic semiconductor initiatives, spearheading university-industry partnerships with Marvell, Synopsys, and FPT to train 50,000 semiconductor and IC design engineers by 2030.',
     sessions: [
       {
         time: '14:00 - 15:30',
