@@ -13,13 +13,68 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(base_dir, 'agenda.json'), 'r', encoding='utf-8') as f:
     agenda_data = json.load(f)
 
+def render_speaker_card(speaker_dict):
+    if not speaker_dict or not isinstance(speaker_dict, dict) or not speaker_dict.get('name'):
+        return ""
+    prefix = speaker_dict.get('prefix', '').strip()
+    name = speaker_dict.get('name', '').strip()
+    title = speaker_dict.get('title', '').strip()
+    org = speaker_dict.get('organization', '').strip()
+    avatar = speaker_dict.get('avatar', '').strip()
+
+    academic_tag = ""
+    display_name = name
+    if prefix.startswith("Assoc. Prof."):
+        academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>'
+        rem_prefix = prefix.replace("Assoc. Prof.", "").strip()
+        display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+    elif prefix.startswith("Prof."):
+        academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Prof.</span>'
+        rem_prefix = prefix.replace("Prof.", "").strip()
+        display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+    else:
+        display_name = f"{prefix} {name}".strip() if prefix else name
+
+    title_html = f'<div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">{title}</div>' if title else ''
+    org_html = f'<div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">{org}</div>' if org else ''
+
+    avatar_clean = avatar.split('?')[0] if avatar else ''
+    if avatar_clean and os.path.exists(os.path.join(base_dir, avatar_clean)):
+        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
+    else:
+        avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
+
+    return f'''
+    <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
+      {avatar_html}
+      <div class="flex flex-col min-w-0 flex-1 justify-center">
+        {academic_tag}
+        <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
+        {title_html}
+        {org_html}
+      </div>
+    </div>
+    '''
+
 agenda_cards_html = []
 for item in agenda_data:
     session = item.get('session', 'morning')
     category = item.get('category', 'other')
     tag_label = category.upper()
     
-    if category == 'keynote':
+    if category == 'opening':
+        tag_label = 'OPENING SPEECH'
+        tag_class = 'bg-blue-50 text-[#0072ce] border border-blue-200/80 font-bold'
+        spine_class = 'border-l-[5px] border-l-[#0072ce]'
+        icon_color = 'text-[#0072ce]'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#0072ce] animate-pulse"></span>'
+    elif category == 'closing':
+        tag_label = 'CLOSING CEREMONY'
+        tag_class = 'bg-indigo-50 text-indigo-800 border border-indigo-200/80 font-bold'
+        spine_class = 'border-l-[5px] border-l-indigo-600'
+        icon_color = 'text-indigo-600'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>'
+    elif category == 'keynote':
         tag_label = 'STRATEGIC KEYNOTE'
         tag_class = 'bg-blue-50 text-blue-700 border border-blue-200/80'
         spine_class = 'border-l-[5px] border-l-[#0072ce]'
@@ -56,50 +111,18 @@ for item in agenda_data:
         icon_color = 'text-slate-500'
         badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>'
 
-    # Speaker Module (Equal Sized & Structured Academic Rank)
-    speaker_html = ""
-    speaker = item.get('speaker')
-    if speaker and isinstance(speaker, dict) and speaker.get('name'):
-        prefix = speaker.get('prefix', '').strip()
-        name = speaker.get('name', '').strip()
-        title = speaker.get('title', '').strip()
-        org = speaker.get('organization', '').strip()
-        avatar = speaker.get('avatar', '').strip()
-
-        # Split academic rank if present (e.g. Assoc. Prof. or Prof.)
-        academic_tag = ""
-        display_name = name
-        if prefix.startswith("Assoc. Prof."):
-            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>'
-            rem_prefix = prefix.replace("Assoc. Prof.", "").strip()
-            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
-        elif prefix.startswith("Prof."):
-            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Prof.</span>'
-            rem_prefix = prefix.replace("Prof.", "").strip()
-            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
-        else:
-            display_name = f"{prefix} {name}".strip() if prefix else name
-
-        title_html = f'<div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">{title}</div>' if title else ''
-        # Organization name allows natural wrapping without losing letters
-        org_html = f'<div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">{org}</div>' if org else ''
-
-        if avatar and os.path.exists(os.path.join(base_dir, avatar)):
-            avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
-        else:
-            avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
-
-        speaker_html = f'''
-        <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
-          {avatar_html}
-          <div class="flex flex-col min-w-0 flex-1 justify-center">
-            {academic_tag}
-            <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
-            {title_html}
-            {org_html}
-          </div>
-        </div>
-        '''
+    # Speaker & Panelists Modules (All rendered as Equal Sized & Structured Speaker Cards)
+    speaker_cards_html = []
+    if item.get('speaker'):
+        s_card = render_speaker_card(item['speaker'])
+        if s_card:
+            speaker_cards_html.append(s_card)
+    if item.get('panelists') and isinstance(item['panelists'], list):
+        for p in item['panelists']:
+            p_card = render_speaker_card(p)
+            if p_card:
+                speaker_cards_html.append(p_card)
+    all_speakers_html = "\n".join(speaker_cards_html)
 
     # Sponsor / Co-Host Module (2-Column Layout, Same Row, Matching Height)
     sponsor_html = ""
@@ -109,7 +132,8 @@ for item in agenda_data:
         s_logo = sponsor.get('logo', '').strip()
 
         logo_img_html = ""
-        if s_logo and os.path.exists(os.path.join(base_dir, s_logo)):
+        s_logo_clean = s_logo.split('?')[0] if s_logo else ''
+        if s_logo_clean and os.path.exists(os.path.join(base_dir, s_logo_clean)):
             logo_img_html = f'<img src="{s_logo}" alt="{s_name}" class="h-6 max-h-7 w-auto object-contain shrink-0">'
         else:
             logo_img_html = f'<span class="text-xs font-black text-slate-800 tracking-wider uppercase">{s_name}</span>'
@@ -133,12 +157,12 @@ for item in agenda_data:
         </div>
         '''
 
-    # Combined Meta Row (Speaker & Co-Host on the same row)
+    # Combined Meta Row (All Speaker Cards & Co-Host on the same row)
     meta_row_html = ""
-    if speaker_html or sponsor_html:
+    if all_speakers_html or sponsor_html:
         meta_row_html = f'''
         <div class="mt-3 flex flex-wrap items-center gap-3">
-          {speaker_html}
+          {all_speakers_html}
           {sponsor_html}
         </div>
         '''
@@ -159,7 +183,7 @@ for item in agenda_data:
           </div>
         </div>
 
-        <!-- Right Column: Title + Combined Meta Row (Speaker & Co-Host Side-by-Side) -->
+        <!-- Right Column: Title + Combined Meta Row (All Speakers & Co-Host Side-by-Side) -->
         <div class="flex-1 min-w-0 flex flex-col justify-center">
           <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#0072ce] transition-colors">
             {item['description']}
@@ -286,7 +310,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20260922_0805">
+  <link rel="stylesheet" href="styles.css?v=20260922_0900">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -674,7 +698,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="mrvll-dark-card speaker-card cursor-pointer group p-5 sm:p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-[#0072ce] bg-[#101726] hover:border-blue-400/80 transition-all duration-300" data-speaker-id="le-quang-dam">
             <div>
               <div class="relative w-full aspect-square rounded-xl overflow-hidden border border-blue-500/40 mb-4 shadow-[0_0_25px_rgba(0,114,206,0.25)] group-hover:border-blue-400 transition-all bg-blue-950/80">
-                <img src="images/speakers/le-quang-dam.jpg?v=20260922_0805" alt="Dr. Le Quang Dam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/le-quang-dam.jpg?v=20260922_0900" alt="Dr. Le Quang Dam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-4xl font-bold text-[#00b5e2]">
                   QD
                 </div>
@@ -887,7 +911,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="speaker-card cursor-pointer group p-4 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="hoang-trang">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-3 group-hover:border-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/hoang-trang.jpg?v=20260922_0805" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/hoang-trang.jpg?v=20260922_0900" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-2xl font-bold text-emerald-400">HT</div>
                 <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
@@ -905,7 +929,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="speaker-card cursor-pointer group p-4 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="loan-nguyen">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-3 group-hover:border-blue-400 shadow-[0_0_15px_rgba(0,114,206,0.15)] transition-all bg-blue-950/80">
-                <img src="images/speakers/loan-nguyen.jpg?v=20260922_0805" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/loan-nguyen.jpg?v=20260922_0900" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-2xl font-bold text-[#00b5e2]">LN</div>
                 <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
@@ -933,6 +957,25 @@ html_content = f'''<!DOCTYPE html>
             </div>
             <div class="mt-3 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10.5px] text-slate-400 group-hover:text-emerald-400 font-semibold">
               <span>View Executive Bio</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- Dr. Nguyen Ky Phung -->
+          <div class="speaker-card cursor-pointer group p-4 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-ky-phung">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-slate-700/70 mb-3 group-hover:border-blue-400 shadow-[0_0_15px_rgba(0,114,206,0.15)] transition-all bg-[#0b1324] flex items-center justify-center">
+                <div class="w-full h-full flex items-center justify-center text-slate-500 group-hover:text-slate-400 transition-colors">
+                  <svg class="w-14 h-14 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-2 min-h-[38px] flex items-center">Dr. Nguyen Ky Phung</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-1 truncate">Saigon Hi-Tech Park (SHTP)</span>
+              <p class="text-[10.5px] text-slate-400 mt-1 line-clamp-2 min-h-[30px] leading-snug">Vice Chairman</p>
+            </div>
+            <div class="mt-3 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10.5px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>Distinguished Panelist</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -974,6 +1017,21 @@ html_content = f'''<!DOCTYPE html>
               <div>
                 <span class="text-slate-400 block uppercase font-bold">Key Focus</span>
                 <span class="text-emerald-400 font-semibold">National Strategy: 50,000 Engineers & IP Ecosystem</span>
+              </div>
+            </div>
+
+            <!-- Confirmed Panelists List -->
+            <div class="mt-6 pt-4 border-t border-slate-800/60">
+              <span class="text-slate-400 block uppercase font-bold text-[11px] mb-2.5">Confirmed Panelists:</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
+                  <strong>Prof. Dr. Nguyen Thi Thanh Mai</strong> <span class="text-slate-400 text-[11px]">(President, VNU-HCM)</span>
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
+                  <strong>Dr. Nguyen Ky Phung</strong> <span class="text-slate-400 text-[11px]">(Vice Chairman, SHTP)</span>
+                </span>
               </div>
             </div>
           </div>
@@ -1622,7 +1680,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20260922_0805"></script>
+  <script src="app.js?v=20260922_0900"></script>
 </body>
 </html>
 '''

@@ -15,13 +15,68 @@ out_path = os.path.join(base_dir, "agenda.html")
 with open(json_path, 'r', encoding='utf-8') as f:
     agenda_data = json.load(f)
 
+def render_speaker_card(speaker_dict):
+    if not speaker_dict or not isinstance(speaker_dict, dict) or not speaker_dict.get('name'):
+        return ""
+    prefix = speaker_dict.get('prefix', '').strip()
+    name = speaker_dict.get('name', '').strip()
+    title = speaker_dict.get('title', '').strip()
+    org = speaker_dict.get('organization', '').strip()
+    avatar = speaker_dict.get('avatar', '').strip()
+
+    academic_tag = ""
+    display_name = name
+    if prefix.startswith("Assoc. Prof."):
+        academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>'
+        rem_prefix = prefix.replace("Assoc. Prof.", "").strip()
+        display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+    elif prefix.startswith("Prof."):
+        academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Prof.</span>'
+        rem_prefix = prefix.replace("Prof.", "").strip()
+        display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
+    else:
+        display_name = f"{prefix} {name}".strip() if prefix else name
+
+    title_html = f'<div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">{title}</div>' if title else ''
+    org_html = f'<div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">{org}</div>' if org else ''
+
+    avatar_clean = avatar.split('?')[0] if avatar else ''
+    if avatar_clean and os.path.exists(os.path.join(base_dir, avatar_clean)):
+        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
+    else:
+        avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
+
+    return f'''
+    <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
+      {avatar_html}
+      <div class="flex flex-col min-w-0 flex-1 justify-center">
+        {academic_tag}
+        <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
+        {title_html}
+        {org_html}
+      </div>
+    </div>
+    '''
+
 agenda_cards_html = []
 for item in agenda_data:
     session = item.get('session', 'morning')
     category = item.get('category', 'other')
     tag_label = category.upper()
     
-    if category == 'keynote':
+    if category == 'opening':
+        tag_label = 'OPENING SPEECH'
+        tag_class = 'bg-blue-50 text-[#0072ce] border border-blue-200/80 font-bold'
+        spine_class = 'border-l-[5px] border-l-[#0072ce]'
+        icon_color = 'text-[#0072ce]'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#0072ce] animate-pulse"></span>'
+    elif category == 'closing':
+        tag_label = 'CLOSING CEREMONY'
+        tag_class = 'bg-indigo-50 text-indigo-800 border border-indigo-200/80 font-bold'
+        spine_class = 'border-l-[5px] border-l-indigo-600'
+        icon_color = 'text-indigo-600'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>'
+    elif category == 'keynote':
         tag_label = 'STRATEGIC KEYNOTE'
         tag_class = 'bg-blue-50 text-blue-700 border border-blue-200/80'
         spine_class = 'border-l-[5px] border-l-[#0072ce]'
@@ -58,50 +113,18 @@ for item in agenda_data:
         icon_color = 'text-slate-500'
         badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>'
 
-    # Speaker Module (Equal Sized & Structured Academic Rank)
-    speaker_html = ""
-    speaker = item.get('speaker')
-    if speaker and isinstance(speaker, dict) and speaker.get('name'):
-        prefix = speaker.get('prefix', '').strip()
-        name = speaker.get('name', '').strip()
-        title = speaker.get('title', '').strip()
-        org = speaker.get('organization', '').strip()
-        avatar = speaker.get('avatar', '').strip()
-
-        # Split academic rank if present (e.g. Assoc. Prof. or Prof.)
-        academic_tag = ""
-        display_name = name
-        if prefix.startswith("Assoc. Prof."):
-            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>'
-            rem_prefix = prefix.replace("Assoc. Prof.", "").strip()
-            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
-        elif prefix.startswith("Prof."):
-            academic_tag = '<span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Prof.</span>'
-            rem_prefix = prefix.replace("Prof.", "").strip()
-            display_name = f"{rem_prefix} {name}".strip() if rem_prefix else name
-        else:
-            display_name = f"{prefix} {name}".strip() if prefix else name
-
-        title_html = f'<div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">{title}</div>' if title else ''
-        # Organization name allows natural wrapping without losing letters
-        org_html = f'<div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">{org}</div>' if org else ''
-
-        if avatar and os.path.exists(os.path.join(base_dir, avatar)):
-            avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
-        else:
-            avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
-
-        speaker_html = f'''
-        <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
-          {avatar_html}
-          <div class="flex flex-col min-w-0 flex-1 justify-center">
-            {academic_tag}
-            <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
-            {title_html}
-            {org_html}
-          </div>
-        </div>
-        '''
+    # Speaker & Panelists Modules (All rendered as Equal Sized & Structured Speaker Cards)
+    speaker_cards_html = []
+    if item.get('speaker'):
+        s_card = render_speaker_card(item['speaker'])
+        if s_card:
+            speaker_cards_html.append(s_card)
+    if item.get('panelists') and isinstance(item['panelists'], list):
+        for p in item['panelists']:
+            p_card = render_speaker_card(p)
+            if p_card:
+                speaker_cards_html.append(p_card)
+    all_speakers_html = "\n".join(speaker_cards_html)
 
     # Sponsor / Co-Host Module (2-Column Layout, Same Row, Matching Height)
     sponsor_html = ""
@@ -111,7 +134,8 @@ for item in agenda_data:
         s_logo = sponsor.get('logo', '').strip()
 
         logo_img_html = ""
-        if s_logo and os.path.exists(os.path.join(base_dir, s_logo)):
+        s_logo_clean = s_logo.split('?')[0] if s_logo else ''
+        if s_logo_clean and os.path.exists(os.path.join(base_dir, s_logo_clean)):
             logo_img_html = f'<img src="{s_logo}" alt="{s_name}" class="h-6 max-h-7 w-auto object-contain shrink-0">'
         else:
             logo_img_html = f'<span class="text-xs font-black text-slate-800 tracking-wider uppercase">{s_name}</span>'
@@ -135,12 +159,12 @@ for item in agenda_data:
         </div>
         '''
 
-    # Combined Meta Row (Speaker & Co-Host on the same row)
+    # Combined Meta Row (All Speaker Cards & Co-Host on the same row)
     meta_row_html = ""
-    if speaker_html or sponsor_html:
+    if all_speakers_html or sponsor_html:
         meta_row_html = f'''
         <div class="mt-3 flex flex-wrap items-center gap-3">
-          {speaker_html}
+          {all_speakers_html}
           {sponsor_html}
         </div>
         '''
@@ -161,7 +185,7 @@ for item in agenda_data:
           </div>
         </div>
 
-        <!-- Right Column: Title + Combined Meta Row (Speaker & Co-Host Side-by-Side) -->
+        <!-- Right Column: Title + Combined Meta Row (All Speakers & Co-Host Side-by-Side) -->
         <div class="flex-1 min-w-0 flex flex-col justify-center">
           <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#0072ce] transition-colors">
             {item['description']}
@@ -255,7 +279,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260922_0805">
+  <link rel="stylesheet" href="styles.css?v=20260922_0900">
 
   <style>
     body {{
@@ -476,7 +500,7 @@ html = f'''<!DOCTYPE html>
           const cardText = card.innerText.toLowerCase();
 
           const matchesSession = (currentSession === 'all' || cardSession === currentSession);
-          const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+          const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory || (currentCategory === 'keynote' && (cardCategory === 'opening' || cardCategory === 'closing')));
           const matchesSearch = (!searchQuery || cardText.includes(searchQuery));
 
           if (matchesSession && matchesCategory && matchesSearch) {{

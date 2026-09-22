@@ -15,14 +15,23 @@
     "to": "09:10",
     "description": "Opening Remarks",
     "session": "morning",
-    "category": "keynote",
+    "category": "opening",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Le Quang Dam & Mr. Noam Mizrahi",
-      "title": "General Director (Marvell VN) & EVP, CTO (Marvell)",
-      "organization": "Marvell Technology",
-      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0805"
+      "name": "Le Quang Dam (QD)",
+      "title": "General Director",
+      "organization": "Marvell Technology Vietnam",
+      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
+    "panelists": [
+      {
+        "prefix": "Mr.",
+        "name": "Noam Mizrahi",
+        "title": "EVP & Corporate CTO",
+        "organization": "Marvell Technology, Inc.",
+        "avatar": "images/speakers/noam-mizrahi.jpg"
+      }
+    ],
     "sponsor": null
   },
   {
@@ -31,7 +40,7 @@
     "to": "09:20",
     "description": "Strategy for HCMC High-Tech & Silicon Ecosystem",
     "session": "morning",
-    "category": "keynote",
+    "category": "opening",
     "speaker": {
       "prefix": "Mr.",
       "name": "Nguyen Van Duoc",
@@ -47,7 +56,7 @@
     "to": "09:30",
     "description": "U.S. - Vietnam Comprehensive Strategic Partnership",
     "session": "morning",
-    "category": "keynote",
+    "category": "opening",
     "speaker": {
       "prefix": "Ms.",
       "name": "Melissa A. Brown",
@@ -61,7 +70,7 @@
     "id": 5,
     "from": "09:30",
     "to": "10:10",
-    "description": "Keynote 1: Marvell Semiconductor Leadership & Vietnam Vision",
+    "description": "Marvell Semiconductor Leadership & Vietnam Vision",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -69,7 +78,7 @@
       "name": "Le Quang Dam (QD)",
       "title": "General Director",
       "organization": "Marvell Technology Vietnam",
-      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0805"
+      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
     "sponsor": null
   },
@@ -77,7 +86,7 @@
     "id": 6,
     "from": "10:10",
     "to": "10:35",
-    "description": "Presentation 1: Next-Generation Arm Server Silicon & Cloud Workloads",
+    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -96,7 +105,7 @@
     "id": 7,
     "from": "10:35",
     "to": "11:00",
-    "description": "Presentation 2: Analog IC Design & Mixed-Signal IC Research",
+    "description": "Analog IC Design & Mixed-Signal IC Research",
     "session": "morning",
     "category": "academia",
     "speaker": {
@@ -112,7 +121,7 @@
     "id": 8,
     "from": "11:00",
     "to": "11:30",
-    "description": "Coffee Break & Networking",
+    "description": "Coffee Break",
     "session": "morning",
     "category": "networking",
     "speaker": null,
@@ -122,7 +131,7 @@
     "id": 9,
     "from": "11:30",
     "to": "11:55",
-    "description": "Presentation 3: IC Fabrication & ATP Engineering in Global Supply Chain",
+    "description": "IC Fabrication & ATP Engineering in Global Supply Chain",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -141,7 +150,7 @@
     "id": 10,
     "from": "11:55",
     "to": "12:20",
-    "description": "Presentation 4: Next-Gen Mobile Connectivity Silicon & Edge AI",
+    "description": "Next-Gen Mobile Connectivity Silicon & Edge AI",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -170,7 +179,7 @@
     "id": 12,
     "from": "13:50",
     "to": "14:30",
-    "description": "Keynote 2: From Assembly to Advanced packaging Integration: Strategic Ascent in the Global Semiconductor Value Chain",
+    "description": "From Assembly to Advanced Packaging Integration: Strategic Ascent in the Global Semiconductor Value Chain",
     "session": "afternoon",
     "category": "keynote",
     "speaker": {
@@ -186,7 +195,7 @@
     "id": 13,
     "from": "14:30",
     "to": "14:55",
-    "description": "Presentation 5: Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles",
+    "description": "Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
@@ -205,7 +214,7 @@
     "id": 14,
     "from": "14:55",
     "to": "15:20",
-    "description": "Presentation 6: Toward Quantum–AI-Driven IC Design: Research at HCMUT, VNU-HCM",
+    "description": "Toward Quantum–AI-Driven IC Design: Research at HCMUT, VNU-HCM",
     "session": "afternoon",
     "category": "academia",
     "speaker": {
@@ -213,7 +222,7 @@
       "name": "Trang Hoang, Ph.D.",
       "title": "Head of Examination & QA Office",
       "organization": "HCMUT (Bach Khoa HCMC)",
-      "avatar": "images/speakers/hoang-trang.jpg?v=20260922_0805"
+      "avatar": "images/speakers/hoang-trang.jpg?v=20260922_0900"
     },
     "sponsor": null
   },
@@ -221,7 +230,7 @@
     "id": 15,
     "from": "15:20",
     "to": "15:45",
-    "description": "Presentation 7: Vietnam's Semiconductor Moment: From Talent to Ownership",
+    "description": "Vietnam's Semiconductor Moment: From Talent to Ownership",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
@@ -229,7 +238,7 @@
       "name": "Loan Nguyen",
       "title": "Co-Founder & CEO",
       "organization": "Connexus",
-      "avatar": "images/speakers/loan-nguyen.jpg?v=20260922_0805"
+      "avatar": "images/speakers/loan-nguyen.jpg?v=20260922_0900"
     },
     "sponsor": null
   },
@@ -237,7 +246,7 @@
     "id": 16,
     "from": "15:45",
     "to": "16:15",
-    "description": "Coffee Break & Networking",
+    "description": "Coffee Break",
     "session": "afternoon",
     "category": "networking",
     "speaker": null,
@@ -252,27 +261,52 @@
     "category": "panel",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Noam Mizrahi (Panel Host)",
-      "title": "EVP & Corporate Chief Technology Officer (CTO)",
+      "name": "Noam Mizrahi",
+      "title": "EVP & Corporate CTO (Panel Host)",
       "organization": "Marvell Technology, Inc.",
       "avatar": "images/speakers/noam-mizrahi.jpg"
     },
+    "panelists": [
+      {
+        "prefix": "Prof. Dr.",
+        "name": "Nguyen Thi Thanh Mai",
+        "title": "President (Distinguished Panelist)",
+        "organization": "VNU-HCM",
+        "avatar": "images/speakers/nguyen-thi-thanh-mai.jpg"
+      },
+      {
+        "prefix": "Dr.",
+        "name": "Nguyen Ky Phung",
+        "title": "Vice Chairman (Distinguished Panelist)",
+        "organization": "Saigon Hi-Tech Park (SHTP)",
+        "avatar": ""
+      }
+    ],
     "sponsor": null
   },
   {
     "id": 18,
     "from": "16:55",
     "to": "17:05",
-    "description": "Closing Remarks",
+    "description": "Closing Strategic Remarks",
     "session": "afternoon",
-    "category": "keynote",
+    "category": "closing",
     "speaker": {
-      "prefix": "",
-      "name": "Mr. Noam Mizrahi & Dr. Le Quang Dam",
-      "title": "Summit Leadership & Closing Remarks",
-      "organization": "Marvell Technology",
-      "avatar": "images/speakers/noam-mizrahi.jpg"
+      "prefix": "Dr.",
+      "name": "Le Quang Dam (QD)",
+      "title": "General Director",
+      "organization": "Marvell Technology Vietnam",
+      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
+    "panelists": [
+      {
+        "prefix": "Mr.",
+        "name": "Noam Mizrahi",
+        "title": "EVP & Corporate CTO",
+        "organization": "Marvell Technology, Inc.",
+        "avatar": "images/speakers/noam-mizrahi.jpg"
+      }
+    ],
     "sponsor": null
   },
   {

@@ -27,7 +27,7 @@ const SPEAKER_BIOS = {
     title: 'General Director',
     org: 'Marvell Technology Vietnam Co., Ltd.',
     tag: 'STRATEGIC KEYNOTE 1 / HOST LEADERSHIP',
-    photo: 'images/speakers/le-quang-dam.jpg?v=20260922_0805',
+    photo: 'images/speakers/le-quang-dam.jpg?v=20260922_0900',
     avatarText: 'QD',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Quang-Dam (QD) Le is the General Director of Marvell Technology Vietnam, bringing over three decades of engineering leadership, technical depth, and global vision to the semiconductor industry. Since joining Marvell in 2011, QD has held key executive roles—including Technical Director, Associate Vice President, and Vice President—before taking on his current position leading the company’s operations and strategic growth in Vietnam.\n\nQD began his career as an algorithm designer specializing in Digital Signal Processing (DSP) IPs at Miranda Technologies and Gennum Corporation. He later joined ATI Technologies (acquired by AMD) as Senior Manager, directing multi-regional DSP engineering teams across Canada, India, China, and Germany. Prior to Marvell, he served as a Senior Principal Scientist at Broadcom. An active contributor to the field, QD holds several worldwide patents and has authored numerous technical papers.\n\nQD holds a Bachelor of Science from Ho Chi Minh City University of Science (HCMUS), followed by a Master’s in Physics and a Doctorate in Signal Processing with a focus on Artificial Intelligence from Canada. Grounded in his technical foundation, QD remains deeply passionate about advancing system architecture, signal processing, and AI technologies.',
@@ -36,19 +36,19 @@ const SPEAKER_BIOS = {
         time: '09:00 - 09:10',
         title: 'Opening Remarks (with Mr. Noam Mizrahi)',
         room: 'Plenary Hall',
-        category: 'Ceremony'
+        category: 'Opening Speech'
       },
       {
         time: '09:30 - 10:10',
-        title: 'Keynote 1: Marvell Semiconductor Leadership & Vietnam Vision',
+        title: 'Marvell Semiconductor Leadership & Vietnam Vision',
         room: 'Plenary Hall',
         category: 'Strategic Keynote'
       },
       {
         time: '16:55 - 17:05',
-        title: 'Closing Remarks (with Mr. Noam Mizrahi)',
+        title: 'Closing Strategic Remarks (with Mr. Noam Mizrahi)',
         room: 'Plenary Hall',
-        category: 'Ceremony'
+        category: 'Closing Ceremony'
       }
     ]
   },
@@ -76,9 +76,9 @@ const SPEAKER_BIOS = {
       },
       {
         time: '16:55 - 17:05',
-        title: 'Closing Remarks (with Dr. Le Quang Dam)',
+        title: 'Closing Strategic Remarks (with Dr. Le Quang Dam)',
         room: 'Plenary Hall',
-        category: 'Ceremony'
+        category: 'Closing Ceremony'
       }
     ]
   },
@@ -130,7 +130,7 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '13:50 - 14:30',
-        title: 'Keynote 2: From Assembly to Advanced packaging Integration: Strategic Ascent in the Global Semiconductor Value Chain',
+        title: 'From Assembly to Advanced Packaging Integration: Strategic Ascent in the Global Semiconductor Value Chain',
         room: 'Plenary Hall',
         category: 'Strategic Keynote'
       }
@@ -149,7 +149,7 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '14:30 - 14:55',
-        title: 'Presentation 5: Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles',
+        title: 'Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
@@ -161,14 +161,14 @@ const SPEAKER_BIOS = {
     title: 'Head of Examination & QA Office, Senior IC Design Faculty',
     org: 'Ho Chi Minh City University of Technology (HCMUT), VNU-HCM',
     tag: 'ACADEMIA / QUANTUM & AI IC DESIGN',
-    photo: 'images/speakers/hoang-trang.jpg?v=20260922_0805',
+    photo: 'images/speakers/hoang-trang.jpg?v=20260922_0900',
     avatarText: 'TH',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
     bio: 'Trang Hoang is an Associate Professor and Head of the Examination and Quality Assurance Office at Ho Chi Minh City University of Technology (HCMUT), VNU-HCM. He received his Ph.D. in Microelectronics from Université Joseph Fourier and CEA-LETI, France. Working on AI and quantum computing for IC design, he has led ten research projects (three national-level), published over 110 papers, edited 2 IEEE Press–Wiley books, 8 textbooks, and obtained 2 U.S. patents and 4 Vietnamese patents. He chaired the development of HCMUT\'s IC design programs. An IEEE Senior Member and Executive Committee member of the Ho Chi Minh City Semiconductor Industry Association (HSIA), he received the 2025 Hitachi Global Foundation Asia Innovation Award and VNU-HCM Outstanding Publication Awards (2024, 2025).',
     sessions: [
       {
         time: '14:55 - 15:20',
-        title: 'Presentation 6: Toward Quantum–AI-Driven IC Design: Research at HCMUT, VNU-HCM',
+        title: 'Toward Quantum–AI-Driven IC Design: Research at HCMUT, VNU-HCM',
         room: 'Plenary Hall',
         category: 'Academia & Research'
       }
@@ -180,14 +180,14 @@ const SPEAKER_BIOS = {
     title: 'Co-Founder & Chief Executive Officer (CEO)',
     org: 'Connexus',
     tag: 'INDUSTRY STARTUP / SILICON OWNERSHIP',
-    photo: 'images/speakers/loan-nguyen.jpg?v=20260922_0805',
+    photo: 'images/speakers/loan-nguyen.jpg?v=20260922_0900',
     avatarText: 'LN',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Loan Nguyen holds a Master’s in Economics from ESCP Business School, Paris. With more than 18 years of executive experience, she has built her career at the intersection of corporate governance, growth strategy, digital transformation, and technology-driven business management, holding C-suite and leadership roles at Bamboo Capital Group, Philip Morris International, and The HEINEKEN Company.\n\nAs Co-Founder & CEO of Connexus, she channels cross-industry executive experience to drive innovation, operational excellence, and growth in the semiconductor and AI industries. She leads Connexus’s mission to turn Vietnamese engineering talent into globally relevant, owned technology, from AI accelerator chips to AI-powered automation platforms for SoC design.',
     sessions: [
       {
         time: '15:20 - 15:45',
-        title: 'Presentation 7: Vietnam\'s Semiconductor Moment: From Talent to Ownership',
+        title: 'Vietnam\'s Semiconductor Moment: From Talent to Ownership',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
@@ -202,12 +202,12 @@ const SPEAKER_BIOS = {
     photo: '',
     avatarText: '',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'General Factory Director (Engineering & Operation) at Intel Products Vietnam. (Detailed profile and presentation abstract to be updated upon official submission from the presenter).',
+    bio: '',
     sessions: [
       {
-        time: '10:40 - 11:20',
-        title: 'Presentation 3 (Intel Vietnam: Mr. Nguyen Quang Khanh)',
-        room: 'Grand Ballroom',
+        time: '11:30 - 11:55',
+        title: 'IC Fabrication & ATP Engineering in Global Supply Chain',
+        room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
     ]
@@ -224,7 +224,7 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '10:10 - 10:35',
-        title: 'Presentation 1: Next-Generation Arm Server Silicon & Cloud Workloads',
+        title: 'Next-Generation Arm Server Silicon & Cloud Workloads',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
@@ -242,7 +242,7 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '10:35 - 11:00',
-        title: 'Presentation 2: Analog IC Design & Mixed-Signal IC Research',
+        title: 'Analog IC Design & Mixed-Signal IC Research',
         room: 'Plenary Hall',
         category: 'Academia & Research'
       }
@@ -260,7 +260,7 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '11:55 - 12:20',
-        title: 'Presentation 4: Next-Gen Mobile Connectivity Silicon & Edge AI',
+        title: 'Next-Gen Mobile Connectivity Silicon & Edge AI',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
@@ -283,6 +283,24 @@ const SPEAKER_BIOS = {
         category: 'High-Level Panel'
       }
     ]
+  },
+  'nguyen-ky-phung': {
+    name: 'Dr. Nguyen Ky Phung',
+    title: 'Vice Chairman',
+    org: 'Saigon Hi-Tech Park Authority (SHTP)',
+    tag: 'DISTINGUISHED PANELIST / SHTP',
+    photo: '',
+    avatarText: '',
+    colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
+    bio: '',
+    sessions: [
+      {
+        time: '16:15 - 16:55',
+        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain',
+        room: 'Plenary Hall',
+        category: 'High-Level Panel'
+      }
+    ]
   }
 };
 
@@ -297,6 +315,7 @@ SPEAKER_BIOS['nguyen-hoang-trang'] = SPEAKER_BIOS['hoang-trang'];
 SPEAKER_BIOS['nguyen-loan'] = SPEAKER_BIOS['loan-nguyen'];
 SPEAKER_BIOS['pham-loan'] = SPEAKER_BIOS['loan-nguyen'];
 SPEAKER_BIOS['mai-thi-thanh-nguyen'] = SPEAKER_BIOS['nguyen-thi-thanh-mai'];
+SPEAKER_BIOS['ky-phung'] = SPEAKER_BIOS['nguyen-ky-phung'];
 
 // ==========================================================================
 // 2. COUNTDOWN TIMER TO NOV 23, 2026
@@ -355,7 +374,7 @@ function initAgendaTabs() {
       const cardCategory = card.getAttribute('data-category');
 
       const sessionMatch = (currentSession === 'all') || (cardSession === currentSession);
-      const categoryMatch = (currentCategory === 'all') || (cardCategory === currentCategory);
+      const categoryMatch = (currentCategory === 'all') || (cardCategory === currentCategory) || (currentCategory === 'keynote' && (cardCategory === 'opening' || cardCategory === 'closing'));
 
       if (sessionMatch && categoryMatch) {
         card.style.display = '';
