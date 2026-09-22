@@ -180,18 +180,18 @@ html = f'''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026</title>
+  <title>Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026</title>
   
   <!-- Canonical & Standard SEO Meta Tags -->
   <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
-  <meta name="title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta name="thumbnail" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Schema.org for Google & Zalo -->
-  <meta itemprop="name" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
-  <meta itemprop="description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta itemprop="name" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
+  <meta itemprop="description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta itemprop="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Open Graph / Facebook / LinkedIn / Zalo -->
@@ -199,10 +199,10 @@ html = f'''<!DOCTYPE html>
   <meta property="og:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
   <meta property="og:site_name" content="Vietnam Semiconductor Summit 2026">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="og:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
-  <meta property="og:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
-  <meta name="og:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta property="og:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="og:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
+  <meta property="og:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="og:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta property="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta property="og:image:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta property="og:image:secure_url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
@@ -215,8 +215,8 @@ html = f'''<!DOCTYPE html>
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Official Summit Timetable (24 Sessions) | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="twitter:description" content="Dedicated 24-session timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="twitter:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
+  <meta name="twitter:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="twitter:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   
   <!-- Tailwind CSS CDN -->
@@ -250,7 +250,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260915_1125">
+  <link rel="stylesheet" href="styles.css?v=20260922_0805">
 
   <style>
     body {{
@@ -311,7 +311,7 @@ html = f'''<!DOCTYPE html>
         MARVELL TECHNOLOGY PRESENTS • OFFICIAL TIMETABLE
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-        Comprehensive 24-Session Agenda
+        Official Summit Agenda & Timetable
       </h1>
       <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
         Monday, November 23, 2026 • Ho Chi Minh City, Vietnam. Full strategic congress timetable uniting Government leadership, industry pioneers, and academic research luminaries.
@@ -329,7 +329,7 @@ html = f'''<!DOCTYPE html>
       </div>
 
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> 24 Work Sessions</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> Technical & Strategic Tracks</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 – 20:10 ICT</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Grand Ballroom & Tech Halls</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 100% Free RSVP</span>
@@ -344,9 +344,9 @@ html = f'''<!DOCTYPE html>
     
     <!-- Session Switcher Tabs -->
     <div class="flex flex-wrap items-center justify-center gap-2 mb-6 bg-slate-200/70 p-1.5 rounded-xl max-w-xl mx-auto border border-slate-300/60">
-      <button class="agenda-tab-btn active px-4 py-2 text-xs font-bold rounded-lg bg-slate-900 text-white shadow-sm transition-all" data-session="all">All Sessions (24)</button>
-      <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="morning">Morning Sessions (12)</button>
-      <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="afternoon">Afternoon Technical (12)</button>
+      <button class="agenda-tab-btn active px-4 py-2 text-xs font-bold rounded-lg bg-slate-900 text-white shadow-sm transition-all" data-session="all">All Sessions</button>
+      <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="morning">Morning Sessions</button>
+      <button class="agenda-tab-btn px-4 py-2 text-xs font-bold rounded-lg text-slate-600 hover:text-slate-900 transition-all" data-session="afternoon">Afternoon Sessions</button>
     </div>
 
     <!-- Category Filter Pills -->
@@ -380,14 +380,14 @@ html = f'''<!DOCTYPE html>
     <!-- Active Filter Counter -->
     <div class="flex items-center justify-between text-xs text-slate-500 mb-4 pb-2 border-b border-slate-200">
       <div>
-        Showing <span id="visible-sessions-count" class="font-bold text-slate-900">24</span> of 24 sessions
+        Showing <span id="visible-sessions-count" class="font-bold text-slate-900">{len(agenda_data)}</span> sessions
       </div>
       <div class="text-[11px] text-slate-400">
         Presentation & Speaker Focus
       </div>
     </div>
 
-    <!-- 24 Sessions Timetable List -->
+    <!-- Official Timetable Sessions List -->
     <div id="agenda-cards-container" class="space-y-3.5">
 {cards_block}
     </div>
@@ -418,9 +418,29 @@ html = f'''<!DOCTYPE html>
           <a href="index.html#register" class="hover:text-slate-900 font-bold text-[#0072ce] transition-colors">RSVP Pass</a>
         </div>
       </div>
+
+      <!-- Marvell Vietnam Footprint Grid -->
+      <div class="py-6 grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-slate-200/80 text-[11px] text-slate-600">
+        <div>
+          <span class="font-bold text-slate-900 uppercase block mb-1">Headquarters (ET6 Office)</span>
+          <p class="font-semibold text-slate-800">Etown6 Tower</p>
+          <p class="text-slate-500">364 Cong Hoa, Tan Binh Ward, Ho Chi Minh City</p>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900 uppercase block mb-1">R&D Center (UOA Office)</span>
+          <p class="font-semibold text-slate-800">UOA Tower</p>
+          <p class="text-slate-500">6 Tan Trao, Tan My Ward, District 7, Ho Chi Minh City</p>
+        </div>
+        <div>
+          <span class="font-bold text-slate-900 uppercase block mb-1">R&D Center (SP2 Da Nang)</span>
+          <p class="font-semibold text-slate-800">Software Park 2 (SP2)</p>
+          <p class="text-slate-500">Thuan Phuoc Ward, Hai Chau District, Da Nang City</p>
+        </div>
+      </div>
+
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
         <span>&copy; 2026 Marvell Technology, Inc. All rights reserved.</span>
-        <span>Dedicated Staging Timetable Environment &bull; Version 2026.09.14</span>
+        <span>The 1st Vietnam Semiconductor Summit &bull; Monday, November 23, 2026</span>
       </div>
     </div>
   </footer>

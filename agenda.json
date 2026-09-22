@@ -1,8 +1,8 @@
 [
   {
-    "id": 2,
+    "id": 1,
     "from": "08:00",
-    "to": "08:45",
+    "to": "09:00",
     "description": "Welcome & Breakfast",
     "session": "morning",
     "category": "networking",
@@ -10,35 +10,25 @@
     "sponsor": null
   },
   {
-    "id": 3,
-    "from": "08:45",
-    "to": "08:55",
-    "description": "Opening Performance",
-    "session": "morning",
-    "category": "other",
-    "speaker": null,
-    "sponsor": null
-  },
-  {
-    "id": 4,
-    "from": "08:55",
-    "to": "09:00",
-    "description": "Marvell Semiconductor Leadership & Vietnam Vision",
+    "id": 2,
+    "from": "09:00",
+    "to": "09:10",
+    "description": "Opening Remarks",
     "session": "morning",
     "category": "keynote",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Le Quang Dam",
-      "title": "General Manager",
-      "organization": "Marvell Technology Vietnam",
+      "name": "Le Quang Dam & Mr. Noam Mizrahi",
+      "title": "General Director (Marvell VN) & EVP, CTO (Marvell)",
+      "organization": "Marvell Technology",
       "avatar": "images/speakers/le-quang-dam.jpg"
     },
     "sponsor": null
   },
   {
-    "id": 5,
-    "from": "09:00",
-    "to": "09:10",
+    "id": 3,
+    "from": "09:10",
+    "to": "09:20",
     "description": "Strategy for HCMC High-Tech & Silicon Ecosystem",
     "session": "morning",
     "category": "keynote",
@@ -52,9 +42,9 @@
     "sponsor": null
   },
   {
-    "id": 6,
-    "from": "09:10",
-    "to": "09:20",
+    "id": 4,
+    "from": "09:20",
+    "to": "09:30",
     "description": "U.S. - Vietnam Comprehensive Strategic Partnership",
     "session": "morning",
     "category": "keynote",
@@ -68,92 +58,31 @@
     "sponsor": null
   },
   {
-    "id": 7,
-    "from": "09:20",
-    "to": "10:00",
-    "description": "IC Design - Advanced Silicon Architecture Trends",
+    "id": 5,
+    "from": "09:30",
+    "to": "10:10",
+    "description": "Keynote 1: Marvell Semiconductor Leadership & Vietnam Vision",
     "session": "morning",
     "category": "keynote",
     "speaker": {
-      "prefix": "Mr.",
-      "name": "Noam Mizrahi",
-      "title": "Executive VP & Corporate Chief Technology Officer (CTO)",
-      "organization": "Marvell Technology, Inc.",
-      "avatar": "images/speakers/noam-mizrahi.jpg"
+      "prefix": "Dr.",
+      "name": "Le Quang Dam (QD)",
+      "title": "General Director",
+      "organization": "Marvell Technology Vietnam",
+      "avatar": "images/speakers/le-quang-dam.jpg"
     },
     "sponsor": null
   },
   {
-    "id": 8,
-    "from": "10:00",
-    "to": "10:40",
-    "description": "Advanced Packaging & Co-Packaged Optics (CPO)",
-    "session": "morning",
-    "category": "keynote",
-    "speaker": {
-      "prefix": "Ms.",
-      "name": "Bich-Yen Nguyen",
-      "title": "Senior Fellow (IEEE Fellow)",
-      "organization": "Soitec / VSAP-LAB",
-      "avatar": "images/speakers/bich-yen-nguyen.jpg"
-    },
-    "sponsor": null
-  },
-  {
-    "id": 9,
-    "from": "10:40",
-    "to": "11:10",
-    "description": "Coffee Break",
-    "session": "morning",
-    "category": "networking",
-    "speaker": null,
-    "sponsor": null
-  },
-  {
-    "id": 10,
-    "from": "11:10",
-    "to": "11:35",
-    "description": "IC Fabrication & ATP Engineering in Global Supply Chain",
-    "session": "morning",
-    "category": "industry",
-    "speaker": {
-      "prefix": "Ms.",
-      "name": "Hien Dao",
-      "title": "Director of Assembly & Test Engineering",
-      "organization": "Intel Corporation",
-      "avatar": "images/speakers/hien-dao.jpg"
-    },
-    "sponsor": {
-      "name": "Intel Corporation",
-      "logo": "images/partners/intel.svg"
-    }
-  },
-  {
-    "id": 11,
-    "from": "11:35",
-    "to": "12:00",
-    "description": "Academic IC Design (Digital) & VLSI Research",
-    "session": "morning",
-    "category": "academia",
-    "speaker": {
-      "prefix": "Assoc. Prof. Dr.",
-      "name": "Hoang Trang",
-      "title": "Head of IC Design Lab",
-      "organization": "HCMUT (Bach Khoa HCMC)",
-      "avatar": "images/speakers/hoang-trang.jpg"
-    },
-    "sponsor": null
-  },
-  {
-    "id": 12,
-    "from": "12:00",
-    "to": "12:25",
-    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
+    "id": 6,
+    "from": "10:10",
+    "to": "10:35",
+    "description": "Presentation 1: Next-Generation Arm Server Silicon & Cloud Workloads",
     "session": "morning",
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Phong Vo",
+      "name": "Vo Phong",
       "title": "General Director",
       "organization": "Ampere Computing Vietnam",
       "avatar": "images/speakers/phong-vo.jpg"
@@ -163,88 +92,12 @@
       "logo": "images/partners/ampere.svg"
     }
   },
-
   {
-    "id": 14,
-    "from": "12:40",
-    "to": "13:50",
-    "description": "Lunch & Networking Banquet",
+    "id": 7,
+    "from": "10:35",
+    "to": "11:00",
+    "description": "Presentation 2: Analog IC Design & Mixed-Signal IC Research",
     "session": "morning",
-    "category": "networking",
-    "speaker": null,
-    "sponsor": null
-  },
-  {
-    "id": 15,
-    "from": "13:50",
-    "to": "14:30",
-    "description": "Government Strategic Vision for National Semiconductor Ecosystem",
-    "session": "afternoon",
-    "category": "keynote",
-    "speaker": {
-      "prefix": "",
-      "name": "Government Strategic Vision",
-      "title": "TBU",
-      "organization": "TBU",
-      "avatar": ""
-    },
-    "sponsor": null
-  },
-  {
-    "id": 16,
-    "from": "14:30",
-    "to": "14:55",
-    "description": "Automotive & Edge AI Silicon Architecture",
-    "session": "afternoon",
-    "category": "industry",
-    "speaker": {
-      "prefix": "Mr.",
-      "name": "Khoa Tran",
-      "title": "General Director",
-      "organization": "Renesas Electronics Vietnam",
-      "avatar": "images/speakers/khoa-tran.jpg"
-    },
-    "sponsor": {
-      "name": "Renesas Electronics Corporation",
-      "logo": "images/partners/renesas.svg"
-    }
-  },
-  {
-    "id": 17,
-    "from": "14:55",
-    "to": "15:20",
-    "description": "Edge AI & Connectivity Silicon Evolution",
-    "session": "afternoon",
-    "category": "industry",
-    "speaker": {
-      "prefix": "Mr.",
-      "name": "Thieu Phuong Nam",
-      "title": "General Director",
-      "organization": "Qualcomm Vietnam, Cambodia & Laos",
-      "avatar": "images/speakers/thieu-phuong-nam.jpg"
-    },
-    "sponsor": {
-      "name": "Qualcomm Technologies, Inc.",
-      "logo": "images/partners/qualcomm.svg"
-    }
-  },
-
-  {
-    "id": 19,
-    "from": "15:35",
-    "to": "16:05",
-    "description": "Coffee Break",
-    "session": "afternoon",
-    "category": "networking",
-    "speaker": null,
-    "sponsor": null
-  },
-  {
-    "id": 20,
-    "from": "16:05",
-    "to": "16:30",
-    "description": "Analog IC Design & Mixed-Signal IC Research",
-    "session": "afternoon",
     "category": "academia",
     "speaker": {
       "prefix": "Assoc. Prof. Dr.",
@@ -256,59 +109,177 @@
     "sponsor": null
   },
   {
-    "id": 21,
-    "from": "16:30",
-    "to": "16:55",
-    "description": "Semiconductor Startup Innovation & Custom Silicon",
-    "session": "afternoon",
+    "id": 8,
+    "from": "11:00",
+    "to": "11:30",
+    "description": "Coffee Break & Networking",
+    "session": "morning",
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
+  },
+  {
+    "id": 9,
+    "from": "11:30",
+    "to": "11:55",
+    "description": "Presentation 3: IC Fabrication & ATP Engineering in Global Supply Chain",
+    "session": "morning",
     "category": "industry",
     "speaker": {
-      "prefix": "Ms.",
-      "name": "Nguyen Loan",
-      "title": "TBU",
-      "organization": "Connexus (TBU)",
+      "prefix": "Mr.",
+      "name": "Nguyen Quang Khanh",
+      "title": "General Factory Director",
+      "organization": "Intel Products Vietnam (IPV)",
       "avatar": ""
+    },
+    "sponsor": {
+      "name": "Intel Corporation",
+      "logo": "images/partners/intel.svg"
+    }
+  },
+  {
+    "id": 10,
+    "from": "11:55",
+    "to": "12:20",
+    "description": "Presentation 4: Next-Gen Mobile Connectivity Silicon & Edge AI",
+    "session": "morning",
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Vo Thieu Nam",
+      "title": "General Director",
+      "organization": "Qualcomm Vietnam, Cambodia & Laos",
+      "avatar": "images/speakers/thieu-phuong-nam.jpg"
+    },
+    "sponsor": {
+      "name": "Qualcomm Technologies, Inc.",
+      "logo": "images/partners/qualcomm.svg"
+    }
+  },
+  {
+    "id": 11,
+    "from": "12:20",
+    "to": "13:50",
+    "description": "Lunch & Products Demo",
+    "session": "morning",
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
+  },
+  {
+    "id": 12,
+    "from": "13:50",
+    "to": "14:30",
+    "description": "Keynote 2: From Assembly to Advanced packaging Integration: Strategic Ascent in the Global Semiconductor Value Chain",
+    "session": "afternoon",
+    "category": "keynote",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Nguyen Bich-Yen",
+      "title": "Senior Fellow (IEEE Fellow) & Co-Founder",
+      "organization": "VSAP-LAB / Soitec",
+      "avatar": "images/speakers/bich-yen-nguyen.jpg"
     },
     "sponsor": null
   },
   {
-    "id": 22,
-    "from": "16:55",
-    "to": "17:35",
+    "id": 13,
+    "from": "14:30",
+    "to": "14:55",
+    "description": "Presentation 5: Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles",
+    "session": "afternoon",
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Tran Dac Khoa",
+      "title": "General Director",
+      "organization": "Renesas Design Vietnam",
+      "avatar": "images/speakers/khoa-tran.jpg"
+    },
+    "sponsor": {
+      "name": "Renesas Electronics Corporation",
+      "logo": "images/partners/renesas.svg"
+    }
+  },
+  {
+    "id": 14,
+    "from": "14:55",
+    "to": "15:20",
+    "description": "Presentation 6: Toward Quantum–AI-Driven IC Design: Research at HCMUT, VNU-HCM",
+    "session": "afternoon",
+    "category": "academia",
+    "speaker": {
+      "prefix": "Assoc. Prof.",
+      "name": "Trang Hoang, Ph.D.",
+      "title": "Head of Examination & QA Office",
+      "organization": "HCMUT (Bach Khoa HCMC)",
+      "avatar": "images/speakers/hoang-trang.jpg"
+    },
+    "sponsor": null
+  },
+  {
+    "id": 15,
+    "from": "15:20",
+    "to": "15:45",
+    "description": "Presentation 7: Vietnam's Semiconductor Moment: From Talent to Ownership",
+    "session": "afternoon",
+    "category": "industry",
+    "speaker": {
+      "prefix": "Ms.",
+      "name": "Loan Nguyen",
+      "title": "Co-Founder & CEO",
+      "organization": "Connexus",
+      "avatar": "images/speakers/loan-nguyen.jpg"
+    },
+    "sponsor": null
+  },
+  {
+    "id": 16,
+    "from": "15:45",
+    "to": "16:15",
+    "description": "Coffee Break & Networking",
+    "session": "afternoon",
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
+  },
+  {
+    "id": 17,
+    "from": "16:15",
+    "to": "16:55",
     "description": "Strategic Plenary Panel: Building Vietnam's National Semiconductor Value Chain",
     "session": "afternoon",
     "category": "panel",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Sandeep Bharathi",
-      "title": "President, Data Center Group (DCG) - Panel Chair",
+      "name": "Noam Mizrahi (Panel Host)",
+      "title": "EVP & Corporate Chief Technology Officer (CTO)",
       "organization": "Marvell Technology, Inc.",
-      "avatar": "images/speakers/sandeep-bharathi.jpg"
+      "avatar": "images/speakers/noam-mizrahi.jpg"
     },
     "sponsor": null
   },
-
   {
-    "id": 24,
-    "from": "17:55",
-    "to": "18:10",
-    "description": "Closing Strategic Remarks",
+    "id": 18,
+    "from": "16:55",
+    "to": "17:05",
+    "description": "Closing Remarks",
     "session": "afternoon",
     "category": "keynote",
     "speaker": {
       "prefix": "",
-      "name": "Ban Tổ chức / Summit Leadership",
-      "title": "Closing Strategic Remarks",
-      "organization": "TBU",
-      "avatar": ""
+      "name": "Mr. Noam Mizrahi & Dr. Le Quang Dam",
+      "title": "Summit Leadership & Closing Remarks",
+      "organization": "Marvell Technology",
+      "avatar": "images/speakers/noam-mizrahi.jpg"
     },
     "sponsor": null
   },
   {
-    "id": 25,
-    "from": "18:10",
-    "to": "20:10",
-    "description": "VIP Gala Dinner (Distinguished Delegates & Guests)",
+    "id": 19,
+    "from": "17:05",
+    "to": "20:00",
+    "description": "VIP Gala Dinner (Distinguished Guests & Delegates)",
     "session": "evening",
     "category": "networking",
     "speaker": null,
