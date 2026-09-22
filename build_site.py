@@ -210,6 +210,11 @@ html_content = f'''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology</title>
   
+  <!-- Anti-Cache Directives (Forces Browser Revalidation) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <!-- Canonical & Standard SEO Meta Tags -->
   <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/">
   <meta name="title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
@@ -669,7 +674,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="mrvll-dark-card speaker-card cursor-pointer group p-5 sm:p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-[#0072ce] bg-[#101726] hover:border-blue-400/80 transition-all duration-300" data-speaker-id="le-quang-dam">
             <div>
               <div class="relative w-full aspect-square rounded-xl overflow-hidden border border-blue-500/40 mb-4 shadow-[0_0_25px_rgba(0,114,206,0.25)] group-hover:border-blue-400 transition-all bg-blue-950/80">
-                <img src="images/speakers/le-quang-dam.jpg" alt="Dr. Le Quang Dam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/le-quang-dam.jpg?v=20260922_0805" alt="Dr. Le Quang Dam" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-4xl font-bold text-[#00b5e2]">
                   QD
                 </div>
@@ -882,7 +887,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="speaker-card cursor-pointer group p-4 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="hoang-trang">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-3 group-hover:border-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/hoang-trang.jpg" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/hoang-trang.jpg?v=20260922_0805" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-2xl font-bold text-emerald-400">HT</div>
                 <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
@@ -900,7 +905,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="speaker-card cursor-pointer group p-4 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="loan-nguyen">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-3 group-hover:border-blue-400 shadow-[0_0_15px_rgba(0,114,206,0.15)] transition-all bg-blue-950/80">
-                <img src="images/speakers/loan-nguyen.jpg" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/loan-nguyen.jpg?v=20260922_0805" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-2xl font-bold text-[#00b5e2]">LN</div>
                 <div class="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>

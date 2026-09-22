@@ -182,6 +182,11 @@ html = f'''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026</title>
   
+  <!-- Anti-Cache Directives (Forces Browser Revalidation) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <!-- Canonical & Standard SEO Meta Tags -->
   <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
   <meta name="title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
