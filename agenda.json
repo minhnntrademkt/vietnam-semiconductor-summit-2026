@@ -91,14 +91,14 @@
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Vo Phong",
-      "title": "General Director",
-      "organization": "Ampere Computing Vietnam",
-      "avatar": "images/speakers/phong-vo.jpg"
+      "name": "Lam Trinh",
+      "title": "Regional Sales Director, South Asia",
+      "organization": "Synopsys Inc",
+      "avatar": "images/speakers/lam-trinh.jpg"
     },
     "sponsor": {
-      "name": "Ampere Computing LLC",
-      "logo": "images/partners/ampere.svg"
+      "name": "Synopsys Inc",
+      "logo": "images/partners/synopsys.svg"
     }
   },
   {

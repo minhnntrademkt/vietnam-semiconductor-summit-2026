@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 46" fill="none">
+  <!-- Synopsys Transparent Logo with Generous Safe ViewBox -->
+  <g>
+    <!-- Synopsys Brand Purple Mark -->
+    <path d="M12 28c0 4.4 3.6 8 8 8 5.5 0 9-3.5 12-7.5l-3.5-3c-2 2.8-4.5 5.5-8.5 5.5-2.2 0-4-1.8-4-4 0-1.8 1.2-3.2 3.2-4.2l5.8-3c4.5-2.3 6.5-5.5 6.5-9.8 0-4.4-3.6-8-8-8-5.5 0-9 3.5-12 7.5l3.5 3c2-2.8 4.5-5.5 8.5-5.5 2.2 0 4 1.8 4 4 0 1.8-1.2 3.2-3.2 4.2l-5.8 3c-4.5 2.3-6.5 5.5-6.5 9.8z" fill="#5C2D91"/>
+    <!-- SYNOPSYS Wordmark -->
+    <text x="44" y="32" font-family="'Plus Jakarta Sans', Arial, Helvetica, sans-serif" font-weight="800" font-size="22" letter-spacing="2" fill="#0F172A">SYNOPSYS</text>
+  </g>
+</svg>

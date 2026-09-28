@@ -212,15 +212,15 @@ const SPEAKER_BIOS = {
       }
     ]
   },
-  'phong-vo': {
-    name: 'Mr. Vo Phong',
-    title: 'General Director',
-    org: 'Ampere Computing Vietnam',
-    tag: 'INDUSTRY / CLOUD ARM CPU',
-    photo: 'images/speakers/phong-vo.jpg',
-    avatarText: 'PV',
+  'lam-trinh': {
+    name: 'Mr. Lam Trinh',
+    title: 'Regional Sales Director, South Asia',
+    org: 'Synopsys Inc',
+    tag: 'INDUSTRY / EDA & SEMICONDUCTOR IP',
+    photo: 'images/speakers/lam-trinh.jpg',
+    avatarText: 'LT',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'General Director of Ampere Computing Vietnam, leading engineering operations for energy-efficient, high-core-count ARM server microprocessors powering hyperscale cloud datacenters globally.',
+    bio: '',
     sessions: [
       {
         time: '10:10 - 10:35',
@@ -306,7 +306,10 @@ const SPEAKER_BIOS = {
 
 // Aliases for backwards-compatibility
 SPEAKER_BIOS['qd'] = SPEAKER_BIOS['le-quang-dam'];
-SPEAKER_BIOS['vo-phong'] = SPEAKER_BIOS['phong-vo'];
+SPEAKER_BIOS['lam-trinh'] = SPEAKER_BIOS['lam-trinh'];
+SPEAKER_BIOS['trinh-lam'] = SPEAKER_BIOS['lam-trinh'];
+SPEAKER_BIOS['vo-phong'] = SPEAKER_BIOS['lam-trinh'];
+SPEAKER_BIOS['phong-vo'] = SPEAKER_BIOS['lam-trinh'];
 SPEAKER_BIOS['tran-dac-khoa'] = SPEAKER_BIOS['tran-dac-khoa'];
 SPEAKER_BIOS['khoa-tran'] = SPEAKER_BIOS['tran-dac-khoa'];
 SPEAKER_BIOS['tran-dang-khoa'] = SPEAKER_BIOS['tran-dac-khoa'];
@@ -459,7 +462,15 @@ function initSpeakerBioModal() {
       avatarEl.classList.remove('hidden');
     }
 
-    document.getElementById('speaker-modal-bio').innerText = speaker.bio;
+    const bioEl = document.getElementById('speaker-modal-bio');
+    const bioBlock = bioEl ? bioEl.closest('div') : null;
+    if (speaker.bio && speaker.bio.trim()) {
+      bioEl.innerText = speaker.bio;
+      if (bioBlock) bioBlock.classList.remove('hidden');
+    } else {
+      bioEl.innerText = '';
+      if (bioBlock) bioBlock.classList.add('hidden');
+    }
 
     // Render sessions
     const sessionsContainer = document.getElementById('speaker-modal-sessions');
