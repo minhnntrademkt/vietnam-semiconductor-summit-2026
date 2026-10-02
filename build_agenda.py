@@ -279,7 +279,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260928_1204">
+  <link rel="stylesheet" href="styles.css?v=20261003_0009">
 
   <style>
     body {{

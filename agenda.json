@@ -86,19 +86,19 @@
     "id": 6,
     "from": "10:10",
     "to": "10:35",
-    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
+    "description": "Advanced Packaging Innovation – Enabling AI Growth",
     "session": "morning",
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Lam Trinh",
-      "title": "Regional Sales Director, South Asia",
-      "organization": "Synopsys Inc",
-      "avatar": "images/speakers/lam-trinh.jpg"
+      "name": "Nguyen Quang Khanh",
+      "title": "General Factory Director",
+      "organization": "Intel Products Vietnam (IPV)",
+      "avatar": "images/speakers/nguyen-quang-khanh.jpg"
     },
     "sponsor": {
-      "name": "Synopsys Inc",
-      "logo": "images/partners/synopsys.svg"
+      "name": "Intel Corporation",
+      "logo": "images/partners/intel.svg"
     }
   },
   {
@@ -131,25 +131,6 @@
     "id": 9,
     "from": "11:30",
     "to": "11:55",
-    "description": "IC Fabrication & ATP Engineering in Global Supply Chain",
-    "session": "morning",
-    "category": "industry",
-    "speaker": {
-      "prefix": "Mr.",
-      "name": "Nguyen Quang Khanh",
-      "title": "General Factory Director",
-      "organization": "Intel Products Vietnam (IPV)",
-      "avatar": ""
-    },
-    "sponsor": {
-      "name": "Intel Corporation",
-      "logo": "images/partners/intel.svg"
-    }
-  },
-  {
-    "id": 10,
-    "from": "11:55",
-    "to": "12:20",
     "description": "Next-Gen Mobile Connectivity Silicon & Edge AI",
     "session": "morning",
     "category": "industry",
@@ -163,6 +144,25 @@
     "sponsor": {
       "name": "Qualcomm Technologies, Inc.",
       "logo": "images/partners/qualcomm.svg"
+    }
+  },
+  {
+    "id": 10,
+    "from": "11:55",
+    "to": "12:20",
+    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
+    "session": "morning",
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Lam Trinh",
+      "title": "Regional Sales Director, South Asia",
+      "organization": "Synopsys Inc",
+      "avatar": "images/speakers/lam-trinh.jpg"
+    },
+    "sponsor": {
+      "name": "Synopsys Inc",
+      "logo": "images/partners/synopsys.svg"
     }
   },
   {
@@ -312,7 +312,7 @@
   {
     "id": 19,
     "from": "17:05",
-    "to": "20:00",
+    "to": "19:35",
     "description": "VIP Gala Dinner (Distinguished Guests & Delegates)",
     "session": "evening",
     "category": "networking",

@@ -196,21 +196,22 @@ const SPEAKER_BIOS = {
   },
   'nguyen-quang-khanh': {
     name: 'Mr. Nguyen Quang Khanh',
-    title: 'General Factory Director (Engineering & Operation)',
+    title: 'General Factory Director',
     org: 'Intel Products Vietnam (IPV)',
-    tag: 'INDUSTRY / IC FABRICATION & ATP',
-    photo: '',
-    avatarText: '',
+    tag: 'INDUSTRY / ADVANCED PACKAGING & ATP',
+    photo: 'images/speakers/nguyen-quang-khanh.jpg',
+    avatarText: 'QK',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: '',
+    bio: 'Khanh Nguyen is General Factory Director of Intel Vietnam Assembly Test Manufacturing, part of the Advanced Packaging Technology and Manufacturing organization. In his current role, he is responsible for Intel’s Assembly Test operations in Vietnam, driving operational excellence to deliver advanced packaging solutions for customers worldwide.',
     sessions: [
       {
-        time: '11:30 - 11:55',
-        title: 'IC Fabrication & ATP Engineering in Global Supply Chain',
+        time: '10:10 - 10:35',
+        title: 'Advanced Packaging Innovation – Enabling AI Growth',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
-    ]
+    ],
+    abstract: 'AI is reshaping the semiconductor industry at an unprecedented pace, creating a need for system-level innovations that extend far beyond traditional silicon scaling. Advanced packaging has become the foundation for this transformation, enabling the integration of compute, memory, interconnect, and photonics into increasingly capable AI platforms. This session explores how heterogeneous integration, chiplet architectures, Foveros, EMIB, and emerging co-packaged optics technologies are pushing the boundaries of performance, scale, and efficiency, and why advanced packaging is becoming a key differentiator in the AI era.'
   },
   'lam-trinh': {
     name: 'Mr. Lam Trinh',
@@ -223,7 +224,7 @@ const SPEAKER_BIOS = {
     bio: '',
     sessions: [
       {
-        time: '10:10 - 10:35',
+        time: '11:55 - 12:20',
         title: 'Next-Generation Arm Server Silicon & Cloud Workloads',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
@@ -259,7 +260,7 @@ const SPEAKER_BIOS = {
     bio: 'General Director of Qualcomm Vietnam, Cambodia & Laos, directing Qualcomm’s business, R&D alliances, and engineering initiatives in edge AI silicon, 5G/6G wireless communications, and IoT platforms.',
     sessions: [
       {
-        time: '11:55 - 12:20',
+        time: '11:30 - 11:55',
         title: 'Next-Gen Mobile Connectivity Silicon & Edge AI',
         room: 'Plenary Hall',
         category: 'Industry Presentation'

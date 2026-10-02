@@ -310,7 +310,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20260928_1204">
+  <link rel="stylesheet" href="styles.css?v=20261003_0009">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -824,10 +824,9 @@ html_content = f'''<!DOCTYPE html>
           <!-- Mr. Nguyen Quang Khanh -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-quang-khanh">
             <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-slate-700/60 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-[#0b1324] flex items-center justify-center">
-                <div class="w-full h-full flex items-center justify-center text-slate-500 group-hover:text-slate-400 transition-colors">
-                  <svg class="w-12 h-12 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/nguyen-quang-khanh.jpg" alt="Mr. Nguyen Quang Khanh" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">QK</div>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Nguyen Quang Khanh</h4>
@@ -1685,7 +1684,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20260928_1204"></script>
+  <script src="app.js?v=20261003_0009"></script>
 </body>
 </html>
 '''
