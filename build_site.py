@@ -13,6 +13,43 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(base_dir, 'agenda.json'), 'r', encoding='utf-8') as f:
     agenda_data = json.load(f)
 
+def get_speaker_id(speaker_dict):
+    if not speaker_dict or not isinstance(speaker_dict, dict):
+        return ""
+    if speaker_dict.get('id'):
+        return speaker_dict['id']
+    avatar = speaker_dict.get('avatar', '').lower()
+    name = speaker_dict.get('name', '').lower()
+    if 'le-quang-dam' in avatar or 'quang dam' in name:
+        return 'le-quang-dam'
+    elif 'noam' in avatar or 'noam' in name:
+        return 'noam-mizrahi'
+    elif 'van-duoc' in avatar or 'duoc' in name:
+        return 'nguyen-van-duoc'
+    elif 'melissa' in avatar or 'melissa' in name:
+        return 'melissa-brown'
+    elif 'khanh' in avatar or 'khanh' in name:
+        return 'nguyen-quang-khanh'
+    elif 'thanh-loan' in avatar or 'thanh loan' in name:
+        return 'pham-nguyen-thanh-loan'
+    elif 'thieu-phuong-nam' in avatar or 'nam' in name:
+        return 'thieu-phuong-nam'
+    elif 'lam-trinh' in avatar or 'lam trinh' in name:
+        return 'lam-trinh'
+    elif 'bich-yen' in avatar or 'bich-yen' in name:
+        return 'nguyen-bich-yen'
+    elif 'khoa' in avatar or 'khoa' in name:
+        return 'tran-dac-khoa'
+    elif 'hoang-trang' in avatar or 'hoang' in name:
+        return 'hoang-trang'
+    elif 'loan-nguyen' in avatar or 'loan' in name:
+        return 'loan-nguyen'
+    elif 'thanh-mai' in avatar or 'mai' in name:
+        return 'nguyen-thi-thanh-mai'
+    elif 'ky-phung' in avatar or 'phung' in name:
+        return 'nguyen-ky-phung'
+    return ""
+
 def render_speaker_card(speaker_dict):
     if not speaker_dict or not isinstance(speaker_dict, dict) or not speaker_dict.get('name'):
         return ""
@@ -21,6 +58,7 @@ def render_speaker_card(speaker_dict):
     title = speaker_dict.get('title', '').strip()
     org = speaker_dict.get('organization', '').strip()
     avatar = speaker_dict.get('avatar', '').strip()
+    speaker_id = get_speaker_id(speaker_dict)
 
     academic_tag = ""
     display_name = name
@@ -40,19 +78,25 @@ def render_speaker_card(speaker_dict):
 
     avatar_clean = avatar.split('?')[0] if avatar else ''
     if avatar_clean and os.path.exists(os.path.join(base_dir, avatar_clean)):
-        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm">'
+        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm" style="object-position: center top;">'
     else:
         avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
 
+    data_attr = f'data-speaker-id="{speaker_id}"' if speaker_id else ''
+    click_classes = "speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200" if speaker_id else ""
+    arrow_html = f'<svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>' if speaker_id else ""
+    title_attr = f'title="Click to view {display_name} profile & presentation abstract"' if speaker_id else ""
+
     return f'''
-    <div class="w-full sm:w-[280px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0">
+    <div class="{click_classes} w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" {data_attr} {title_attr}>
       {avatar_html}
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         {academic_tag}
-        <div class="text-[13px] font-bold text-slate-900 tracking-tight truncate">{display_name}</div>
+        <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">{display_name}</div>
         {title_html}
         {org_html}
       </div>
+      {arrow_html}
     </div>
     '''
 
@@ -310,7 +354,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261003_0009">
+  <link rel="stylesheet" href="styles.css?v=20261004_0918">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -709,7 +753,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-xs text-slate-400 mt-0.5 font-medium">Marvell Technology Vietnam</p>
             </div>
             <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400">
-              Topic: <em class="line-clamp-2">Marvell In Vietnam - Global Silicon Innovation</em>
+              Topic: <em class="line-clamp-2">Building What's Next: Vietnam's Semiconductor Journey</em>
               <div class="mt-2.5 text-[11px] text-[#00b5e2] flex items-center gap-1.5 font-semibold group-hover:underline">
                 <span>View Bio & Abstract</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -870,7 +914,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of IC Design & Embedded Lab</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
-              <span>View Executive Bio</span>
+              <span>View Bio & Abstract</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -1684,7 +1728,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261003_0009"></script>
+  <script src="app.js?v=20261004_0918"></script>
 </body>
 </html>
 '''

@@ -40,7 +40,7 @@ const SPEAKER_BIOS = {
       },
       {
         time: '09:30 - 10:10',
-        title: 'Marvell Semiconductor Leadership & Vietnam Vision',
+        title: 'Building What\'s Next: Vietnam\'s Semiconductor Journey',
         room: 'Plenary Hall',
         category: 'Strategic Keynote'
       },
@@ -50,7 +50,18 @@ const SPEAKER_BIOS = {
         room: 'Plenary Hall',
         category: 'Closing Ceremony'
       }
-    ]
+    ],
+    abstract: `Twenty-five years ago, Vietnam took its first steps into the global semiconductor industry. Today, after years of building talent, technology, capabilities and trust, a new question is emerging: <strong class="text-cyan-300 font-bold tracking-wide">what will Vietnam build next?</strong>
+
+I have had the opportunity to witness part of this journey firsthand through Marvell Vietnam - from a team of just 5 engineers to more than 650 engineers today, contributing to advanced semiconductor technologies and products for the global market.
+
+What makes this journey meaningful to me is not simply the growth in numbers. It is seeing people develop, teams take on increasingly difficult challenges, and engineers in Vietnam gradually earn the opportunity to contribute to leading-edge technologies of the industry.
+
+But AI is changing the pace. Every AI breakthrough runs on silicon, and the race is on. Vietnam's national strategy aims for 50,000 semiconductor engineers and 100 chip design companies by 2030. Capability cannot be rushed, but it cannot wait either: it takes years of patient investment in people, technical depth, and partnership between industry and universities.
+
+Vietnam is ready to aim higher: from contributing to the world's chips to leading in advanced chip design, AI hardware, and a deeper local ecosystem. In this talk, I will share what this journey has taught us, and where I believe Vietnam should place its boldest bets.
+
+<div class="mt-3 pt-2.5 border-t border-cyan-500/25"><span class="text-white font-bold bg-[#0072ce]/30 px-2.5 py-1.5 rounded-lg border border-cyan-400/40 inline-block leading-relaxed shadow-[0_0_15px_rgba(0,181,226,0.15)] text-cyan-200">The first 25 years showed how far we have come. The next 25 are ours to build.</span></div>`
   },
   'noam-mizrahi': {
     name: 'Mr. Noam Mizrahi',
@@ -243,11 +254,12 @@ const SPEAKER_BIOS = {
     sessions: [
       {
         time: '10:35 - 11:00',
-        title: 'Analog IC Design & Mixed-Signal IC Research',
+        title: 'IC Design Education at HUST-SEEE: A full-value chain approach and Biomedical IC Design Demonstration.',
         room: 'Plenary Hall',
         category: 'Academia & Research'
       }
-    ]
+    ],
+    abstract: `Hanoi University of Science and Technology (HUST) provides a comprehensive semiconductor education program covering the entire industry value chain - from IC design and manufacturing to packaging, testing, and application development. Centered at the School of Electrical and Electronic Engineering ( SEEE), the curriculum emphasizes practical, research-based, and project-oriented learning supported by Class 1000 cleanrooms, Cadence EDA design suites, and FPGA prototyping labs. Adopting the philosophy of "Application First, Chip Follows", the BKIC Design Lab demonstrates this academic framework through a multimodal digital electronic stethoscope. The device integrates an Analog Front- End (AFE) stage for the simultaneous acquisition and conditioning of Phonocardiogram (PCG), Photoplethysmography (PPG), and Electrocardiogram (ECG) signals. Digitized and transmitted wirelessly via Bluetooth Low Energy (BLE), the chip achieves high signal clarity ( ECG SNR > 28dB, PCG SNR > 33dB) at low power consumption (132 mW) within a Vietnamese bronze drum-inspired enclosure. This work highlights SEEE-HUST's capability in bridging hands-on IC design education with practical biomedical applications.`
   },
   'thieu-phuong-nam': {
     name: 'Mr. Vo Thieu Nam',
@@ -365,6 +377,9 @@ function initCountdown() {
 // 3. AGENDA TABS & FILTERING
 // ==========================================================================
 function initAgendaTabs() {
+  // If dedicated agenda search input exists (agenda.html), let agenda.html's own advanced search script handle tabs
+  if (document.getElementById('agenda-search-input')) return;
+
   const tabButtons = document.querySelectorAll('.agenda-tab-btn');
   const filterPills = document.querySelectorAll('.agenda-filter-pill');
   const agendaCards = document.querySelectorAll('.agenda-item-card');
@@ -509,14 +524,17 @@ function initSpeakerBioModal() {
     document.body.style.overflow = 'hidden';
   }
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
+  // Click event delegation to support all speaker cards (both in Speakers section and Agenda section)
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-speaker-id]');
+    if (card) {
       const speakerId = card.getAttribute('data-speaker-id');
-      if (speakerId) {
+      if (speakerId && SPEAKER_BIOS[speakerId]) {
         openSpeakerBio(speakerId);
       }
-    });
+    }
   });
+  window.openSpeakerBio = openSpeakerBio;
 
   function closeSpeakerModal() {
     modal.classList.add('hidden');

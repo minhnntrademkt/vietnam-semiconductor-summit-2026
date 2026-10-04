@@ -70,7 +70,7 @@
     "id": 5,
     "from": "09:30",
     "to": "10:10",
-    "description": "Marvell Semiconductor Leadership & Vietnam Vision",
+    "description": "Building What's Next: Vietnam's Semiconductor Journey",
     "session": "morning",
     "category": "keynote",
     "speaker": {
@@ -80,6 +80,7 @@
       "organization": "Marvell Technology Vietnam",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
+    "abstract": "Twenty-five years ago, Vietnam took its first steps into the global semiconductor industry. Today, after years of building talent, technology, capabilities and trust, a new question is emerging: what will Vietnam build next?\nI have had the opportunity to witness part of this journey firsthand through Marvell Vietnam - from a team of just 5 engineers to more than 650 engineers today, contributing to advanced semiconductor technologies and products for the global market.\n\nWhat makes this journey meaningful to me is not simply the growth in numbers. It is seeing people develop, teams take on increasingly difficult challenges, and engineers in Vietnam gradually earn the opportunity to contribute to leading-edge technologies of the industry.\n\nBut AI is changing the pace. Every AI breakthrough runs on silicon, and the race is on. Vietnam's national strategy aims for 50,000 semiconductor engineers and 100 chip design companies by 2030. Capability cannot be rushed, but it cannot wait either: it takes years of patient investment in people, technical depth, and partnership between industry and universities.\n\nVietnam is ready to aim higher: from contributing to the world's chips to leading in advanced chip design, AI hardware, and a deeper local ecosystem. In this talk, I will share what this journey has taught us, and where I believe Vietnam should place its boldest bets.\n\nThe first 25 years showed how far we have come. The next 25 are ours to build.",
     "sponsor": null
   },
   {
@@ -105,7 +106,7 @@
     "id": 7,
     "from": "10:35",
     "to": "11:00",
-    "description": "Analog IC Design & Mixed-Signal IC Research",
+    "description": "IC Design Education at HUST-SEEE: A full-value chain approach and Biomedical IC Design Demonstration.",
     "session": "morning",
     "category": "academia",
     "speaker": {
@@ -115,6 +116,7 @@
       "organization": "HUST (Bach Khoa Hanoi)",
       "avatar": "images/speakers/pham-nguyen-thanh-loan.jpg"
     },
+    "abstract": "Hanoi University of Science and Technology (HUST) provides a comprehensive semiconductor education program covering the entire industry value chain - from IC design and manufacturing to packaging, testing, and application development. Centered at the School of Electrical and Electronic Engineering ( SEEE), the curriculum emphasizes practical, research-based, and project-oriented learning supported by Class 1000 cleanrooms, Cadence EDA design suites, and FPGA prototyping labs. Adopting the philosophy of \"Application First, Chip Follows\", the BKIC Design Lab demonstrates this academic framework through a multimodal digital electronic stethoscope. The device integrates an Analog Front- End (AFE) stage for the simultaneous acquisition and conditioning of Phonocardiogram (PCG), Photoplethysmography (PPG), and Electrocardiogram (ECG) signals. Digitized and transmitted wirelessly via Bluetooth Low Energy (BLE), the chip achieves high signal clarity ( ECG SNR > 28dB, PCG SNR > 33dB) at low power consumption (132 mW) within a Vietnamese bronze drum-inspired enclosure. This work highlights SEEE-HUST's capability in bridging hands-on IC design education with practical biomedical applications.",
     "sponsor": null
   },
   {
