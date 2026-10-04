@@ -22,7 +22,7 @@ def get_speaker_id(speaker_dict):
         return speaker_dict['id']
     avatar = speaker_dict.get('avatar', '').lower()
     name = speaker_dict.get('name', '').lower()
-    if 'le-quang-dam' in avatar or 'quang dam' in name:
+    if 'le-quang-dam' in avatar or 'quang dam' in name or 'quang-dam' in name:
         return 'le-quang-dam'
     elif 'noam' in avatar or 'noam' in name:
         return 'noam-mizrahi'
@@ -32,9 +32,9 @@ def get_speaker_id(speaker_dict):
         return 'melissa-brown'
     elif 'khanh' in avatar or 'khanh' in name:
         return 'nguyen-quang-khanh'
-    elif 'thanh-loan' in avatar or 'thanh loan' in name:
+    elif 'thanh-loan' in avatar or 'pham-nguyen' in name or 'pham' in name:
         return 'pham-nguyen-thanh-loan'
-    elif 'thieu-phuong-nam' in avatar or 'nam' in name:
+    elif 'thieu-phuong-nam' in avatar or 'thieu' in name or 'nam' in name:
         return 'thieu-phuong-nam'
     elif 'lam-trinh' in avatar or 'lam trinh' in name:
         return 'lam-trinh'
@@ -42,7 +42,7 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-bich-yen'
     elif 'khoa' in avatar or 'khoa' in name:
         return 'tran-dac-khoa'
-    elif 'hoang-trang' in avatar or 'hoang' in name:
+    elif 'hoang-trang' in avatar or 'trang hoang' in name or 'hoang' in name:
         return 'hoang-trang'
     elif 'loan-nguyen' in avatar or 'loan' in name:
         return 'loan-nguyen'
@@ -186,10 +186,10 @@ for item in agenda_data:
 
         sponsor_html = f'''
         <div class="inline-flex items-stretch rounded-xl border border-slate-200/90 bg-white shadow-sm shrink-0 min-h-[64px] self-stretch">
-          <!-- Cột 1: Co-Host / Partner: (Canh giữa cột) -->
+          <!-- Cột 1: Partner: (Canh giữa cột) -->
           <div class="px-2.5 py-2 bg-slate-50 border-r border-slate-200/80 flex items-center justify-center text-center shrink-0">
             <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 whitespace-nowrap">
-              Co-Host / Partner:
+              Partner:
             </span>
           </div>
 
@@ -203,7 +203,7 @@ for item in agenda_data:
         </div>
         '''
 
-    # Combined Meta Row (All Speaker Cards & Co-Host on the same row)
+    # Combined Meta Row (All Speaker Cards & Partner on the same row)
     meta_row_html = ""
     if all_speakers_html or sponsor_html:
         meta_row_html = f'''
@@ -229,7 +229,7 @@ for item in agenda_data:
           </div>
         </div>
 
-        <!-- Right Column: Title + Combined Meta Row (All Speakers & Co-Host Side-by-Side) -->
+        <!-- Right Column: Title + Combined Meta Row (All Speakers & Partner Side-by-Side) -->
         <div class="flex-1 min-w-0 flex flex-col justify-center">
           <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#0072ce] transition-colors">
             {item['description']}
@@ -323,7 +323,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261004_0918">
+  <link rel="stylesheet" href="styles.css?v=20261004_2331">
 
   <style>
     body {{
@@ -696,7 +696,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261004_0918"></script>
+  <script src="app.js?v=20261004_2331"></script>
 </body>
 </html>
 '''

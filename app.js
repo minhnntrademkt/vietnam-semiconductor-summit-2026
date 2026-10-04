@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 const SPEAKER_BIOS = {
   'le-quang-dam': {
-    name: 'Dr. Le Quang Dam',
-    title: 'General Director',
-    org: 'Marvell Technology Vietnam Co., Ltd.',
-    tag: 'STRATEGIC KEYNOTE 1 / HOST LEADERSHIP',
+    name: 'Dr. Quang-Dam Le',
+    title: 'Vice President & General Director',
+    org: 'Marvell Technology Vietnam, LLC',
+    tag: 'STRATEGIC KEYNOTE 3 / HOST LEADERSHIP',
     photo: 'images/speakers/le-quang-dam.jpg?v=20260922_0900',
     avatarText: 'QD',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Quang-Dam (QD) Le is the General Director of Marvell Technology Vietnam, bringing over three decades of engineering leadership, technical depth, and global vision to the semiconductor industry. Since joining Marvell in 2011, QD has held key executive roles—including Technical Director, Associate Vice President, and Vice President—before taking on his current position leading the company’s operations and strategic growth in Vietnam.\n\nQD began his career as an algorithm designer specializing in Digital Signal Processing (DSP) IPs at Miranda Technologies and Gennum Corporation. He later joined ATI Technologies (acquired by AMD) as Senior Manager, directing multi-regional DSP engineering teams across Canada, India, China, and Germany. Prior to Marvell, he served as a Senior Principal Scientist at Broadcom. An active contributor to the field, QD holds several worldwide patents and has authored numerous technical papers.\n\nQD holds a Bachelor of Science from Ho Chi Minh City University of Science (HCMUS), followed by a Master’s in Physics and a Doctorate in Signal Processing with a focus on Artificial Intelligence from Canada. Grounded in his technical foundation, QD remains deeply passionate about advancing system architecture, signal processing, and AI technologies.',
+    bio: 'Quang-Dam (QD) Le is the Vice President & General Director of Marvell Technology Vietnam, LLC, bringing over three decades of engineering leadership, technical depth, and global vision to the semiconductor industry. Since joining Marvell in 2011, QD has held key executive roles—including Technical Director, Associate Vice President, and Vice President—before taking on his current position leading the company’s operations and strategic growth in Vietnam.\n\nQD began his career as an algorithm designer specializing in Digital Signal Processing (DSP) IPs at Miranda Technologies and Gennum Corporation. He later joined ATI Technologies (acquired by AMD) as Senior Manager, directing multi-regional DSP engineering teams across Canada, India, China, and Germany. Prior to Marvell, he served as a Senior Principal Scientist at Broadcom. An active contributor to the field, QD holds several worldwide patents and has authored numerous technical papers.\n\nQD holds a Bachelor of Science from Ho Chi Minh City University of Science (HCMUS), followed by a Master’s in Physics and a Doctorate in Signal Processing with a focus on Artificial Intelligence from Canada. Grounded in his technical foundation, QD remains deeply passionate about advancing system architecture, signal processing, and AI technologies.',
     sessions: [
       {
         time: '09:00 - 09:10',
@@ -67,7 +67,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     name: 'Mr. Noam Mizrahi',
     title: 'Executive VP & Corporate Chief Technology Officer (CTO)',
     org: 'Marvell Technology, Inc. (NASDAQ: MRVL)',
-    tag: 'PANEL HOST / SUMMIT CO-HOST',
+    tag: 'PANEL HOST / HOST LEADERSHIP',
     photo: 'images/speakers/noam-mizrahi.jpg',
     avatarText: 'NM',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
@@ -75,7 +75,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     sessions: [
       {
         time: '09:00 - 09:10',
-        title: 'Opening Remarks (with Dr. Le Quang Dam)',
+        title: 'Opening Remarks (with Dr. Quang-Dam Le)',
         room: 'Plenary Hall',
         category: 'Ceremony'
       },
@@ -87,7 +87,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
       },
       {
         time: '16:55 - 17:05',
-        title: 'Closing Strategic Remarks (with Dr. Le Quang Dam)',
+        title: 'Closing Strategic Remarks (with Dr. Quang-Dam Le)',
         room: 'Plenary Hall',
         category: 'Closing Ceremony'
       }
@@ -149,7 +149,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     abstract: 'The semiconductor industry is entering a new era where performance gains are driven not only by transistor scaling, but increasingly by advanced packaging, chiplets, heterogeneous integration, materials innovation, and system-level co-design. This shift is redefining value creation in the semiconductor ecosystem and opening strategic opportunities for countries that can position themselves in integration, packaging, and system-level manufacturing.\n\nVietnam is well positioned to benefit from this transition. With a growing electronics manufacturing base, an expanding assembly and test ecosystem, a competitive workforce, and increasing participation from global technology companies, Vietnam is emerging as a credible node in global semiconductor production networks. The strategic imperative is therefore not mere entry, but upward mobility—moving from manufacturing participation toward higher-value activities in advanced packaging, design support, and system integration.\n\nThis plenary outlines a practical pathway for Vietnam’s semiconductor development—from assembly and testing toward advanced packaging, system-in-package (SiP), and heterogeneous integration—supported by capability building, workforce development, and stronger local supplier ecosystems. A key focus is the complementarity between Vietnam and Japan: Japan’s strengths in materials, precision equipment, manufacturing quality, and process expertise align with Vietnam’s scale, talent base, and industrial growth, enabling collaboration in technology transfer, training, and supply chain resilience.\n\nThe core message is clear: Vietnam’s opportunity is not to replicate the entire semiconductor value chain, but to strategically position itself in the fastest-growing, highest-value segments. By building on its manufacturing foundation and deepening collaboration with trusted partners in Asia such as Japan, Singapore, Vietnam can accelerate its transition toward a high-value, innovation-driven role in the global semiconductor ecosystem.'
   },
   'tran-dac-khoa': {
-    name: 'Mr. Tran Dac Khoa',
+    name: 'Mr. Khoa Tran',
     title: 'General Director',
     org: 'Renesas Design Vietnam Co., Ltd.',
     tag: 'INDUSTRY / AUTOMOTIVE IC & SDV',
@@ -206,7 +206,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     abstract: 'Vietnam has spent two decades building world-class semiconductor engineering talent, but talent alone doesn\'t make an industry. The real question is: what are we going to build with it? Can a Vietnamese company move beyond design services and actually own IP, own products, own the upside?\n\nThis talk explores why the answer is increasingly yes, and why AI is making that transition possible faster than ever. As AI reshapes chip design itself, new tools and approaches are lowering the barriers to creating original silicon, opening opportunities for smaller, ambitious teams to compete on technology and products, not just scale.\n\nFrom semiconductor IP and AI accelerator chips to AI-powered SoC design automation, the presentation examines what Vietnam’s next generation of engineers can build. The Connexus journey offers one example: turning Vietnamese engineering talent into owned, globally relevant technology, built in Vietnam, for the world.'
   },
   'nguyen-quang-khanh': {
-    name: 'Mr. Nguyen Quang Khanh',
+    name: 'Mr. Khanh Nguyen',
     title: 'General Factory Director',
     org: 'Intel Products Vietnam (IPV)',
     tag: 'INDUSTRY / ADVANCED PACKAGING & ATP',
@@ -232,7 +232,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     photo: 'images/speakers/lam-trinh.jpg',
     avatarText: 'LT',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: '',
+    bio: 'Lam Trinh is regional sales manager at Synopsys, where he is responsible for emerging markets such as Vietnam, Pakistan, and Bangladesh. He works closely with start-ups in the IC design field to promote Synopsys technologies that help customers shorten time to market. Lam has also been working with government agencies and universities to promote Synopsys IC design advanced technologies.  Lam has been in the semiconductor industry for more than 20 years with the big names such as Intel and Synopsys.',
     sessions: [
       {
         time: '11:55 - 12:20',
@@ -243,7 +243,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     ]
   },
   'pham-nguyen-thanh-loan': {
-    name: 'Assoc. Prof. Dr. Pham Nguyen Thanh Loan',
+    name: 'Assoc. Prof. Dr. Loan Pham-Nguyen',
     title: 'Head of IC Design & Embedded Systems Laboratory',
     org: 'Hanoi University of Science and Technology (HUST - SEEE)',
     tag: 'ACADEMIA / ANALOG & RF IC',
@@ -262,7 +262,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     abstract: `Hanoi University of Science and Technology (HUST) provides a comprehensive semiconductor education program covering the entire industry value chain - from IC design and manufacturing to packaging, testing, and application development. Centered at the School of Electrical and Electronic Engineering ( SEEE), the curriculum emphasizes practical, research-based, and project-oriented learning supported by Class 1000 cleanrooms, Cadence EDA design suites, and FPGA prototyping labs. Adopting the philosophy of "Application First, Chip Follows", the BKIC Design Lab demonstrates this academic framework through a multimodal digital electronic stethoscope. The device integrates an Analog Front- End (AFE) stage for the simultaneous acquisition and conditioning of Phonocardiogram (PCG), Photoplethysmography (PPG), and Electrocardiogram (ECG) signals. Digitized and transmitted wirelessly via Bluetooth Low Energy (BLE), the chip achieves high signal clarity ( ECG SNR > 28dB, PCG SNR > 33dB) at low power consumption (132 mW) within a Vietnamese bronze drum-inspired enclosure. This work highlights SEEE-HUST's capability in bridging hands-on IC design education with practical biomedical applications.`
   },
   'thieu-phuong-nam': {
-    name: 'Mr. Vo Thieu Nam',
+    name: 'Mr. Nam Thieu',
     title: 'General Director',
     org: 'Qualcomm Vietnam, Cambodia & Laos',
     tag: 'INDUSTRY / CONNECTIVITY & EDGE AI',
@@ -280,7 +280,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     ]
   },
   'nguyen-thi-thanh-mai': {
-    name: 'Prof. Dr. Nguyen Thi Thanh Mai',
+    name: 'Prof. Dr. Mai Nguyen',
     title: 'President',
     org: 'Vietnam National University, Ho Chi Minh City (VNU-HCM)',
     tag: 'ACADEMIA / WORKFORCE STRATEGY',
@@ -298,8 +298,8 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     ]
   },
   'nguyen-ky-phung': {
-    name: 'Dr. Nguyen Ky Phung',
-    title: 'Vice Chairman',
+    name: 'Dr. Phung Nguyen',
+    title: 'Head of the Management Board',
     org: 'Saigon Hi-Tech Park Authority (SHTP)',
     tag: 'DISTINGUISHED PANELIST / SHTP',
     photo: '',
@@ -332,6 +332,12 @@ SPEAKER_BIOS['nguyen-loan'] = SPEAKER_BIOS['loan-nguyen'];
 SPEAKER_BIOS['pham-loan'] = SPEAKER_BIOS['loan-nguyen'];
 SPEAKER_BIOS['mai-thi-thanh-nguyen'] = SPEAKER_BIOS['nguyen-thi-thanh-mai'];
 SPEAKER_BIOS['ky-phung'] = SPEAKER_BIOS['nguyen-ky-phung'];
+SPEAKER_BIOS['quang-dam-le'] = SPEAKER_BIOS['le-quang-dam'];
+SPEAKER_BIOS['khanh-nguyen'] = SPEAKER_BIOS['nguyen-quang-khanh'];
+SPEAKER_BIOS['loan-pham-nguyen'] = SPEAKER_BIOS['pham-nguyen-thanh-loan'];
+SPEAKER_BIOS['nam-thieu'] = SPEAKER_BIOS['thieu-phuong-nam'];
+SPEAKER_BIOS['mai-nguyen'] = SPEAKER_BIOS['nguyen-thi-thanh-mai'];
+SPEAKER_BIOS['phung-nguyen'] = SPEAKER_BIOS['nguyen-ky-phung'];
 
 // ==========================================================================
 // 2. COUNTDOWN TIMER TO NOV 23, 2026

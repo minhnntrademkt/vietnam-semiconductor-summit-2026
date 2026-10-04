@@ -18,9 +18,9 @@
     "category": "opening",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Le Quang Dam (QD)",
-      "title": "General Director",
-      "organization": "Marvell Technology Vietnam",
+      "name": "Quang-Dam Le (QD)",
+      "title": "Vice President & General Director",
+      "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
     "panelists": [
@@ -75,9 +75,9 @@
     "category": "keynote",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Le Quang Dam (QD)",
-      "title": "General Director",
-      "organization": "Marvell Technology Vietnam",
+      "name": "Quang-Dam Le (QD)",
+      "title": "Vice President & General Director",
+      "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
     "abstract": "Twenty-five years ago, Vietnam took its first steps into the global semiconductor industry. Today, after years of building talent, technology, capabilities and trust, a new question is emerging: what will Vietnam build next?\nI have had the opportunity to witness part of this journey firsthand through Marvell Vietnam - from a team of just 5 engineers to more than 650 engineers today, contributing to advanced semiconductor technologies and products for the global market.\n\nWhat makes this journey meaningful to me is not simply the growth in numbers. It is seeing people develop, teams take on increasingly difficult challenges, and engineers in Vietnam gradually earn the opportunity to contribute to leading-edge technologies of the industry.\n\nBut AI is changing the pace. Every AI breakthrough runs on silicon, and the race is on. Vietnam's national strategy aims for 50,000 semiconductor engineers and 100 chip design companies by 2030. Capability cannot be rushed, but it cannot wait either: it takes years of patient investment in people, technical depth, and partnership between industry and universities.\n\nVietnam is ready to aim higher: from contributing to the world's chips to leading in advanced chip design, AI hardware, and a deeper local ecosystem. In this talk, I will share what this journey has taught us, and where I believe Vietnam should place its boldest bets.\n\nThe first 25 years showed how far we have come. The next 25 are ours to build.",
@@ -92,7 +92,7 @@
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Nguyen Quang Khanh",
+      "name": "Khanh Nguyen",
       "title": "General Factory Director",
       "organization": "Intel Products Vietnam (IPV)",
       "avatar": "images/speakers/nguyen-quang-khanh.jpg"
@@ -111,7 +111,7 @@
     "category": "academia",
     "speaker": {
       "prefix": "Assoc. Prof. Dr.",
-      "name": "Pham Nguyen Thanh Loan",
+      "name": "Loan Pham-Nguyen",
       "title": "Head of IC Design & Embedded Systems Lab",
       "organization": "HUST (Bach Khoa Hanoi)",
       "avatar": "images/speakers/pham-nguyen-thanh-loan.jpg"
@@ -138,7 +138,7 @@
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Vo Thieu Nam",
+      "name": "Nam Thieu",
       "title": "General Director",
       "organization": "Qualcomm Vietnam, Cambodia & Laos",
       "avatar": "images/speakers/thieu-phuong-nam.jpg"
@@ -186,7 +186,7 @@
     "category": "keynote",
     "speaker": {
       "prefix": "Ms.",
-      "name": "Nguyen Bich-Yen",
+      "name": "Bich-Yen Nguyen",
       "title": "Senior Fellow (IEEE Fellow) & Co-Founder",
       "organization": "VSAP-LAB / Soitec",
       "avatar": "images/speakers/bich-yen-nguyen.jpg"
@@ -202,7 +202,7 @@
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Tran Dac Khoa",
+      "name": "Khoa Tran",
       "title": "General Director",
       "organization": "Renesas Design Vietnam",
       "avatar": "images/speakers/khoa-tran.jpg"
@@ -271,15 +271,15 @@
     "panelists": [
       {
         "prefix": "Prof. Dr.",
-        "name": "Nguyen Thi Thanh Mai",
+        "name": "Mai Nguyen",
         "title": "President (Distinguished Panelist)",
         "organization": "VNU-HCM",
         "avatar": "images/speakers/nguyen-thi-thanh-mai.jpg"
       },
       {
         "prefix": "Dr.",
-        "name": "Nguyen Ky Phung",
-        "title": "Vice Chairman (Distinguished Panelist)",
+        "name": "Phung Nguyen",
+        "title": "Head of the Management Board (Distinguished Panelist)",
         "organization": "Saigon Hi-Tech Park (SHTP)",
         "avatar": ""
       }
@@ -295,9 +295,9 @@
     "category": "closing",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Le Quang Dam (QD)",
-      "title": "General Director",
-      "organization": "Marvell Technology Vietnam",
+      "name": "Quang-Dam Le (QD)",
+      "title": "Vice President & General Director",
+      "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
     "panelists": [
