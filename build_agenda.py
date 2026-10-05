@@ -323,7 +323,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261004_2331">
+  <link rel="stylesheet" href="styles.css?v=20261005_1017">
 
   <style>
     body {{
@@ -696,7 +696,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261004_2331"></script>
+  <script src="app.js?v=20261005_1017"></script>
 </body>
 </html>
 '''
