@@ -265,7 +265,7 @@ MARVELL_SVG_PATH = '''M425.9,98.4l-33.7,53.9l-33.3-53.9H344v91h14.9v-58.6c0-1.1,
 def get_marvell_logo(css_class="h-7 w-auto", fill_color="#0072ce"):
     return f'<svg class="{css_class}" viewBox="0 0 1004 288" fill="{fill_color}" aria-label="Marvell Technology Logo"><path d="{MARVELL_SVG_PATH}"/></svg>'
 
-marvell_logo_header = get_marvell_logo("h-8 sm:h-9 md:h-10 w-auto", "#000000")
+marvell_logo_header = get_marvell_logo("h-7 sm:h-9 md:h-10 w-auto", "#000000")
 marvell_logo_footer = get_marvell_logo("h-7 sm:h-8 w-auto", "#000000")
 marvell_logo_ticket = get_marvell_logo("h-5 w-auto", "#00b5e2")
 marvell_logo_partner = get_marvell_logo("h-8 w-auto", "#000000")
@@ -354,7 +354,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261005_1017">
+  <link rel="stylesheet" href="styles.css?v=20261005_1101">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -368,15 +368,15 @@ html_content = f'''<!DOCTYPE html>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-3 lg:gap-6 xl:gap-8">
       
       <!-- Brand Logo & Summit Title -->
-      <a href="#" class="flex items-center gap-3 sm:gap-4 shrink-0 group">
+      <a href="#" class="flex items-center gap-2 sm:gap-4 min-w-0 group">
         <div class="flex items-center shrink-0">
           <!-- Marvell Brand Mark Official Vector -->
           {marvell_logo_header}
         </div>
-        <div class="h-8 sm:h-9 w-px bg-slate-300"></div>
-        <div class="flex flex-col shrink-0">
-          <span class="text-xs sm:text-sm xl:text-base font-extrabold tracking-wide text-slate-900 uppercase whitespace-nowrap">Vietnam Semiconductor Summit</span>
-          <span class="text-[10px] sm:text-xs text-[#0072ce] tracking-wider font-mono font-bold whitespace-nowrap">2026 INAUGURAL EDITION</span>
+        <div class="h-7 sm:h-9 w-px bg-slate-300 shrink-0"></div>
+        <div class="flex flex-col min-w-0">
+          <span class="text-[11px] sm:text-sm xl:text-base font-extrabold tracking-tight sm:tracking-wide text-slate-900 uppercase truncate sm:whitespace-nowrap">Vietnam Semiconductor Summit</span>
+          <span class="text-[9px] sm:text-xs text-[#0072ce] tracking-wider font-mono font-bold truncate sm:whitespace-nowrap">2026 INAUGURAL EDITION</span>
         </div>
       </a>
 
@@ -1231,7 +1231,7 @@ html_content = f'''<!DOCTYPE html>
         <p class="text-slate-600 text-sm mt-2 max-w-xl mx-auto">Auditorium seating is strictly limited. Complete the form below to receive your official invitation letter and digital check-in E-Pass.</p>
       </div>
 
-      <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200/90 shadow-xl">
+      <div class="bg-white p-5 sm:p-8 md:p-10 rounded-2xl border border-slate-200/90 shadow-xl max-w-full">
         <form id="summit-register-form" class="space-y-6">
           
           <!-- Pass Tier Selector -->
@@ -1329,7 +1329,7 @@ html_content = f'''<!DOCTYPE html>
           </div>
 
           <div class="pt-4">
-            <button type="submit" class="mrvll-btn-primary w-full justify-center text-sm py-4">
+            <button type="submit" class="mrvll-btn-primary w-full justify-center text-xs sm:text-sm py-3.5 sm:py-4 px-4 sm:px-8 text-center max-w-full">
               <span>CONFIRM REGISTRATION (FREE RSVP)</span>
               <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </button>
@@ -1473,24 +1473,24 @@ html_content = f'''<!DOCTYPE html>
   <!-- =========================================================================
        POP-UP 1: SPEAKER BIO & SESSIONS MODAL (HIGH-TECH MARVELL CANVAS)
        ========================================================================= -->
-  <div id="speaker-bio-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-4">
-    <div class="modal-content-box bg-[#0c1017] max-w-2xl sm:max-w-3xl w-full rounded-2xl border border-cyan-500/40 p-6 sm:p-8 shadow-2xl relative text-left max-h-[90vh] flex flex-col">
+  <div id="speaker-bio-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-3 sm:p-4 overflow-y-auto overflow-x-hidden">
+    <div class="modal-content-box bg-[#0c1017] max-w-2xl sm:max-w-3xl w-full rounded-2xl border border-cyan-500/40 p-4 sm:p-8 shadow-2xl relative text-left max-h-[90vh] flex flex-col max-w-full">
       <!-- Close Button -->
       <button id="speaker-modal-close" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
 
       <!-- Speaker Profile Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pb-6 border-b border-slate-800 shrink-0">
-        <div class="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-cyan-500/60 shadow-[0_0_30px_rgba(0,181,226,0.35)] shrink-0 bg-blue-950/80">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-slate-800 shrink-0">
+        <div class="relative w-20 h-20 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-cyan-500/60 shadow-[0_0_30px_rgba(0,181,226,0.35)] shrink-0 bg-blue-950/80">
           <img id="speaker-modal-img" src="" alt="Speaker Portrait" class="hidden w-full h-full object-cover object-top" onerror="this.classList.add('hidden'); document.getElementById('speaker-modal-avatar').classList.remove('hidden');">
-          <div id="speaker-modal-avatar" class="w-full h-full flex items-center justify-center text-4xl sm:text-5xl font-black text-[#00b5e2]">
+          <div id="speaker-modal-avatar" class="w-full h-full flex items-center justify-center text-3xl sm:text-5xl font-black text-[#00b5e2]">
             NM
           </div>
         </div>
         <div class="flex-1 min-w-0 pr-6">
-          <h3 id="speaker-modal-name" class="text-2xl sm:text-3xl font-bold text-white leading-tight">Noam Mizrahi</h3>
-          <p id="speaker-modal-title" class="text-sm font-semibold text-[#00b5e2] mt-1">EVP & Chief Technology Officer (CTO)</p>
+          <h3 id="speaker-modal-name" class="text-xl sm:text-3xl font-bold text-white leading-tight">Noam Mizrahi</h3>
+          <p id="speaker-modal-title" class="text-xs sm:text-sm font-semibold text-[#00b5e2] mt-1">EVP & Chief Technology Officer (CTO)</p>
           <p id="speaker-modal-org" class="text-xs sm:text-sm text-slate-400 font-medium mt-0.5">Marvell Technology, Inc.</p>
         </div>
       </div>
@@ -1522,7 +1522,7 @@ html_content = f'''<!DOCTYPE html>
           <span>View full timetable in Agenda</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
-        <button id="speaker-modal-rsvp-btn" class="mrvll-btn-primary text-xs py-3 w-full sm:w-auto justify-center">
+        <button id="speaker-modal-rsvp-btn" class="mrvll-btn-primary text-xs py-3 px-4 w-full sm:w-auto justify-center text-center max-w-full">
           <span>REGISTER TO ATTEND</span>
           <svg class="btn-arrow w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </button>
@@ -1533,8 +1533,8 @@ html_content = f'''<!DOCTYPE html>
   <!-- =========================================================================
        POP-UP 2: QUICK RSVP REGISTRATION MODAL
        ========================================================================= -->
-  <div id="quick-rsvp-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-4">
-    <div class="modal-content-box bg-white max-w-xl w-full rounded-2xl border border-slate-300 p-6 sm:p-8 shadow-2xl relative text-left max-h-[92vh] overflow-y-auto modal-scroll-y">
+  <div id="quick-rsvp-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-3 sm:p-4 overflow-y-auto overflow-x-hidden">
+    <div class="modal-content-box bg-white max-w-xl w-full rounded-2xl border border-slate-300 p-4 sm:p-8 shadow-2xl relative text-left max-h-[92vh] overflow-y-auto modal-scroll-y max-w-full">
       <!-- Close Button -->
       <button id="quick-rsvp-close" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -1545,7 +1545,7 @@ html_content = f'''<!DOCTYPE html>
           <span class="w-2 h-2 rounded-full bg-[#0072ce] animate-pulse"></span>
           <span class="text-[11px] font-extrabold tracking-widest text-[#0072ce] uppercase font-mono">FREE RSVP • LIMITED CAPACITY</span>
         </div>
-        <h3 class="text-2xl font-extrabold text-slate-900">Attend Vietnam Semiconductor Summit 2026</h3>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">Attend Vietnam Semiconductor Summit 2026</h3>
         <p class="text-xs text-slate-500 mt-1">Complete your details to secure your seat and receive your check-in E-Pass.</p>
       </div>
 
@@ -1636,7 +1636,7 @@ html_content = f'''<!DOCTYPE html>
         </div>
 
         <div class="pt-2">
-          <button type="submit" class="mrvll-btn-primary w-full justify-center text-xs py-3.5">
+          <button type="submit" class="mrvll-btn-primary w-full justify-center text-xs py-3 sm:py-3.5 px-4 text-center max-w-full">
             <span>CONFIRM FREE REGISTRATION</span>
             <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </button>
@@ -1651,8 +1651,8 @@ html_content = f'''<!DOCTYPE html>
   <!-- =========================================================================
        12. FREE REGISTRATION CONFIRMATION MODAL & TICKET PASS
        ========================================================================= -->
-  <div id="ticket-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-4">
-    <div class="modal-content-box bg-[#0c1017] max-w-lg w-full rounded-2xl border border-cyan-500/50 p-6 sm:p-8 shadow-2xl relative text-left">
+  <div id="ticket-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-3 sm:p-4 overflow-y-auto overflow-x-hidden">
+    <div class="modal-content-box bg-[#0c1017] max-w-lg w-full rounded-2xl border border-cyan-500/50 p-4 sm:p-8 shadow-2xl relative text-left max-w-full">
       
       <!-- Close Button -->
       <button id="modal-close-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
@@ -1719,11 +1719,11 @@ html_content = f'''<!DOCTYPE html>
 
       <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row gap-3">
-        <button id="download-ticket-btn" class="mrvll-btn-primary flex-1 justify-center text-xs py-3">
+        <button id="download-ticket-btn" class="mrvll-btn-primary flex-1 justify-center text-xs py-3 px-3 text-center max-w-full">
           <span>PRINT / SAVE TICKET (PDF)</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
         </button>
-        <button id="add-calendar-btn" class="inline-flex items-center justify-center gap-2 bg-[#101726] border border-cyan-500/40 hover:border-cyan-400 text-[#00b5e2] text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-lg transition-colors">
+        <button id="add-calendar-btn" class="inline-flex items-center justify-center gap-2 bg-[#101726] border border-cyan-500/40 hover:border-cyan-400 text-[#00b5e2] text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-lg transition-colors max-w-full text-center">
           <span>ADD TO CALENDAR (.ICS)</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         </button>
@@ -1740,7 +1740,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261005_1017"></script>
+  <script src="app.js?v=20261005_1101"></script>
 </body>
 </html>
 '''

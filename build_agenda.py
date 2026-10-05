@@ -323,7 +323,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261005_1017">
+  <link rel="stylesheet" href="styles.css?v=20261005_1101">
 
   <style>
     body {{
@@ -638,24 +638,24 @@ html = f'''<!DOCTYPE html>
   <!-- =========================================================================
        POP-UP: SPEAKER BIO & SESSIONS MODAL (HIGH-TECH MARVELL CANVAS)
        ========================================================================= -->
-  <div id="speaker-bio-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-4">
-    <div class="modal-content-box bg-[#0c1017] max-w-2xl sm:max-w-3xl w-full rounded-2xl border border-cyan-500/40 p-6 sm:p-8 shadow-2xl relative text-left max-h-[90vh] flex flex-col">
+  <div id="speaker-bio-modal" class="fixed inset-0 z-50 hidden modal-backdrop items-center justify-center p-3 sm:p-4 overflow-y-auto overflow-x-hidden">
+    <div class="modal-content-box bg-[#0c1017] max-w-2xl sm:max-w-3xl w-full rounded-2xl border border-cyan-500/40 p-4 sm:p-8 shadow-2xl relative text-left max-h-[90vh] flex flex-col max-w-full">
       <!-- Close Button -->
       <button id="speaker-modal-close" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
 
       <!-- Speaker Profile Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pb-6 border-b border-slate-800 shrink-0">
-        <div class="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-cyan-500/60 shadow-[0_0_30px_rgba(0,181,226,0.35)] shrink-0 bg-blue-950/80">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-slate-800 shrink-0">
+        <div class="relative w-20 h-20 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-cyan-500/60 shadow-[0_0_30px_rgba(0,181,226,0.35)] shrink-0 bg-blue-950/80">
           <img id="speaker-modal-img" src="" alt="Speaker Portrait" class="hidden w-full h-full object-cover object-top" onerror="this.classList.add('hidden'); document.getElementById('speaker-modal-avatar').classList.remove('hidden');">
-          <div id="speaker-modal-avatar" class="w-full h-full flex items-center justify-center text-4xl sm:text-5xl font-black text-[#00b5e2]">
+          <div id="speaker-modal-avatar" class="w-full h-full flex items-center justify-center text-3xl sm:text-5xl font-black text-[#00b5e2]">
             NM
           </div>
         </div>
         <div class="flex-1 min-w-0 pr-6">
-          <h3 id="speaker-modal-name" class="text-2xl sm:text-3xl font-bold text-white leading-tight">Noam Mizrahi</h3>
-          <p id="speaker-modal-title" class="text-sm font-semibold text-[#00b5e2] mt-1">EVP & Chief Technology Officer (CTO)</p>
+          <h3 id="speaker-modal-name" class="text-xl sm:text-3xl font-bold text-white leading-tight">Noam Mizrahi</h3>
+          <p id="speaker-modal-title" class="text-xs sm:text-sm font-semibold text-[#00b5e2] mt-1">EVP & Chief Technology Officer (CTO)</p>
           <p id="speaker-modal-org" class="text-xs sm:text-sm text-slate-400 font-medium mt-0.5">Marvell Technology, Inc.</p>
         </div>
       </div>
@@ -687,7 +687,7 @@ html = f'''<!DOCTYPE html>
           <span>View Main Summit Overview</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
-        <a href="index.html#register" class="mrvll-btn-primary text-xs py-3 w-full sm:w-auto justify-center">
+        <a href="index.html#register" class="mrvll-btn-primary text-xs py-3 px-4 w-full sm:w-auto justify-center text-center max-w-full">
           <span>REGISTER TO ATTEND</span>
           <svg class="btn-arrow w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
@@ -696,7 +696,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261005_1017"></script>
+  <script src="app.js?v=20261005_1101"></script>
 </body>
 </html>
 '''

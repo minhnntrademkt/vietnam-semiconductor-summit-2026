@@ -528,6 +528,7 @@ function initSpeakerBioModal() {
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   }
 
   // Click event delegation to support all speaker cards (both in Speakers section and Agenda section)
@@ -545,7 +546,8 @@ function initSpeakerBioModal() {
   function closeSpeakerModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   }
 
   if (closeBtn) {
@@ -585,6 +587,7 @@ function openQuickRsvpModal(defaultTier) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
   document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
 }
 
 function closeQuickRsvpModal() {
@@ -592,7 +595,8 @@ function closeQuickRsvpModal() {
   if (!modal) return;
   modal.classList.add('hidden');
   modal.classList.remove('flex');
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
 }
 
 function initQuickRsvpModal() {
@@ -718,6 +722,7 @@ function showTicketModal(attendee) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
   document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
 }
 
 function initRegistrationForm() {
@@ -781,7 +786,8 @@ function initRegistrationForm() {
   function closeTicketModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   }
 
   if (closeBtn) {
