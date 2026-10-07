@@ -45,8 +45,14 @@ const SPEAKER_BIOS = {
         category: 'Strategic Keynote'
       },
       {
+        time: '16:15 - 16:55',
+        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain (Moderator)',
+        room: 'Plenary Hall',
+        category: 'High-Level Panel'
+      },
+      {
         time: '16:55 - 17:05',
-        title: 'Closing Strategic Remarks (with Mr. Noam Mizrahi)',
+        title: 'Closing Strategic Remarks (with Summit Leadership)',
         room: 'Plenary Hall',
         category: 'Closing Ceremony'
       }
@@ -151,12 +157,12 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   'tran-dac-khoa': {
     name: 'Mr. Khoa Tran',
     title: 'General Director',
-    org: 'Renesas Design Vietnam Co., Ltd.',
+    org: 'Renesas Electronics Vietnam',
     tag: 'INDUSTRY / AUTOMOTIVE IC & SDV',
     photo: 'images/speakers/khoa-tran.jpg',
     avatarText: 'TDK',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Tran Dac Khoa, General Director of Renesas Design Vietnam, joined the company in 2005 as part of its first generation of engineers. He holds a bachelor’s degree in Electronics–Telecommunications from Ho Chi Minh City University of Technology (HCMUT) and brings over 20 years of semiconductor design experience. With deep expertise in System-on-Chip (SoC) hardware, he has contributed to major automotive projects and presented at A-SSCC 2008 in Japan. As the first Vietnamese General Director, he has expanded Renesas Vietnam’s role as a vital global R&D hub while actively fostering local engineering talent through university partnerships.',
+    bio: 'Tran Dac Khoa, General Director of Renesas Electronics Vietnam, joined the company in 2005 as part of its first generation of engineers. He holds a bachelor’s degree in Electronics–Telecommunications from Ho Chi Minh City University of Technology (HCMUT) and brings over 20 years of semiconductor design experience. With deep expertise in System-on-Chip (SoC) hardware, he has contributed to major automotive projects and presented at A-SSCC 2008 in Japan. As the first Vietnamese General Director, he has expanded Renesas Vietnam’s role as a vital global R&D hub while actively fostering local engineering talent through university partnerships.',
     sessions: [
       {
         time: '14:30 - 14:55',
@@ -235,7 +241,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     bio: 'Lam Trinh is regional sales manager at Synopsys, where he is responsible for emerging markets such as Vietnam, Pakistan, and Bangladesh. He works closely with start-ups in the IC design field to promote Synopsys technologies that help customers shorten time to market. Lam has also been working with government agencies and universities to promote Synopsys IC design advanced technologies.  Lam has been in the semiconductor industry for more than 20 years with the big names such as Intel and Synopsys.',
     sessions: [
       {
-        time: '11:55 - 12:20',
+        time: '11:30 - 11:55',
         title: 'Next-Generation Arm Server Silicon & Cloud Workloads',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
@@ -250,16 +256,34 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     photo: 'images/speakers/pham-nguyen-thanh-loan.jpg',
     avatarText: 'PTL',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
-    bio: 'Head of the IC Design and Embedded Systems Laboratory at the School of Electrical & Electronic Engineering (SEEE), HUST. She is a foremost researcher in analog and mixed-signal microelectronics, leading national collaborative research in high-frequency wireless communications.',
+    bio: `Assoc. Prof. Dr. Loan Pham-Nguyen (Member, IEEE) is an Associate Professor at the School of Electrical and Electronic Engineering (SEEE), Hanoi University of Science and Technology (HUST), Vietnam. She holds several key leadership roles, including Deputy Head of the Department of Electronics at SEEE since 2014, and recently served as the Director of the Smart Embedded System & IoT education program from 2022 to 2024. Within the IEEE community, she is the Chairman of the Vietnam chapter of the IEEE Power Electronics Society (PELS), Vice Chairman of the IEEE Circuit and System Society (CASS) and has been part of the IEEE Vietnam Section Secretariat since 2012. She received her engineer degree from École Centrale de Lyon (2005), her M.Sc. from Joseph Fourier University (2006), and her Ph.D. in Micro-Nanoelectronics from the Grenoble Institute of Technology (INPG), France (2009).\n\nSince 2010, Dr. Pham-Nguyen has led an Analog IC design research group (BKIC) at HUST, focusing on power management ICs and Analog-to-Digital Converters (ADCs) for biomedical applications and wearable devices. Her team works closely with international researchers from institutions like KAIST, CBNU, Korea, and UC San Diego, US on collaborative projects, such as designing wireless chargers, NFC tags, LED driver, TEG PMIC. She plays a significant role in educational quality assurance as a qualified AUN-QA Assessor and contributor to ABET-based programs. She is the author of 1 textbook, co-author of 1 book chapter, 2 patents, and over 60 journals and international conference papers.`,
     sessions: [
       {
-        time: '10:35 - 11:00',
+        time: '11:00 - 11:30',
         title: 'IC Design Education at HUST-SEEE: A full-value chain approach and Biomedical IC Design Demonstration.',
         room: 'Plenary Hall',
         category: 'Academia & Research'
       }
     ],
     abstract: `Hanoi University of Science and Technology (HUST) provides a comprehensive semiconductor education program covering the entire industry value chain - from IC design and manufacturing to packaging, testing, and application development. Centered at the School of Electrical and Electronic Engineering ( SEEE), the curriculum emphasizes practical, research-based, and project-oriented learning supported by Class 1000 cleanrooms, Cadence EDA design suites, and FPGA prototyping labs. Adopting the philosophy of "Application First, Chip Follows", the BKIC Design Lab demonstrates this academic framework through a multimodal digital electronic stethoscope. The device integrates an Analog Front- End (AFE) stage for the simultaneous acquisition and conditioning of Phonocardiogram (PCG), Photoplethysmography (PPG), and Electrocardiogram (ECG) signals. Digitized and transmitted wirelessly via Bluetooth Low Energy (BLE), the chip achieves high signal clarity ( ECG SNR > 28dB, PCG SNR > 33dB) at low power consumption (132 mW) within a Vietnamese bronze drum-inspired enclosure. This work highlights SEEE-HUST's capability in bridging hands-on IC design education with practical biomedical applications.`
+  },
+  'hai-hoang': {
+    name: 'Mr. Hai Hoang',
+    title: 'Director',
+    org: 'Qualcomm Vietnam',
+    tag: 'INDUSTRY / CONNECTIVITY & EDGE AI',
+    photo: '',
+    avatarText: 'HH',
+    colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
+    bio: '',
+    sessions: [
+      {
+        time: '11:55 - 12:20',
+        title: 'Next-Gen Mobile Connectivity Silicon & Edge AI',
+        room: 'Plenary Hall',
+        category: 'Industry Presentation'
+      }
+    ]
   },
   'thieu-phuong-nam': {
     name: 'Mr. Nam Thieu',
@@ -272,7 +296,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     bio: 'General Director of Qualcomm Vietnam, Cambodia & Laos, directing Qualcomm’s business, R&D alliances, and engineering initiatives in edge AI silicon, 5G/6G wireless communications, and IoT platforms.',
     sessions: [
       {
-        time: '11:30 - 11:55',
+        time: '11:55 - 12:20',
         title: 'Next-Gen Mobile Connectivity Silicon & Edge AI',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
@@ -280,9 +304,9 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     ]
   },
   'nguyen-thi-thanh-mai': {
-    name: 'Prof. Dr. Mai Nguyen',
-    title: 'President',
-    org: 'Vietnam National University, Ho Chi Minh City (VNU-HCM)',
+    name: 'Dr. Mai Nguyen',
+    title: 'President (Distinguished Panelist)',
+    org: 'VNU-HCM',
     tag: 'ACADEMIA / WORKFORCE STRATEGY',
     photo: 'images/speakers/nguyen-thi-thanh-mai.jpg',
     avatarText: 'NTM',
@@ -299,11 +323,11 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   },
   'nguyen-ky-phung': {
     name: 'Dr. Phung Nguyen',
-    title: 'Head of the Management Board',
-    org: 'Saigon Hi-Tech Park Authority (SHTP)',
+    title: 'Vice Chairman (Distinguished Panelist)',
+    org: 'Saigon Hi-Tech Park (SHTP)',
     tag: 'DISTINGUISHED PANELIST / SHTP',
     photo: '',
-    avatarText: '',
+    avatarText: 'NKP',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: '',
     sessions: [
@@ -326,6 +350,9 @@ SPEAKER_BIOS['phong-vo'] = SPEAKER_BIOS['lam-trinh'];
 SPEAKER_BIOS['tran-dac-khoa'] = SPEAKER_BIOS['tran-dac-khoa'];
 SPEAKER_BIOS['khoa-tran'] = SPEAKER_BIOS['tran-dac-khoa'];
 SPEAKER_BIOS['tran-dang-khoa'] = SPEAKER_BIOS['tran-dac-khoa'];
+SPEAKER_BIOS['hai-hoang'] = SPEAKER_BIOS['hai-hoang'];
+SPEAKER_BIOS['mr-hai-hoang'] = SPEAKER_BIOS['hai-hoang'];
+SPEAKER_BIOS['hoang-hung-hai'] = SPEAKER_BIOS['hai-hoang'];
 SPEAKER_BIOS['vo-thieu-nam'] = SPEAKER_BIOS['thieu-phuong-nam'];
 SPEAKER_BIOS['nguyen-hoang-trang'] = SPEAKER_BIOS['hoang-trang'];
 SPEAKER_BIOS['nguyen-loan'] = SPEAKER_BIOS['loan-nguyen'];
@@ -488,6 +515,7 @@ function initSpeakerBioModal() {
     const bioBlock = bioEl ? bioEl.closest('div') : null;
     if (speaker.bio && speaker.bio.trim()) {
       bioEl.innerText = speaker.bio;
+      bioEl.style.whiteSpace = 'pre-line';
       if (bioBlock) bioBlock.classList.remove('hidden');
     } else {
       bioEl.innerText = '';

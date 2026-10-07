@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Build script for dedicated Agenda page (agenda.html).
 Compiles 24 sessions from agenda.json into a clean 2-column layout
@@ -8,7 +8,7 @@ and Sponsor/Partner info.
 import json
 import os
 
-base_dir = r"d:\Landing Page\Landing Marvell"
+base_dir = os.path.dirname(os.path.abspath(__file__))
 json_path = os.path.join(base_dir, "agenda.json")
 out_path = os.path.join(base_dir, "agenda.html")
 
@@ -34,6 +34,8 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-quang-khanh'
     elif 'thanh-loan' in avatar or 'pham-nguyen' in name or 'pham' in name:
         return 'pham-nguyen-thanh-loan'
+    elif 'hai' in avatar or 'hai' in name:
+        return 'hai-hoang'
     elif 'thieu-phuong-nam' in avatar or 'thieu' in name or 'nam' in name:
         return 'thieu-phuong-nam'
     elif 'lam-trinh' in avatar or 'lam trinh' in name:
@@ -52,7 +54,7 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-ky-phung'
     return ""
 
-def render_speaker_card(speaker_dict):
+def render_speaker_card(speaker_dict, is_moderator=False):
     if not speaker_dict or not isinstance(speaker_dict, dict) or not speaker_dict.get('name'):
         return ""
     prefix = speaker_dict.get('prefix', '').strip()
@@ -61,6 +63,8 @@ def render_speaker_card(speaker_dict):
     org = speaker_dict.get('organization', '').strip()
     avatar = speaker_dict.get('avatar', '').strip()
     speaker_id = get_speaker_id(speaker_dict)
+
+    is_mod = is_moderator or speaker_dict.get('is_moderator') or 'moderator' in title.lower()
 
     academic_tag = ""
     display_name = name
@@ -80,21 +84,38 @@ def render_speaker_card(speaker_dict):
 
     avatar_clean = avatar.split('?')[0] if avatar else ''
     if avatar_clean and os.path.exists(os.path.join(base_dir, avatar_clean)):
-        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm" style="object-position: center top;">'
+        border_avatar = "border-2 border-[#0072ce]" if is_mod else "border border-blue-200 ring-1 ring-blue-50"
+        avatar_core = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover object-top shrink-0 {border_avatar} shadow-sm" style="object-position: center top;">'
     else:
-        avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
+        border_style = "border-2 border-[#0072ce]" if is_mod else "border border-slate-200/80"
+        avatar_core = f'''<div class="w-11 h-11 rounded-full {border_style} bg-slate-100 flex items-end justify-center shrink-0 overflow-hidden shadow-sm">
+          <svg class="w-9 h-9 text-slate-400/60 translate-y-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>'''
+
+    if is_mod:
+        avatar_html = f'''<div class="relative shrink-0 flex items-center justify-center">
+        {avatar_core}
+        <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 py-[0.5px] rounded bg-[#0072ce] text-white text-[7.5px] font-extrabold tracking-wider uppercase leading-none shadow-xs whitespace-nowrap z-10 pointer-events-none">MODERATOR</span>
+      </div>'''
+    else:
+        avatar_html = avatar_core
 
     data_attr = f'data-speaker-id="{speaker_id}"' if speaker_id else ''
     click_classes = "speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200" if speaker_id else ""
     arrow_html = f'<svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>' if speaker_id else ""
     title_attr = f'title="Click to view {display_name} profile & presentation abstract"' if speaker_id else ""
 
+    card_styling = "w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0"
+    name_html = f'<div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">{display_name}</div>'
+
     return f'''
-    <div class="{click_classes} w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" {data_attr} {title_attr}>
+    <div class="{click_classes} {card_styling}" {data_attr} {title_attr}>
       {avatar_html}
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         {academic_tag}
-        <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">{display_name}</div>
+        {name_html}
         {title_html}
         {org_html}
       </div>
@@ -159,6 +180,10 @@ for item in agenda_data:
 
     # Speaker & Panelists Modules (All rendered as Equal Sized & Structured Speaker Cards)
     speaker_cards_html = []
+    if item.get('moderator'):
+        m_card = render_speaker_card(item['moderator'], is_moderator=True)
+        if m_card:
+            speaker_cards_html.append(m_card)
     if item.get('speaker'):
         s_card = render_speaker_card(item['speaker'])
         if s_card:
@@ -186,14 +211,14 @@ for item in agenda_data:
 
         sponsor_html = f'''
         <div class="inline-flex items-stretch rounded-xl border border-slate-200/90 bg-white shadow-sm shrink-0 min-h-[64px] self-stretch">
-          <!-- Cột 1: Partner: (Canh giữa cột) -->
+          <!-- Cá»™t 1: Partner: (Canh giá»¯a cá»™t) -->
           <div class="px-2.5 py-2 bg-slate-50 border-r border-slate-200/80 flex items-center justify-center text-center shrink-0">
             <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 whitespace-nowrap">
               Partner:
             </span>
           </div>
 
-          <!-- Cột 2: Logo (nền trong suốt) & Tên doanh nghiệp -->
+          <!-- Cá»™t 2: Logo (ná»n trong suá»‘t) & TÃªn doanh nghiá»‡p -->
           <div class="px-3 py-1.5 flex flex-col justify-center gap-1 bg-white">
             <div class="flex items-center">
               {logo_img_html}
@@ -323,7 +348,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261005_1101">
+  <link rel="stylesheet" href="styles.css?v=20261007_1724">
 
   <style>
     body {{
@@ -381,13 +406,13 @@ html = f'''<!DOCTYPE html>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/70 border border-blue-500/40 text-xs font-bold text-[#00b5e2] tracking-wider uppercase mb-4 shadow-[0_0_15px_rgba(0,181,226,0.2)]">
         <span class="w-2 h-2 rounded-full bg-[#00b5e2] animate-pulse"></span>
-        MARVELL TECHNOLOGY PRESENTS • OFFICIAL TIMETABLE
+        MARVELL TECHNOLOGY PRESENTS â€¢ OFFICIAL TIMETABLE
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
         Official Summit Agenda & Timetable
       </h1>
       <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-        Monday, November 23, 2026 • Ho Chi Minh City, Vietnam. Full strategic congress timetable uniting Government leadership, industry pioneers, and academic research luminaries.
+        Monday, November 23, 2026 â€¢ Ho Chi Minh City, Vietnam. Full strategic congress timetable uniting Government leadership, industry pioneers, and academic research luminaries.
       </p>
 
       <!-- Search Box & Summary Bar -->
@@ -403,7 +428,7 @@ html = f'''<!DOCTYPE html>
 
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> Technical & Strategic Tracks</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 – 20:10 ICT</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 â€“ 20:10 ICT</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Grand Ballroom & Tech Halls</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 100% Free RSVP</span>
       </div>
@@ -667,7 +692,7 @@ html = f'''<!DOCTYPE html>
             <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
             <span>BIOGRAPHY & EXECUTIVE PROFILE</span>
           </h4>
-          <p id="speaker-modal-bio" class="text-sm text-slate-300 leading-relaxed">...</p>
+          <p id="speaker-modal-bio" class="text-sm text-slate-300 leading-relaxed whitespace-pre-line">...</p>
         </div>
 
         <div class="pt-2">
@@ -696,7 +721,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261005_1101"></script>
+  <script src="app.js?v=20261007_1724"></script>
 </body>
 </html>
 '''

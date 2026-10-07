@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 The 1st Vietnam Semiconductor Summit 2026 - Site Generator
 Host Organization: Marvell Technology, Inc. (NASDAQ: MRVL)
@@ -32,6 +32,8 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-quang-khanh'
     elif 'thanh-loan' in avatar or 'pham-nguyen' in name or 'pham' in name:
         return 'pham-nguyen-thanh-loan'
+    elif 'hai' in avatar or 'hai' in name:
+        return 'hai-hoang'
     elif 'thieu-phuong-nam' in avatar or 'thieu' in name or 'nam' in name:
         return 'thieu-phuong-nam'
     elif 'lam-trinh' in avatar or 'lam trinh' in name:
@@ -50,7 +52,7 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-ky-phung'
     return ""
 
-def render_speaker_card(speaker_dict):
+def render_speaker_card(speaker_dict, is_moderator=False):
     if not speaker_dict or not isinstance(speaker_dict, dict) or not speaker_dict.get('name'):
         return ""
     prefix = speaker_dict.get('prefix', '').strip()
@@ -59,6 +61,8 @@ def render_speaker_card(speaker_dict):
     org = speaker_dict.get('organization', '').strip()
     avatar = speaker_dict.get('avatar', '').strip()
     speaker_id = get_speaker_id(speaker_dict)
+
+    is_mod = is_moderator or speaker_dict.get('is_moderator') or 'moderator' in title.lower()
 
     academic_tag = ""
     display_name = name
@@ -78,21 +82,38 @@ def render_speaker_card(speaker_dict):
 
     avatar_clean = avatar.split('?')[0] if avatar else ''
     if avatar_clean and os.path.exists(os.path.join(base_dir, avatar_clean)):
-        avatar_html = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm" style="object-position: center top;">'
+        border_avatar = "border-2 border-[#0072ce]" if is_mod else "border border-blue-200 ring-1 ring-blue-50"
+        avatar_core = f'<img src="{avatar}" alt="{display_name}" class="w-11 h-11 rounded-full object-cover object-top shrink-0 {border_avatar} shadow-sm" style="object-position: center top;">'
     else:
-        avatar_html = '''<div class="w-11 h-11 rounded-full bg-gradient-to-b from-slate-50 to-blue-50/70 border border-slate-200/90 flex items-center justify-center shrink-0 shadow-sm text-slate-400"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>'''
+        border_style = "border-2 border-[#0072ce]" if is_mod else "border border-slate-200/80"
+        avatar_core = f'''<div class="w-11 h-11 rounded-full {border_style} bg-slate-100 flex items-end justify-center shrink-0 overflow-hidden shadow-sm">
+          <svg class="w-9 h-9 text-slate-400/60 translate-y-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>'''
+
+    if is_mod:
+        avatar_html = f'''<div class="relative shrink-0 flex items-center justify-center">
+        {avatar_core}
+        <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 py-[0.5px] rounded bg-[#0072ce] text-white text-[7.5px] font-extrabold tracking-wider uppercase leading-none shadow-xs whitespace-nowrap z-10 pointer-events-none">MODERATOR</span>
+      </div>'''
+    else:
+        avatar_html = avatar_core
 
     data_attr = f'data-speaker-id="{speaker_id}"' if speaker_id else ''
     click_classes = "speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200" if speaker_id else ""
     arrow_html = f'<svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>' if speaker_id else ""
     title_attr = f'title="Click to view {display_name} profile & presentation abstract"' if speaker_id else ""
 
+    card_styling = "w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0"
+    name_html = f'<div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">{display_name}</div>'
+
     return f'''
-    <div class="{click_classes} w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" {data_attr} {title_attr}>
+    <div class="{click_classes} {card_styling}" {data_attr} {title_attr}>
       {avatar_html}
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         {academic_tag}
-        <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">{display_name}</div>
+        {name_html}
         {title_html}
         {org_html}
       </div>
@@ -157,6 +178,10 @@ for item in agenda_data:
 
     # Speaker & Panelists Modules (All rendered as Equal Sized & Structured Speaker Cards)
     speaker_cards_html = []
+    if item.get('moderator'):
+        m_card = render_speaker_card(item['moderator'], is_moderator=True)
+        if m_card:
+            speaker_cards_html.append(m_card)
     if item.get('speaker'):
         s_card = render_speaker_card(item['speaker'])
         if s_card:
@@ -184,14 +209,14 @@ for item in agenda_data:
 
         sponsor_html = f'''
         <div class="inline-flex items-stretch rounded-xl border border-slate-200/90 bg-white shadow-sm shrink-0 min-h-[64px] self-stretch">
-          <!-- Cột 1: Partner: (Canh giữa cột) -->
+          <!-- Cá»™t 1: Partner: (Canh giá»¯a cá»™t) -->
           <div class="px-2.5 py-2 bg-slate-50 border-r border-slate-200/80 flex items-center justify-center text-center shrink-0">
             <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500 whitespace-nowrap">
               Partner:
             </span>
           </div>
 
-          <!-- Cột 2: Logo (nền trong suốt) & Tên doanh nghiệp -->
+          <!-- Cá»™t 2: Logo (ná»n trong suá»‘t) & TÃªn doanh nghiá»‡p -->
           <div class="px-3 py-1.5 flex flex-col justify-center gap-1 bg-white">
             <div class="flex items-center">
               {logo_img_html}
@@ -354,7 +379,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261005_1101">
+  <link rel="stylesheet" href="styles.css?v=20261007_1724">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -444,7 +469,7 @@ html_content = f'''<!DOCTYPE html>
       <!-- Top Host Badge -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/70 border border-blue-500/40 text-xs font-bold text-[#00b5e2] tracking-wider uppercase mb-8 shadow-[0_0_15px_rgba(0,181,226,0.2)]">
         <span class="w-2 h-2 rounded-full bg-[#00b5e2] animate-pulse"></span>
-        MARVELL TECHNOLOGY PRESENTS • INAUGURAL EDITION
+        MARVELL TECHNOLOGY PRESENTS â€¢ INAUGURAL EDITION
       </div>
 
       <!-- Main Headline -->
@@ -489,7 +514,7 @@ html_content = f'''<!DOCTYPE html>
           <div>
             <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Registration</span>
             <span class="text-sm font-bold text-emerald-400">100% Free RSVP</span>
-            <span class="text-[10px] text-slate-400 block">Limited Capacity • Vetted</span>
+            <span class="text-[10px] text-slate-400 block">Limited Capacity â€¢ Vetted</span>
           </div>
         </div>
       </div>
@@ -542,7 +567,7 @@ html_content = f'''<!DOCTYPE html>
         <div class="pt-4 md:pt-0">
           <span class="block text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">50,000</span>
           <span class="text-xs sm:text-sm font-bold text-slate-800 uppercase tracking-wider mt-2 block">National Target Engineers by 2030</span>
-          <p class="text-xs text-slate-500 mt-1">Vietnam Semiconductor Strategy (Decision 1017/QĐ-TTg)</p>
+          <p class="text-xs text-slate-500 mt-1">Vietnam Semiconductor Strategy (Decision 1017/QÄ-TTg)</p>
         </div>
         <div class="pt-4 md:pt-0">
           <span class="block text-4xl sm:text-5xl font-extrabold text-[#00b5e2] tracking-tight">3</span>
@@ -615,7 +640,7 @@ html_content = f'''<!DOCTYPE html>
             </div>
             <span class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase">PILLAR 04</span>
             <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2.5">Talent & Academic R&D</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Supporting Vietnam's National Strategy to develop 50,000 semiconductor engineers by 2030 (Decision 1017/QĐ-TTg) through joint university R&D laboratories, EDA software sponsorships, and fellowship programs.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">Supporting Vietnam's National Strategy to develop 50,000 semiconductor engineers by 2030 (Decision 1017/QÄ-TTg) through joint university R&D laboratories, EDA software sponsorships, and fellowship programs.</p>
           </div>
         </div>
 
@@ -697,7 +722,7 @@ html_content = f'''<!DOCTYPE html>
           <!-- Bottom Action Links -->
           <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs">
             <span class="text-slate-400">
-              Host Headquarters: <strong>Marvell Technology Vietnam, LLC</strong> • Etown6 Tower (HQ) & UOA Tower, HCMC • SP2, Da Nang
+              Host Headquarters: <strong>Marvell Technology Vietnam, LLC</strong> â€¢ Etown6 Tower (HQ) & UOA Tower, HCMC â€¢ SP2, Da Nang
             </span>
             <div class="flex items-center gap-4">
               <a href="https://www.marvell.com/company/careers.html" target="_blank" class="text-[#00b5e2] hover:underline font-semibold flex items-center gap-1">
@@ -931,17 +956,18 @@ html_content = f'''<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Mr. Nam Thieu -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="thieu-phuong-nam">
+          <!-- Mr. Hai Hoang -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="hai-hoang">
             <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/thieu-phuong-nam.jpg" alt="Mr. Nam Thieu" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">TPN</div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-[#0d1829] flex items-end justify-center">
+                <svg class="w-4/5 h-4/5 text-slate-600/60 translate-y-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Nam Thieu</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Qualcomm</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Director, Qualcomm VN & Indochina</p>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Hai Hoang</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Qualcomm Vietnam</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Director</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
               <span>View Executive Bio</span>
@@ -1024,10 +1050,10 @@ html_content = f'''<!DOCTYPE html>
           <!-- Dr. Phung Nguyen -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-ky-phung">
             <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-slate-700/60 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-[#0b1324] flex items-center justify-center">
-                <div class="w-full h-full flex items-center justify-center text-slate-500 group-hover:text-slate-400 transition-colors">
-                  <svg class="w-12 h-12 opacity-40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-slate-700/60 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-[#0b1324] flex items-end justify-center">
+                <svg class="w-4/5 h-4/5 text-slate-600/60 translate-y-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Dr. Phung Nguyen</h4>
@@ -1059,7 +1085,7 @@ html_content = f'''<!DOCTYPE html>
               HIGH-LEVEL STRATEGIC PLENARY
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-              Building Vietnam's National Semiconductor Value Chain 2026–2035
+              Building Vietnam's National Semiconductor Value Chain 2026â€“2035
             </h2>
             <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
               A milestone roundtable uniting Government policymakers, multinational semiconductor titans, and top university presidents to establish actionable frameworks for IC design incentives, packaging infrastructure, and workforce readiness.
@@ -1068,7 +1094,7 @@ html_content = f'''<!DOCTYPE html>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
               <div>
                 <span class="text-slate-400 block uppercase font-bold">Time & Venue</span>
-                <span class="font-mono text-cyan-300 font-bold text-sm">16:15 - 16:55 • Grand Ballroom</span>
+                <span class="font-mono text-cyan-300 font-bold text-sm">16:15 - 16:55 â€¢ Grand Ballroom</span>
               </div>
               <div>
                 <span class="text-slate-400 block uppercase font-bold">Session Chair</span>
@@ -1464,8 +1490,8 @@ html_content = f'''<!DOCTYPE html>
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px]">
-        <p>© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
-        <p class="text-slate-500 font-mono">The 1st Vietnam Semiconductor Summit • Monday, November 23, 2026 • Ho Chi Minh City</p>
+        <p>Â© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
+        <p class="text-slate-500 font-mono">The 1st Vietnam Semiconductor Summit â€¢ Monday, November 23, 2026 â€¢ Ho Chi Minh City</p>
       </div>
     </div>
   </footer>
@@ -1502,7 +1528,7 @@ html_content = f'''<!DOCTYPE html>
             <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
             <span>BIOGRAPHY & EXECUTIVE PROFILE</span>
           </h4>
-          <p id="speaker-modal-bio" class="text-sm text-slate-300 leading-relaxed">...</p>
+          <p id="speaker-modal-bio" class="text-sm text-slate-300 leading-relaxed whitespace-pre-line">...</p>
         </div>
 
         <div class="pt-2">
@@ -1543,7 +1569,7 @@ html_content = f'''<!DOCTYPE html>
       <div class="mb-5 pr-8">
         <div class="flex items-center gap-2 mb-1.5">
           <span class="w-2 h-2 rounded-full bg-[#0072ce] animate-pulse"></span>
-          <span class="text-[11px] font-extrabold tracking-widest text-[#0072ce] uppercase font-mono">FREE RSVP • LIMITED CAPACITY</span>
+          <span class="text-[11px] font-extrabold tracking-widest text-[#0072ce] uppercase font-mono">FREE RSVP â€¢ LIMITED CAPACITY</span>
         </div>
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">Attend Vietnam Semiconductor Summit 2026</h3>
         <p class="text-xs text-slate-500 mt-1">Complete your details to secure your seat and receive your check-in E-Pass.</p>
@@ -1662,7 +1688,7 @@ html_content = f'''<!DOCTYPE html>
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        REGISTRATION CONFIRMED • RSVP VALIDATED
+        REGISTRATION CONFIRMED â€¢ RSVP VALIDATED
       </div>
 
       <h3 class="text-2xl font-bold text-white mb-2">Digital Attendee Pass (E-Pass)</h3>
@@ -1740,7 +1766,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261005_1101"></script>
+  <script src="app.js?v=20261007_1724"></script>
 </body>
 </html>
 '''

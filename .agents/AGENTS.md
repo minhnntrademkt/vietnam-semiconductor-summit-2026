@@ -21,7 +21,9 @@
   1. **Nâng version query string (`?v=YYYYMMDD_HHMM`)**: Bắt buộc cập nhật version cho `styles.css` và `app.js` trong `index.html`, `build_site.py`, `agenda.html`, `build_agenda.py` để ép xóa cache trình duyệt (Cache Busting).
   2. Kiểm tra trạng thái Git (`git status`) đảm bảo sạch sẽ.
   3. Tạo Git commit chuẩn hóa Conventional Commits (`git add .`, `git commit`).
-  4. Đẩy mã nguồn lên GitHub repository (`git push origin main`). Không deploy hosting.
+  4. Đẩy mã nguồn lên GitHub repository (`git push origin main`).
+  5. **BẮT BUỘC DEPLOY HOSTING VIA FTP (STRICT ZERO-LEAKAGE WHITELIST)**: Chạy script deploy `deploy_marvell.ps1` (`powershell -ExecutionPolicy Bypass -File deploy_marvell.ps1`). Chỉ deploy các tệp web runtime cần thiết (`index.html`, `styles.css`, `app.js`, `agenda.*`, `favicon.svg`, `marvell-logo.svg`, `.htaccess`, `images/speakers`, `images/partners`, banners). NGHIÊM CẤM tuyệt đối deploy các tệp làm việc (`.md`, `.py`, `.gs`, `raw_speakers`, scripts nội bộ, review files). Hosting đã được đồng bộ lên cùng máy chủ `103.130.217.103` với Longevity/DNGBS. Tuyệt đối không được bỏ qua bước deploy hosting!
+  6. Cung cấp URL live hosting `https://vietnam-semiconductor-summit-2026.marvell.com/` để Người dùng nghiệm thu.
 
 ### 2. CẤM TỰ SUY DIỄN TÍNH NĂNG RƯỜM RÀ (NO OVER-ENGINEERING UX)
 - Tuyệt đối không tự ý sinh thêm nút bấm thừa thãi, render hàng loạt ô nhập liệu cồng kềnh làm rối mắt người dùng.
@@ -119,7 +121,7 @@ graph TD
 ## 📁 PHẠM VI KHÓA DỰ ÁN (SCOPE-LOCKING PROTOCOL)
 
 Toàn bộ hoạt động chỉ được phép diễn ra trong thư mục:
-`d:\Landing Page\Landing Marvell\`
+`d:\Landing Page\vietnam-semiconductor-summit-2026.marvell.com\`
 
 Các tệp tin nòng cốt thuộc phạm vi quản lý:
 | Tệp tin | Vai trò & Quy cách |
@@ -129,7 +131,9 @@ Các tệp tin nòng cốt thuộc phạm vi quản lý:
 | **`app.js`** | Xử lý Countdown (23/11/2026), Filter Agenda Tabs, Form Validation, E-Pass Modal. |
 | **`agenda.json`** | Cơ sở dữ liệu 24 phiên làm việc chi tiết của hội nghị. |
 | **`build_site.py`** | Script Python tự động biên dịch và tái tạo HTML từ `agenda.json`. |
+| **`deploy_marvell.ps1`** | Script PowerShell tự động deploy hosting qua FTP lên `103.130.217.103`. |
+| **`.htaccess`** | Cấu hình máy chủ LiteSpeed/cPanel, ép chuyển hướng HTTPS, cache-control. |
 | **`PROJECT_SPEC.md`** | Đặc tả kỹ thuật, Brand Guidelines & ngữ cảnh hợp tác. |
 | **`README.md`** | Hướng dẫn nhanh dự án. |
 
-> **Quy tắc biên giới**: Tuyệt đối không đọc, ghi hay can thiệp sang bất kỳ thư mục nào khác ngoài phạm vi `Landing Marvell` trừ khi có chỉ đạo rõ ràng từ Người dùng.
+> **Quy tắc biên giới**: Tuyệt đối không đọc, ghi hay can thiệp sang bất kỳ thư mục nào khác ngoài phạm vi `vietnam-semiconductor-summit-2026.marvell.com` trừ khi có chỉ đạo rõ ràng từ Người dùng.

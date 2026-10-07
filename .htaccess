@@ -1,0 +1,56 @@
+DirectoryIndex index.html
+
+# HTTPS Enforcement
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Clean URL rewriting (e.g. /agenda -> agenda.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 1. Disable Directory Browsing
+Options -Indexes
+
+# 2. Block sensitive files and extensions
+<FilesMatch "\.(ps1|sh|bat|cmd|env|sql|bak|config|log|md|gitignore|jsonl|gs|py|pyc|xls|xlsx|doc|docx)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. Block access to hidden files (except .well-known for SSL AutoSSL)
+<FilesMatch "^\.(?!well-known)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 4. Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# 4.1 Allow Cross-Origin access for static media & json
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|mp4|webm|json|css|js)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, OPTIONS, HEAD"
+        Header set Cache-Control "public, max-age=604800"
+    </IfModule>
+</FilesMatch>
+
+# 5. Prevent HTML Caching
+<FilesMatch "\.(html)$">
+    <IfModule mod_headers.c>
+        Header set X-Frame-Options "SAMEORIGIN"
+        Header set Referrer-Policy "no-referrer-when-downgrade"
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+        Header set X-LiteSpeed-Cache-Control "no-cache, no-store"
+    </IfModule>
+</FilesMatch>
+
+<IfModule LiteSpeed>
+    CacheDisable
+</IfModule>

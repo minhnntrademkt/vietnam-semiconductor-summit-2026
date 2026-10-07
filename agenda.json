@@ -17,21 +17,13 @@
     "session": "morning",
     "category": "opening",
     "speaker": {
-      "prefix": "Dr.",
-      "name": "Quang-Dam Le (QD)",
-      "title": "Vice President & General Director",
-      "organization": "Marvell Technology Vietnam, LLC",
+      "prefix": "Mr.",
+      "name": "Quang-Dam Le",
+      "title": "General Director, VP",
+      "organization": "Marvell Technology Vietnam",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
-    "panelists": [
-      {
-        "prefix": "Mr.",
-        "name": "Noam Mizrahi",
-        "title": "EVP & Corporate CTO",
-        "organization": "Marvell Technology, Inc.",
-        "avatar": "images/speakers/noam-mizrahi.jpg"
-      }
-    ],
+    "panelists": [],
     "sponsor": null
   },
   {
@@ -106,6 +98,16 @@
     "id": 7,
     "from": "10:35",
     "to": "11:00",
+    "description": "Coffee Break",
+    "session": "morning",
+    "category": "networking",
+    "speaker": null,
+    "sponsor": null
+  },
+  {
+    "id": 8,
+    "from": "11:00",
+    "to": "11:30",
     "description": "IC Design Education at HUST-SEEE: A full-value chain approach and Biomedical IC Design Demonstration.",
     "session": "morning",
     "category": "academia",
@@ -120,38 +122,9 @@
     "sponsor": null
   },
   {
-    "id": 8,
-    "from": "11:00",
-    "to": "11:30",
-    "description": "Coffee Break",
-    "session": "morning",
-    "category": "networking",
-    "speaker": null,
-    "sponsor": null
-  },
-  {
     "id": 9,
     "from": "11:30",
     "to": "11:55",
-    "description": "Next-Gen Mobile Connectivity Silicon & Edge AI",
-    "session": "morning",
-    "category": "industry",
-    "speaker": {
-      "prefix": "Mr.",
-      "name": "Nam Thieu",
-      "title": "General Director",
-      "organization": "Qualcomm Vietnam, Cambodia & Laos",
-      "avatar": "images/speakers/thieu-phuong-nam.jpg"
-    },
-    "sponsor": {
-      "name": "Qualcomm Technologies, Inc.",
-      "logo": "images/partners/qualcomm.svg"
-    }
-  },
-  {
-    "id": 10,
-    "from": "11:55",
-    "to": "12:20",
     "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
     "session": "morning",
     "category": "industry",
@@ -165,6 +138,25 @@
     "sponsor": {
       "name": "Synopsys Inc",
       "logo": "images/partners/synopsys.svg"
+    }
+  },
+  {
+    "id": 10,
+    "from": "11:55",
+    "to": "12:20",
+    "description": "Next-Gen Mobile Connectivity Silicon & Edge AI",
+    "session": "morning",
+    "category": "industry",
+    "speaker": {
+      "prefix": "Mr.",
+      "name": "Hai Hoang",
+      "title": "Director",
+      "organization": "Qualcomm Vietnam",
+      "avatar": ""
+    },
+    "sponsor": {
+      "name": "Qualcomm Technologies, Inc.",
+      "logo": "images/partners/qualcomm.svg"
     }
   },
   {
@@ -204,7 +196,7 @@
       "prefix": "Mr.",
       "name": "Khoa Tran",
       "title": "General Director",
-      "organization": "Renesas Design Vietnam",
+      "organization": "Renesas Electronics Vietnam",
       "avatar": "images/speakers/khoa-tran.jpg"
     },
     "sponsor": {
@@ -261,16 +253,24 @@
     "description": "Strategic Plenary Panel: Building Vietnam's National Semiconductor Value Chain",
     "session": "afternoon",
     "category": "panel",
-    "speaker": {
+    "moderator": {
       "prefix": "Mr.",
-      "name": "Noam Mizrahi",
-      "title": "EVP & Corporate CTO (Panel Host)",
-      "organization": "Marvell Technology, Inc.",
-      "avatar": "images/speakers/noam-mizrahi.jpg"
+      "name": "Quang-Dam Le",
+      "title": "General Director, VP",
+      "organization": "Marvell Technology Vietnam",
+      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900",
+      "is_moderator": true
     },
     "panelists": [
       {
-        "prefix": "Prof. Dr.",
+        "prefix": "Mr.",
+        "name": "Noam Mizrahi",
+        "title": "EVP & Corporate CTO (Panel Host)",
+        "organization": "Marvell Technology, Inc.",
+        "avatar": "images/speakers/noam-mizrahi.jpg"
+      },
+      {
+        "prefix": "Dr.",
         "name": "Mai Nguyen",
         "title": "President (Distinguished Panelist)",
         "organization": "VNU-HCM",
@@ -279,7 +279,7 @@
       {
         "prefix": "Dr.",
         "name": "Phung Nguyen",
-        "title": "Head of the Management Board (Distinguished Panelist)",
+        "title": "Vice Chairman (Distinguished Panelist)",
         "organization": "Saigon Hi-Tech Park (SHTP)",
         "avatar": ""
       }
@@ -294,28 +294,19 @@
     "session": "afternoon",
     "category": "closing",
     "speaker": {
-      "prefix": "Dr.",
-      "name": "Quang-Dam Le (QD)",
-      "title": "Vice President & General Director",
-      "organization": "Marvell Technology Vietnam, LLC",
-      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
+      "prefix": "",
+      "name": "Summit Leadership",
+      "title": "Executive Committee",
+      "organization": "The 1st Vietnam Semiconductor Summit 2026",
+      "avatar": ""
     },
-    "panelists": [
-      {
-        "prefix": "Mr.",
-        "name": "Noam Mizrahi",
-        "title": "EVP & Corporate CTO",
-        "organization": "Marvell Technology, Inc.",
-        "avatar": "images/speakers/noam-mizrahi.jpg"
-      }
-    ],
     "sponsor": null
   },
   {
     "id": 19,
     "from": "17:05",
-    "to": "19:35",
-    "description": "VIP Gala Dinner (Distinguished Guests & Delegates)",
+    "to": "20:00",
+    "description": "VIP Gala Dinner (Distinguished Delegates & Guests)",
     "session": "evening",
     "category": "networking",
     "speaker": null,
