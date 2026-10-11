@@ -14,10 +14,13 @@
 
 ## 🛡️ 4 ĐIỀU RĂN KHẮC CỐT GHI TÂM (CORE PRINCIPLES - BẮT BUỘC TUÂN THỦ)
 
-### 1. TUYỆT ĐỐI KHÔNG TỰ Ý BÀN GIAO / DEPLOY KHI CHƯA CÓ LỆNH "DONE"
+### 1. TUYỆT ĐỐI KHÔNG TỰ Ý BÀN GIAO / DEPLOY KHI CHƯA CÓ LỆNH "DONE" (STATE MACHINE CIRCUIT BREAKER)
+- **Kế hoạch trình duyệt**: TUYỆT ĐỐI CẤM liệt kê các bước Git hay Deploy vào bản checklist trình duyệt. Kế hoạch chỉ được chứa đúng phạm vi sửa code.
+- **Khi nhận lệnh "duyệt" / "triển khai"**: Lead Agent CHỈ ĐƯỢC PHÉP gọi tool sửa file cục bộ. NGHIÊM CẤM 100% việc chạy `git commit`, `git push` hay script deploy. Sửa xong lập tức DỪNG LƯỢT báo Localhost (`http://localhost:8080/`).
 - Mọi thao tác sửa đổi, bổ sung trong phiên làm việc BẮT BUỘC chỉ được preview và kiểm tra trên **Localhost (`http://localhost:8080/` hoặc `http://localhost:3000/`)**.
 - Cấm mọi hành vi tự ý commit git hay deploy khi chưa được kiểm duyệt trực quan.
 - **CHỈ KHI NGƯỜI DÙNG BÁO "DONE"** (hoặc "xong", "báo done"), Lead Agent mới được phép chốt phiên bàn giao chính thức:
+  - Các từ khen/xác nhận thông thường như "ok", "tốt", "được rồi", "đẹp rồi" TUYỆT ĐỐI KHÔNG kích hoạt deploy. Phải có từ "done"!
   1. **Nâng version query string (`?v=YYYYMMDD_HHMM`)**: Bắt buộc cập nhật version cho `styles.css` và `app.js` trong `index.html`, `build_site.py`, `agenda.html`, `build_agenda.py` để ép xóa cache trình duyệt (Cache Busting).
   2. Kiểm tra trạng thái Git (`git status`) đảm bảo sạch sẽ.
   3. Tạo Git commit chuẩn hóa Conventional Commits (`git add .`, `git commit`).

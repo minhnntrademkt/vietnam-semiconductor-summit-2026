@@ -17,10 +17,10 @@
     "session": "morning",
     "category": "opening",
     "speaker": {
-      "prefix": "Mr.",
+      "prefix": "Dr.",
       "name": "Quang-Dam Le",
-      "title": "General Director, VP",
-      "organization": "Marvell Technology Vietnam",
+      "title": "Vice President & General Director",
+      "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
     },
     "panelists": [],
@@ -30,7 +30,7 @@
     "id": 3,
     "from": "09:10",
     "to": "09:20",
-    "description": "Strategy for HCMC High-Tech & Silicon Ecosystem",
+    "description": "Opening Address",
     "session": "morning",
     "category": "opening",
     "speaker": {
@@ -46,7 +46,7 @@
     "id": 4,
     "from": "09:20",
     "to": "09:30",
-    "description": "U.S. - Vietnam Comprehensive Strategic Partnership",
+    "description": "Diplomatic Address",
     "session": "morning",
     "category": "opening",
     "speaker": {
@@ -67,7 +67,7 @@
     "category": "keynote",
     "speaker": {
       "prefix": "Dr.",
-      "name": "Quang-Dam Le (QD)",
+      "name": "Quang-Dam Le",
       "title": "Vice President & General Director",
       "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900"
@@ -144,16 +144,17 @@
     "id": 10,
     "from": "11:55",
     "to": "12:20",
-    "description": "Next-Gen Mobile Connectivity Silicon & Edge AI",
+    "description": "Qualcomm - Powering Energy Efficient AI from Device to Data Center",
     "session": "morning",
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
       "name": "Hai Hoang",
-      "title": "Director",
+      "title": "Staff Manager, Product Marketing",
       "organization": "Qualcomm Vietnam",
-      "avatar": ""
+      "avatar": "images/speakers/hai-hoang.jpg"
     },
+    "abstract": "Qualcomm’s product and technology direction brings together low-power design and high-performance computing to support AI across connected devices, the intelligent edge, and data centers. This presentation explores how heterogeneous compute and system-level co-design can balance performance, energy efficiency, and deployment needs across that spectrum. It examines edge and on-device AI as complementary approaches to cloud computing, with local inference helping address latency, privacy, connectivity, and responsiveness. The discussion considers how compute, memory, software, and connectivity must work together to make AI practical in real-world applications. It highlights memory and compute co-design, data movement, and workload-specific architectures as important considerations for improving energy efficiency across diverse deployment environments. For a broad semiconductor audience, the presentation offers a framework for evaluating AI platforms through performance per watt, memory locality, and system efficiency, grounded in the requirements of applications spanning personal devices, industrial systems, and large-scale infrastructure.",
     "sponsor": {
       "name": "Qualcomm Technologies, Inc.",
       "logo": "images/partners/qualcomm.svg"
@@ -254,10 +255,10 @@
     "session": "afternoon",
     "category": "panel",
     "moderator": {
-      "prefix": "Mr.",
+      "prefix": "Dr.",
       "name": "Quang-Dam Le",
-      "title": "General Director, VP",
-      "organization": "Marvell Technology Vietnam",
+      "title": "Vice President & General Director",
+      "organization": "Marvell Technology Vietnam, LLC",
       "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900",
       "is_moderator": true
     },

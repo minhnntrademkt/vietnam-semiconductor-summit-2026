@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 The 1st Vietnam Semiconductor Summit 2026 - Site Generator
 Host Organization: Marvell Technology, Inc. (NASDAQ: MRVL)
@@ -379,7 +379,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261007_1724">
+  <link rel="stylesheet" href="styles.css?v=20261012_0007">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -778,9 +778,8 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium line-clamp-1">Ho Chi Minh City People's Committee</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] sm:text-[10.5px] text-slate-400">
-              Address: <em class="line-clamp-2">Strategy for HCMC High-Tech & Silicon Ecosystem</em>
-              <div class="mt-2 text-[10px] sm:text-[10.5px] text-emerald-400 flex items-center gap-1.5 font-semibold group-hover:underline">
-                <span>View Bio & Profile</span>
+              <div class="text-[10px] sm:text-[10.5px] text-emerald-400 flex items-center gap-1.5 font-semibold group-hover:underline">
+                <span>View Bio & Abstract</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </div>
             </div>
@@ -798,12 +797,11 @@ html_content = f'''<!DOCTYPE html>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white mt-1 group-hover:text-amber-400 transition-colors leading-snug line-clamp-2 min-h-[34px] sm:min-h-[38px] flex items-center">Ms. Melissa A. Brown</h4>
               <p class="text-[11px] sm:text-xs font-semibold text-amber-400 mt-0.5 truncate">U.S. Consul General</p>
-              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium line-clamp-1">U.S. Consulate General in HCMC</p>
+              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium line-clamp-1">U.S. Consulate General in Ho Chi Minh City</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] sm:text-[10.5px] text-slate-400">
-              Address: <em class="line-clamp-2">U.S. - Vietnam Strategic Partnership</em>
-              <div class="mt-2 text-[10px] sm:text-[10.5px] text-amber-400 flex items-center gap-1.5 font-semibold group-hover:underline">
-                <span>View Bio & Profile</span>
+              <div class="text-[10px] sm:text-[10.5px] text-amber-400 flex items-center gap-1.5 font-semibold group-hover:underline">
+                <span>View Bio & Abstract</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
               </div>
             </div>
@@ -859,7 +857,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium line-clamp-1">VSAP-LAB / Soitec (IEEE Fellow)</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] sm:text-[10.5px] text-slate-400">
-              Keynote 2: <em class="line-clamp-2">Advanced Packaging & Co-Packaged Optics</em>
+              Keynote: <em class="line-clamp-2">Advanced Packaging & Co-Packaged Optics</em>
               <div class="mt-2 text-[10px] sm:text-[10.5px] text-[#00b5e2] flex items-center gap-1.5 font-semibold group-hover:underline">
                 <span>View Bio & Abstract</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -882,7 +880,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium line-clamp-1">Marvell Technology Vietnam, LLC</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] sm:text-[10.5px] text-slate-400">
-              Topic: <em class="line-clamp-2">Building What's Next: Vietnam's Semiconductor Journey</em>
+              Keynote: <em class="line-clamp-2">Building What's Next: Vietnam's Semiconductor Journey</em>
               <div class="mt-2 text-[10px] sm:text-[10.5px] text-[#00b5e2] flex items-center gap-1.5 font-semibold group-hover:underline">
                 <span>View Bio & Abstract</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -915,7 +913,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Factory Director</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Executive Bio</span>
+              <span>View Bio & Abstract</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -933,7 +931,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Regional Sales Director, South Asia</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Executive Bio</span>
+              <span>View Bio & Abstract</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -959,18 +957,17 @@ html_content = f'''<!DOCTYPE html>
           <!-- Mr. Hai Hoang -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="hai-hoang">
             <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-[#0d1829] flex items-end justify-center">
-                <svg class="w-4/5 h-4/5 text-slate-600/60 translate-y-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/hai-hoang.jpg" alt="Mr. Hai Hoang" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">HH</div>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Hai Hoang</h4>
               <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Qualcomm Vietnam</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Director</p>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Staff Manager, Product Marketing</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Executive Bio</span>
+              <span>View Bio & Abstract</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -984,8 +981,8 @@ html_content = f'''<!DOCTYPE html>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Khoa Tran</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Renesas Electronics</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Director, Renesas Vietnam</p>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Renesas Electronics Vietnam</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Director</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
               <span>View Bio & Abstract</span>
@@ -1042,7 +1039,7 @@ html_content = f'''<!DOCTYPE html>
               <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">President, VNU-HCM</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
-              <span>View Executive Bio</span>
+              <span>View Bio</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -1058,10 +1055,10 @@ html_content = f'''<!DOCTYPE html>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Dr. Phung Nguyen</h4>
               <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Saigon Hi-Tech Park (SHTP)</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of the Management Board</p>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Vice Chairman (Distinguished Panelist)</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>Distinguished Panelist</span>
+              <span>View Bio</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -1108,7 +1105,7 @@ html_content = f'''<!DOCTYPE html>
 
             <!-- Confirmed Panelists List -->
             <div class="mt-6 pt-4 border-t border-slate-800/60">
-              <span class="text-slate-400 block uppercase font-bold text-[11px] mb-2.5">Confirmed Panelists:</span>
+              <span class="text-slate-400 block uppercase font-bold text-[11px] mb-2.5">Panelists:</span>
               <div class="flex flex-wrap gap-2">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
@@ -1116,7 +1113,7 @@ html_content = f'''<!DOCTYPE html>
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
-                  <strong>Dr. Phung Nguyen</strong> <span class="text-slate-400 text-[11px]">(Head of the Management Board, SHTP)</span>
+                  <strong>Dr. Phung Nguyen</strong> <span class="text-slate-400 text-[11px]">(Vice Chairman, SHTP)</span>
                 </span>
               </div>
             </div>
@@ -1766,7 +1763,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261007_1724"></script>
+  <script src="app.js?v=20261012_0007"></script>
 </body>
 </html>
 '''

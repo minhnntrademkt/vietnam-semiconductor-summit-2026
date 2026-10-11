@@ -111,7 +111,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     sessions: [
       {
         time: '09:10 - 09:20',
-        title: 'Summit Inaugural Address: Strategy for HCMC High-Tech & Silicon Ecosystem',
+        title: 'Opening Address',
         room: 'Plenary Hall',
         category: 'Opening Speech'
       }
@@ -129,7 +129,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     sessions: [
       {
         time: '09:20 - 09:30',
-        title: 'Diplomatic Address: U.S. - Vietnam Comprehensive Strategic Partnership',
+        title: 'Diplomatic Address',
         room: 'Plenary Hall',
         category: 'Opening Speech'
       }
@@ -269,21 +269,22 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   },
   'hai-hoang': {
     name: 'Mr. Hai Hoang',
-    title: 'Director',
+    title: 'Staff Manager, Product Marketing',
     org: 'Qualcomm Vietnam',
     tag: 'INDUSTRY / CONNECTIVITY & EDGE AI',
-    photo: '',
+    photo: 'images/speakers/hai-hoang.jpg',
     avatarText: 'HH',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: '',
+    bio: `As Staff Manager, Product Marketing, Hai Hoang oversees Qualcomm’s product roadmap and portfolio in Vietnam, with a focus on accelerating the adoption of Qualcomm technologies across the market. He also leads strategic initiatives spanning Automotive, Edge AI, AIoT, Data Centre, and 5G/6G in Vietnam.\n\nBefore joining Qualcomm, Hai spent eight years with Viettel’s Device R&D and Manufacturing Division, where he managed several key product development programmes. He subsequently held a series of leadership roles across Viettel Group, including Technology Manager, Senior R&D Manager, Product Director, and Head of Strategic Partnerships, with responsibility for a broad portfolio encompassing smartphones, IoT, Wi-Fi, and access network products. Hai also served as Director of Strategic Partnerships at Vingroup, managing partnerships in Israel, the United States, and the European Union to support smartphone, IoT, and automotive product development.\n\nHai earned a degree in Electronics and Telecommunications from Vietnam National University, Hanoi, and holds a Ph.D. in Electrical Engineering from Florida State University in the United States.`,
     sessions: [
       {
         time: '11:55 - 12:20',
-        title: 'Next-Gen Mobile Connectivity Silicon & Edge AI',
+        title: 'Qualcomm - Powering Energy Efficient AI from Device to Data Center',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
-    ]
+    ],
+    abstract: `Qualcomm’s product and technology direction brings together low-power design and high-performance computing to support AI across connected devices, the intelligent edge, and data centers. This presentation explores how heterogeneous compute and system-level co-design can balance performance, energy efficiency, and deployment needs across that spectrum. It examines edge and on-device AI as complementary approaches to cloud computing, with local inference helping address latency, privacy, connectivity, and responsiveness. The discussion considers how compute, memory, software, and connectivity must work together to make AI practical in real-world applications. It highlights memory and compute co-design, data movement, and workload-specific architectures as important considerations for improving energy efficiency across diverse deployment environments. For a broad semiconductor audience, the presentation offers a framework for evaluating AI platforms through performance per watt, memory locality, and system efficiency, grounded in the requirements of applications spanning personal devices, industrial systems, and large-scale infrastructure.`
   },
   'thieu-phuong-nam': {
     name: 'Mr. Nam Thieu',

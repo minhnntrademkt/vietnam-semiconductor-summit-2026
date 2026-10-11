@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Build script for dedicated Agenda page (agenda.html).
 Compiles 24 sessions from agenda.json into a clean 2-column layout
@@ -348,7 +348,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261007_1724">
+  <link rel="stylesheet" href="styles.css?v=20261012_0007">
 
   <style>
     body {{
@@ -721,7 +721,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261007_1724"></script>
+  <script src="app.js?v=20261012_0007"></script>
 </body>
 </html>
 '''
