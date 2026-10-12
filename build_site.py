@@ -381,7 +381,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261012_1615">
+  <link rel="stylesheet" href="styles.css?v=20261012_1625">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -1275,15 +1275,31 @@ html_content = f'''<!DOCTYPE html>
 
       <!-- Strategic Industry & Academic Partners Grid -->
       <div class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">GLOBAL SEMICONDUCTOR PARTNERS & PREMIER UNIVERSITIES</div>
-      <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3.5 items-center justify-center">
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">INTEL</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">QUALCOMM</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">RENESAS</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">SYNOPSYS</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">CONNEXUS</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">VSAP-LAB</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">VNU-HCM</div>
-        <div class="p-4 bg-white rounded-xl border border-slate-200 text-center font-extrabold text-slate-800 text-sm shadow-sm hover:border-[#0072ce] hover:text-[#0072ce] transition-colors">HUST</div>
+      <div class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-3.5 items-stretch">
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/intel.svg?v=20261012_logos" alt="INTEL" loading="lazy" decoding="async" class="w-auto h-auto max-w-[80px] max-h-10 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/qualcomm.png?v=20261012_logos" alt="QUALCOMM" loading="lazy" decoding="async" class="w-auto h-auto max-w-full max-h-12 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/renesas.svg?v=20261012_logos" alt="RENESAS" loading="lazy" decoding="async" class="w-auto h-auto max-w-full max-h-12 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/synopsys.svg?v=20261012_logos" alt="SYNOPSYS" loading="lazy" decoding="async" class="w-auto h-auto max-w-full max-h-12 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/connexus.png?v=20261012_logos2" alt="CONNEXUS" loading="lazy" decoding="async" class="w-auto h-auto max-w-full max-h-12 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/vsap-lab.png?v=20261012_logos" alt="VSAP-LAB" loading="lazy" decoding="async" class="w-auto h-auto max-w-full max-h-12 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/vnu-hcm.png?v=20261012_logos" alt="VNU-HCM" loading="lazy" decoding="async" class="w-auto h-auto max-w-[88px] max-h-14 object-contain">
+        </div>
+        <div class="h-24 px-4 py-3 bg-white border-slate-200 rounded border shadow-sm flex items-center justify-center hover:border-[#0072ce] transition-colors">
+          <img src="images/partners/hust.png?v=20261012_logos" alt="HUST" loading="lazy" decoding="async" class="w-auto h-auto max-w-[48px] max-h-16 object-contain">
+        </div>
       </div>
 
     </div>
@@ -1810,7 +1826,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261012_1615"></script>
+  <script src="app.js?v=20261012_1625"></script>
 </body>
 </html>
 '''
