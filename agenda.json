@@ -125,7 +125,7 @@
     "id": 9,
     "from": "11:30",
     "to": "11:55",
-    "description": "Next-Generation Arm Server Silicon & Cloud Workloads",
+    "description": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
     "session": "morning",
     "category": "industry",
     "speaker": {
@@ -135,6 +135,7 @@
       "organization": "Synopsys Inc",
       "avatar": "images/speakers/lam-trinh.jpg"
     },
+    "abstract": "GPT-Synopsys brings together OpenAI frontier models with Synopsys' EDA technology and domain expertise, enabling the specialized model to reason about chip design and verification, and to directly operate Synopsys' tools. Engineers will delegate design objectives—from PPA optimization to timing and verification closure—with agents running tools, interpreting results, implementing changes, and iterating toward verified outcomes for engineer review. The joint service offering will provide the bundled compute, model, and licenses, while ensuring customer-specific design data is protected. GPT-Synopsys will feature enterprise-grade security, governance, and access controls. Customer data is not used to train the model, is encrypted at rest and in transit, and can be managed through configurable retention, audit and permission controls.",
     "sponsor": {
       "name": "Synopsys Inc",
       "logo": "images/partners/synopsys.svg"
@@ -283,6 +284,13 @@
         "title": "Vice Chairman (Distinguished Panelist)",
         "organization": "Saigon Hi-Tech Park (SHTP)",
         "avatar": ""
+      },
+      {
+        "prefix": "Dr.",
+        "name": "Thuat Nguyen",
+        "title": "Director",
+        "organization": "Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University",
+        "avatar": "images/speakers/thuat-nguyen.jpg"
       }
     ],
     "sponsor": null

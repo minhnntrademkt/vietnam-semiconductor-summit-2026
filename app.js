@@ -242,11 +242,12 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     sessions: [
       {
         time: '11:30 - 11:55',
-        title: 'Next-Generation Arm Server Silicon & Cloud Workloads',
+        title: 'GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
       }
-    ]
+    ],
+    abstract: 'GPT-Synopsys brings together OpenAI frontier models with Synopsys\' EDA technology and domain expertise, enabling the specialized model to reason about chip design and verification, and to directly operate Synopsys\' tools. Engineers will delegate design objectives—from PPA optimization to timing and verification closure—with agents running tools, interpreting results, implementing changes, and iterating toward verified outcomes for engineer review. The joint service offering will provide the bundled compute, model, and licenses, while ensuring customer-specific design data is protected. GPT-Synopsys will feature enterprise-grade security, governance, and access controls. Customer data is not used to train the model, is encrypted at rest and in transit, and can be managed through configurable retention, audit and permission controls.'
   },
   'pham-nguyen-thanh-loan': {
     name: 'Assoc. Prof. Dr. Loan Pham-Nguyen',
@@ -339,6 +340,24 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
         category: 'High-Level Panel'
       }
     ]
+  },
+  'thuat-nguyen': {
+    name: 'Dr. Thuat Nguyen',
+    title: 'Director',
+    org: 'Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University',
+    tag: 'ACADEMIA / ADVANCED MATERIALS & SENSORS',
+    photo: 'images/speakers/thuat-nguyen.jpg',
+    avatarText: 'TN',
+    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    bio: `Dr. Nguyen Tran Thuat is an Associate Professor of Physics at the University of Science, Vietnam National University, Hanoi (VNU-HUS). He earned his Master's and Ph.D. degrees in Physics from École Polytechnique, France, in 2009. He joined HUS as a researcher in 2014. Currently, he serves as Director of the Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University, while also holding the position of Vice Director and Senior Researcher at the Nano and Energy Center, Faculty of Physics, University of Science.\n\nHis main research focuses on developing high-efficiency solar energy harvesting systems, in-depth exploration of novel physics, and emerging electronic properties in two-dimensional (2D) organometal halide perovskites. These materials possess strong potential for applications in next-generation advanced optoelectronic devices and cutting-edge quantum devices. He also dedicates part of his research to investigating and modeling the electronic switching mechanisms of memristive devices for neuromorphic computing applications.\n\nIn parallel with his research, he is pursuing commercialization-oriented development of a new generation of thermal infrared image sensors/chips (microbolometer-type uncooled IR focal plane arrays) with significant potential for substantially reducing manufacturing costs. These sensors are designed for integration with neuromorphic computing technology based on memristive elements. The thermal infrared imaging chips are being developed and integrated into widely adopted mobile platforms, with the goal of rapidly establishing a spin-off company capable of scaling to mass production and deploying the technology in next-generation AI-powered thermal cameras.`,
+    sessions: [
+      {
+        time: '16:15 - 16:55',
+        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain',
+        room: 'Plenary Hall',
+        category: 'High-Level Panel'
+      }
+    ]
   }
 };
 
@@ -366,6 +385,8 @@ SPEAKER_BIOS['loan-pham-nguyen'] = SPEAKER_BIOS['pham-nguyen-thanh-loan'];
 SPEAKER_BIOS['nam-thieu'] = SPEAKER_BIOS['thieu-phuong-nam'];
 SPEAKER_BIOS['mai-nguyen'] = SPEAKER_BIOS['nguyen-thi-thanh-mai'];
 SPEAKER_BIOS['phung-nguyen'] = SPEAKER_BIOS['nguyen-ky-phung'];
+SPEAKER_BIOS['nguyen-tran-thuat'] = SPEAKER_BIOS['thuat-nguyen'];
+SPEAKER_BIOS['dr-thuat-nguyen'] = SPEAKER_BIOS['thuat-nguyen'];
 
 // ==========================================================================
 // 2. COUNTDOWN TIMER TO NOV 23, 2026

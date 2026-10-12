@@ -50,6 +50,8 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-thi-thanh-mai'
     elif 'ky-phung' in avatar or 'phung' in name:
         return 'nguyen-ky-phung'
+    elif 'thuat' in avatar or 'thuat' in name:
+        return 'thuat-nguyen'
     return ""
 
 def render_speaker_card(speaker_dict, is_moderator=False):
@@ -379,7 +381,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261012_0007">
+  <link rel="stylesheet" href="styles.css?v=20261012_1555">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -469,7 +471,7 @@ html_content = f'''<!DOCTYPE html>
       <!-- Top Host Badge -->
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/70 border border-blue-500/40 text-xs font-bold text-[#00b5e2] tracking-wider uppercase mb-8 shadow-[0_0_15px_rgba(0,181,226,0.2)]">
         <span class="w-2 h-2 rounded-full bg-[#00b5e2] animate-pulse"></span>
-        MARVELL TECHNOLOGY PRESENTS â€¢ INAUGURAL EDITION
+        MARVELL TECHNOLOGY PRESENTS &bull; INAUGURAL EDITION
       </div>
 
       <!-- Main Headline -->
@@ -514,7 +516,7 @@ html_content = f'''<!DOCTYPE html>
           <div>
             <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Registration</span>
             <span class="text-sm font-bold text-emerald-400">100% Free RSVP</span>
-            <span class="text-[10px] text-slate-400 block">Limited Capacity â€¢ Vetted</span>
+            <span class="text-[10px] text-slate-400 block">Limited Capacity &bull; Vetted</span>
           </div>
         </div>
       </div>
@@ -722,7 +724,7 @@ html_content = f'''<!DOCTYPE html>
           <!-- Bottom Action Links -->
           <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs">
             <span class="text-slate-400">
-              Host Headquarters: <strong>Marvell Technology Vietnam, LLC</strong> â€¢ Etown6 Tower (HQ) & UOA Tower, HCMC â€¢ SP2, Da Nang
+              Host Headquarters: <strong>Marvell Technology Vietnam, LLC</strong> &bull; Etown6 Tower (HQ) & UOA Tower, HCMC &bull; SP2, Da Nang
             </span>
             <div class="flex items-center gap-4">
               <a href="https://www.marvell.com/company/careers.html" target="_blank" class="text-[#00b5e2] hover:underline font-semibold flex items-center gap-1">
@@ -1063,6 +1065,24 @@ html_content = f'''<!DOCTYPE html>
             </div>
           </div>
 
+          <!-- Dr. Thuat Nguyen -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="thuat-nguyen">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
+                <img src="images/speakers/thuat-nguyen.jpg" alt="Dr. Thuat Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">TN</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Dr. Thuat Nguyen</h4>
+              <span class="text-[11px] text-emerald-400 font-semibold block mt-0.5 line-clamp-2 leading-tight" title="Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University">Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University</span>
+              <p class="text-[10.5px] text-slate-400 mt-1 line-clamp-1 leading-tight">Director</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
+              <span>View Bio</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1082,7 +1102,7 @@ html_content = f'''<!DOCTYPE html>
               HIGH-LEVEL STRATEGIC PLENARY
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-              Building Vietnam's National Semiconductor Value Chain 2026â€“2035
+              Building Vietnam's National Semiconductor Value Chain 2026&ndash;2035
             </h2>
             <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
               A milestone roundtable uniting Government policymakers, multinational semiconductor titans, and top university presidents to establish actionable frameworks for IC design incentives, packaging infrastructure, and workforce readiness.
@@ -1091,11 +1111,11 @@ html_content = f'''<!DOCTYPE html>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-xs">
               <div>
                 <span class="text-slate-400 block uppercase font-bold">Time & Venue</span>
-                <span class="font-mono text-cyan-300 font-bold text-sm">16:15 - 16:55 â€¢ Grand Ballroom</span>
+                <span class="font-mono text-cyan-300 font-bold text-sm">16:15 - 16:55 &bull; Grand Ballroom</span>
               </div>
               <div>
-                <span class="text-slate-400 block uppercase font-bold">Session Chair</span>
-                <span class="text-white font-semibold">Noam Mizrahi (Marvell EVP & CTO)</span>
+                <span class="text-slate-400 block uppercase font-bold">Moderator & Host</span>
+                <span class="text-white font-semibold">Dr. Quang-Dam Le & Mr. Noam Mizrahi</span>
               </div>
               <div>
                 <span class="text-slate-400 block uppercase font-bold">Key Focus</span>
@@ -1105,16 +1125,43 @@ html_content = f'''<!DOCTYPE html>
 
             <!-- Confirmed Panelists List -->
             <div class="mt-6 pt-4 border-t border-slate-800/60">
-              <span class="text-slate-400 block uppercase font-bold text-[11px] mb-2.5">Panelists:</span>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
-                  <strong>Prof. Dr. Mai Nguyen</strong> <span class="text-slate-400 text-[11px]">(President, VNU-HCM)</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
-                  <strong>Dr. Phung Nguyen</strong> <span class="text-slate-400 text-[11px]">(Vice Chairman, SHTP)</span>
-                </span>
+              <span class="text-slate-400 block uppercase font-bold text-[11px] mb-2.5">Confirmed Panelists & Leadership:</span>
+              <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+                <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#0072ce] shrink-0 mt-1 sm:mt-0"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                    <strong class="font-bold text-white whitespace-nowrap">Dr. Quang-Dam Le</strong>
+                    <span class="text-slate-400 text-[11px]">(Moderator &bull; VP & General Director, Marvell Vietnam)</span>
+                  </div>
+                </div>
+                <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#c8a3ef] shrink-0 mt-1 sm:mt-0"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                    <strong class="font-bold text-white whitespace-nowrap">Mr. Noam Mizrahi</strong>
+                    <span class="text-slate-400 text-[11px]">(Panel Host &bull; EVP & Corporate CTO, Marvell Technology)</span>
+                  </div>
+                </div>
+                <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2] shrink-0 mt-1 sm:mt-0"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                    <strong class="font-bold text-white whitespace-nowrap">Prof. Dr. Mai Nguyen</strong>
+                    <span class="text-slate-400 text-[11px]">(President, VNU-HCM)</span>
+                  </div>
+                </div>
+                <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2] shrink-0 mt-1 sm:mt-0"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                    <strong class="font-bold text-white whitespace-nowrap">Dr. Phung Nguyen</strong>
+                    <span class="text-slate-400 text-[11px]">(Vice Chairman, SHTP)</span>
+                  </div>
+                </div>
+                <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1 sm:mt-0"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
+                    <strong class="font-bold text-white whitespace-nowrap">Dr. Thuat Nguyen</strong>
+                    <span class="text-slate-400 text-[11px]">(Director, Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University)</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1487,8 +1534,8 @@ html_content = f'''<!DOCTYPE html>
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px]">
-        <p>Â© 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
-        <p class="text-slate-500 font-mono">The 1st Vietnam Semiconductor Summit â€¢ Monday, November 23, 2026 â€¢ Ho Chi Minh City</p>
+        <p>&copy; 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
+        <p class="text-slate-500 font-mono">The 1st Vietnam Semiconductor Summit &bull; Monday, November 23, 2026 &bull; Ho Chi Minh City</p>
       </div>
     </div>
   </footer>
@@ -1566,7 +1613,7 @@ html_content = f'''<!DOCTYPE html>
       <div class="mb-5 pr-8">
         <div class="flex items-center gap-2 mb-1.5">
           <span class="w-2 h-2 rounded-full bg-[#0072ce] animate-pulse"></span>
-          <span class="text-[11px] font-extrabold tracking-widest text-[#0072ce] uppercase font-mono">FREE RSVP â€¢ LIMITED CAPACITY</span>
+          <span class="text-[11px] font-extrabold tracking-widest text-[#0072ce] uppercase font-mono">FREE RSVP &bull; LIMITED CAPACITY</span>
         </div>
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">Attend Vietnam Semiconductor Summit 2026</h3>
         <p class="text-xs text-slate-500 mt-1">Complete your details to secure your seat and receive your check-in E-Pass.</p>
@@ -1685,7 +1732,7 @@ html_content = f'''<!DOCTYPE html>
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        REGISTRATION CONFIRMED â€¢ RSVP VALIDATED
+        REGISTRATION CONFIRMED &bull; RSVP VALIDATED
       </div>
 
       <h3 class="text-2xl font-bold text-white mb-2">Digital Attendee Pass (E-Pass)</h3>
@@ -1763,7 +1810,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261012_0007"></script>
+  <script src="app.js?v=20261012_1555"></script>
 </body>
 </html>
 '''

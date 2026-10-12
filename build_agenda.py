@@ -52,6 +52,8 @@ def get_speaker_id(speaker_dict):
         return 'nguyen-thi-thanh-mai'
     elif 'ky-phung' in avatar or 'phung' in name:
         return 'nguyen-ky-phung'
+    elif 'thuat' in avatar or 'thuat' in name:
+        return 'thuat-nguyen'
     return ""
 
 def render_speaker_card(speaker_dict, is_moderator=False):
@@ -348,7 +350,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261012_0007">
+  <link rel="stylesheet" href="styles.css?v=20261012_1555">
 
   <style>
     body {{
@@ -406,13 +408,13 @@ html = f'''<!DOCTYPE html>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/70 border border-blue-500/40 text-xs font-bold text-[#00b5e2] tracking-wider uppercase mb-4 shadow-[0_0_15px_rgba(0,181,226,0.2)]">
         <span class="w-2 h-2 rounded-full bg-[#00b5e2] animate-pulse"></span>
-        MARVELL TECHNOLOGY PRESENTS â€¢ OFFICIAL TIMETABLE
+        MARVELL TECHNOLOGY PRESENTS &bull; OFFICIAL TIMETABLE
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
         Official Summit Agenda & Timetable
       </h1>
       <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-        Monday, November 23, 2026 â€¢ Ho Chi Minh City, Vietnam. Full strategic congress timetable uniting Government leadership, industry pioneers, and academic research luminaries.
+        Monday, November 23, 2026 &bull; Ho Chi Minh City, Vietnam. Full strategic congress timetable uniting Government leadership, industry pioneers, and academic research luminaries.
       </p>
 
       <!-- Search Box & Summary Bar -->
@@ -428,7 +430,7 @@ html = f'''<!DOCTYPE html>
 
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> Technical & Strategic Tracks</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 â€“ 20:10 ICT</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 &ndash; 20:10 ICT</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Grand Ballroom & Tech Halls</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 100% Free RSVP</span>
       </div>
@@ -721,7 +723,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261012_0007"></script>
+  <script src="app.js?v=20261012_1555"></script>
 </body>
 </html>
 '''
