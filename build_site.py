@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-The 1st Vietnam Semiconductor Summit 2026 - Site Generator
+Vietnam Semiconductor Summit 2026 - Site Generator
 Host Organization: Marvell Technology, Inc. (NASDAQ: MRVL)
 Language: 100% International Standard English
 Design System: Marvell Design System (Hierarchical Radius, Ambient Shadows, Glassmorphism)
@@ -303,7 +303,7 @@ html_content = f'''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology</title>
+  <title>Vietnam Semiconductor Summit 2026 | Marvell Technology</title>
   
   <!-- Anti-Cache Directives (Forces Browser Revalidation) -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -312,13 +312,13 @@ html_content = f'''<!DOCTYPE html>
   
   <!-- Canonical & Standard SEO Meta Tags -->
   <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/">
-  <meta name="title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="title" content="Vietnam Semiconductor Summit 2026 | Marvell Technology">
   <meta name="description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta name="thumbnail" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Schema.org for Google & Zalo -->
-  <meta itemprop="name" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta itemprop="name" content="Vietnam Semiconductor Summit 2026 | Marvell Technology">
   <meta itemprop="description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta itemprop="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
@@ -327,8 +327,8 @@ html_content = f'''<!DOCTYPE html>
   <meta property="og:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/">
   <meta property="og:site_name" content="Vietnam Semiconductor Summit 2026">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
-  <meta name="og:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta property="og:title" content="Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="og:title" content="Vietnam Semiconductor Summit 2026 | Marvell Technology">
   <meta property="og:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="og:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta property="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
@@ -338,12 +338,12 @@ html_content = f'''<!DOCTYPE html>
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The 1st Vietnam Semiconductor Summit 2026 Official Banner">
+  <meta property="og:image:alt" content="Vietnam Semiconductor Summit 2026 Official Banner">
   <link rel="image_src" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology">
+  <meta name="twitter:title" content="Vietnam Semiconductor Summit 2026 | Marvell Technology">
   <meta name="twitter:description" content="Accelerating Vietnam's Semiconductor Revolution. Official Inaugural Congress uniting Government leadership, global chipmakers, and academic scholars. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="twitter:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   
@@ -381,7 +381,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261012_1625">
+  <link rel="stylesheet" href="styles.css?v=20261013_1256">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -476,7 +476,7 @@ html_content = f'''<!DOCTYPE html>
 
       <!-- Main Headline -->
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight sm:leading-none">
-        The 1st Vietnam Semiconductor Summit 2026
+        Vietnam Semiconductor Summit 2026
       </h1>
 
       <!-- Strategic Subtitle -->
@@ -825,7 +825,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="mrvll-dark-card speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl flex flex-col justify-between border-t-2 border-t-[#c8a3ef] bg-[#101726] hover:border-purple-400/80 transition-all duration-300" data-speaker-id="noam-mizrahi">
             <div>
               <div class="relative w-full aspect-square rounded-lg sm:rounded-xl overflow-hidden border border-purple-500/40 mb-2.5 sm:mb-3 shadow-[0_0_20px_rgba(200,163,239,0.25)] group-hover:border-purple-400 transition-all bg-purple-950/80">
-                <img src="images/speakers/noam-mizrahi.jpg" alt="Noam Mizrahi" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/noam-mizrahi.jpg?v=20261013_1200" alt="Noam Mizrahi" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-3xl sm:text-4xl font-bold text-[#c8a3ef]">
                   NM
                 </div>
@@ -848,7 +848,7 @@ html_content = f'''<!DOCTYPE html>
           <div class="mrvll-dark-card speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl flex flex-col justify-between border-t-2 border-t-[#00b5e2] bg-[#101726] hover:border-cyan-400/80 transition-all duration-300" data-speaker-id="nguyen-bich-yen">
             <div>
               <div class="relative w-full aspect-square rounded-lg sm:rounded-xl overflow-hidden border border-cyan-500/40 mb-2.5 sm:mb-3 shadow-[0_0_20px_rgba(0,181,226,0.25)] group-hover:border-cyan-400 transition-all bg-blue-950/80">
-                <img src="images/speakers/bich-yen-nguyen.jpg" alt="Ms. Bich-Yen Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/bich-yen-nguyen.jpg?v=20261013_1200" alt="Ms. Bich-Yen Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-3xl sm:text-4xl font-bold text-[#00b5e2]">
                   BYN
                 </div>
@@ -902,137 +902,11 @@ html_content = f'''<!DOCTYPE html>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-3.5">
           
-          <!-- Mr. Khanh Nguyen -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-quang-khanh">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/nguyen-quang-khanh.jpg" alt="Mr. Khanh Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">QK</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Khanh Nguyen</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Intel Products Vietnam (IPV)</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Factory Director</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Mr. Lam Trinh -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="lam-trinh">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/lam-trinh.jpg" alt="Mr. Lam Trinh" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">LT</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Lam Trinh</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Synopsys Inc</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Regional Sales Director, South Asia</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Assoc. Prof. Dr. Loan Pham-Nguyen -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="pham-nguyen-thanh-loan">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/pham-nguyen-thanh-loan.jpg" alt="Assoc. Prof. Dr. Loan Pham-Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">PTL</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Assoc. Prof. Dr. Loan Pham-Nguyen</h4>
-              <span class="text-[11px] text-emerald-400 font-semibold block mt-0.5 truncate">HUST (Bach Khoa Hanoi)</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of IC Design & Embedded Lab</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Mr. Hai Hoang -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="hai-hoang">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/hai-hoang.jpg" alt="Mr. Hai Hoang" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">HH</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Hai Hoang</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Qualcomm Vietnam</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Staff Manager, Product Marketing</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Mr. Khoa Tran -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="khoa-tran">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/khoa-tran.jpg" alt="Mr. Khoa Tran" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">KT</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Khoa Tran</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Renesas Electronics Vietnam</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Director</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Assoc. Prof. Trang Hoang, Ph.D. -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="hoang-trang">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/hoang-trang.jpg?v=20260922_0900" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">HT</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Assoc. Prof. Trang Hoang, Ph.D.</h4>
-              <span class="text-[11px] text-emerald-400 font-semibold block mt-0.5 truncate">HCMUT (Bach Khoa HCMC)</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of IC Design Lab, Hitachi Award</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Ms. Loan Nguyen -->
-          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="loan-nguyen">
-            <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
-                <img src="images/speakers/loan-nguyen.jpg?v=20260922_0900" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">LN</div>
-                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
-              </div>
-              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Ms. Loan Nguyen</h4>
-              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Connexus</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">CEO, Connexus</p>
-            </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
-              <span>View Bio & Abstract</span>
-              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-
-          <!-- Prof. Dr. Mai Nguyen -->
+          <!-- 1. Prof. Dr. Mai Nguyen -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-thi-thanh-mai">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/nguyen-thi-thanh-mai.jpg" alt="Prof. Dr. Mai Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/nguyen-thi-thanh-mai.jpg?v=20261013_1200" alt="Prof. Dr. Mai Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">NTM</div>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
@@ -1046,18 +920,17 @@ html_content = f'''<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Dr. Phung Nguyen -->
+          <!-- 2. Dr. Phung Nguyen -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-ky-phung">
             <div>
-              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-slate-700/60 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-[#0b1324] flex items-end justify-center">
-                <svg class="w-4/5 h-4/5 text-slate-600/60 translate-y-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-                </svg>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/nguyen-ky-phung.jpg?v=20261013_1200" alt="Dr. Phung Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">NKP</div>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
               <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Dr. Phung Nguyen</h4>
               <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Saigon Hi-Tech Park (SHTP)</span>
-              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Vice Chairman (Distinguished Panelist)</p>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Chairman</p>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
               <span>View Bio</span>
@@ -1065,11 +938,11 @@ html_content = f'''<!DOCTYPE html>
             </div>
           </div>
 
-          <!-- Dr. Thuat Nguyen -->
+          <!-- 3. Dr. Thuat Nguyen -->
           <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="thuat-nguyen">
             <div>
               <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
-                <img src="images/speakers/thuat-nguyen.jpg" alt="Dr. Thuat Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <img src="images/speakers/thuat-nguyen.jpg?v=20261013_1200" alt="Dr. Thuat Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                 <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">TN</div>
                 <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
               </div>
@@ -1079,6 +952,132 @@ html_content = f'''<!DOCTYPE html>
             </div>
             <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
               <span>View Bio</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 4. Mr. Khanh Nguyen -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="nguyen-quang-khanh">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/nguyen-quang-khanh.jpg?v=20261013_1200" alt="Mr. Khanh Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">QK</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Khanh Nguyen</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Intel Products Vietnam (IPV)</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Factory Director</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 5. Mr. Lam Trinh -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="lam-trinh">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/lam-trinh.jpg?v=20261013_1200" alt="Mr. Lam Trinh" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">LT</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Lam Trinh</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Synopsys Inc</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Regional Sales Director, South Asia</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 6. Assoc. Prof. Dr. Loan Pham-Nguyen -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="pham-nguyen-thanh-loan">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
+                <img src="images/speakers/pham-nguyen-thanh-loan.jpg?v=20261013_1200" alt="Assoc. Prof. Dr. Loan Pham-Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">PTL</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Assoc. Prof. Dr. Loan Pham-Nguyen</h4>
+              <span class="text-[11px] text-emerald-400 font-semibold block mt-0.5 truncate">HUST (Bach Khoa Hanoi)</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of IC Design & Embedded Lab</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 7. Mr. Hai Hoang -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-[#00b5e2] transition-all duration-300 flex flex-col justify-between" data-speaker-id="hai-hoang">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-cyan-500/30 mb-2.5 group-hover:border-[#00b5e2] shadow-[0_0_12px_rgba(0,181,226,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/hai-hoang.jpg?v=20261013_1200" alt="Mr. Hai Hoang" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">HH</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Hai Hoang</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Qualcomm Vietnam</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Staff Manager, Product Marketing</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 8. Mr. Khoa Tran -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="khoa-tran">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/khoa-tran.jpg?v=20261013_1200" alt="Mr. Khoa Tran" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">KT</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Mr. Khoa Tran</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Renesas Electronics Vietnam</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">General Director</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 9. Assoc. Prof. Trang Hoang, Ph.D. -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between" data-speaker-id="hoang-trang">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-emerald-500/30 mb-2.5 group-hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.1)] transition-all bg-emerald-950/80">
+                <img src="images/speakers/hoang-trang.jpg?v=20261013_1200" alt="Assoc. Prof. Trang Hoang, Ph.D." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-emerald-400">HT</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-emerald-400 transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Assoc. Prof. Trang Hoang, Ph.D.</h4>
+              <span class="text-[11px] text-emerald-400 font-semibold block mt-0.5 truncate">HCMUT (Bach Khoa HCMC)</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">Head of IC Design Lab, Hitachi Award</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-emerald-400 font-semibold">
+              <span>View Bio & Abstract</span>
+              <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- 10. Ms. Loan Nguyen -->
+          <div class="speaker-card cursor-pointer group p-3 sm:p-3.5 rounded-xl bg-[#101726] border border-slate-800 hover:border-blue-400 transition-all duration-300 flex flex-col justify-between" data-speaker-id="loan-nguyen">
+            <div>
+              <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-blue-500/30 mb-2.5 group-hover:border-blue-400 shadow-[0_0_12px_rgba(0,114,206,0.1)] transition-all bg-blue-950/80">
+                <img src="images/speakers/loan-nguyen.jpg?v=20261013_1200" alt="Ms. Loan Nguyen" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                <div class="hidden w-full h-full flex items-center justify-center text-xl font-bold text-[#00b5e2]">LN</div>
+                <div class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#101726]/80 to-transparent pointer-events-none"></div>
+              </div>
+              <h4 class="text-[13px] sm:text-[14px] font-bold text-white group-hover:text-[#00b5e2] transition-colors leading-snug line-clamp-1 min-h-[20px] flex items-center">Ms. Loan Nguyen</h4>
+              <span class="text-[11px] text-[#00b5e2] font-semibold block mt-0.5 truncate">Connexus</span>
+              <p class="text-[10.5px] text-slate-400 mt-0.5 line-clamp-2 min-h-[28px] leading-tight">CEO, Connexus</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 group-hover:text-[#00b5e2] font-semibold">
+              <span>View Bio & Abstract</span>
               <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -1152,7 +1151,7 @@ html_content = f'''<!DOCTYPE html>
                   <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2] shrink-0 mt-1 sm:mt-0"></span>
                   <div class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5">
                     <strong class="font-bold text-white whitespace-nowrap">Dr. Phung Nguyen</strong>
-                    <span class="text-slate-400 text-[11px]">(Vice Chairman, SHTP)</span>
+                    <span class="text-slate-400 text-[11px]">(Chairman, SHTP)</span>
                   </div>
                 </div>
                 <div class="inline-flex items-start sm:items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-950/60 border border-blue-500/30 text-xs text-white">
@@ -1451,7 +1450,7 @@ html_content = f'''<!DOCTYPE html>
           </button>
           <div class="faq-accordion-body">
             <p class="text-sm text-slate-600 leading-relaxed">
-              Yes, <strong>The 1st Vietnam Semiconductor Summit 2026</strong> is 100% free for all verified registrants who receive an official invitation letter. Because auditorium seating is limited, registrations are vetted on a first-come, first-approved basis.
+              Yes, <strong>Vietnam Semiconductor Summit 2026</strong> is 100% free for all verified registrants who receive an official invitation letter. Because auditorium seating is limited, registrations are vetted on a first-come, first-approved basis.
             </p>
           </div>
         </div>
@@ -1511,7 +1510,7 @@ html_content = f'''<!DOCTYPE html>
           {marvell_logo_footer}
           <div class="h-5 w-px bg-slate-300"></div>
           <div>
-            <span class="text-slate-900 font-bold block text-xs">The 1st Vietnam Semiconductor Summit 2026</span>
+            <span class="text-slate-900 font-bold block text-xs">Vietnam Semiconductor Summit 2026</span>
             <span class="text-[10px] text-[#0072ce] font-mono font-semibold">Organized by Marvell Technology, Inc. (NASDAQ: MRVL)</span>
           </div>
         </div>
@@ -1551,7 +1550,7 @@ html_content = f'''<!DOCTYPE html>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px]">
         <p>&copy; 2026 Marvell Technology, Inc. All rights reserved. Essential technology, done right.</p>
-        <p class="text-slate-500 font-mono">The 1st Vietnam Semiconductor Summit &bull; Monday, November 23, 2026 &bull; Ho Chi Minh City</p>
+        <p class="text-slate-500 font-mono">Vietnam Semiconductor Summit &bull; Monday, November 23, 2026 &bull; Ho Chi Minh City</p>
       </div>
     </div>
   </footer>
@@ -1826,7 +1825,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261012_1625"></script>
+  <script src="app.js?v=20261013_1256"></script>
 </body>
 </html>
 '''

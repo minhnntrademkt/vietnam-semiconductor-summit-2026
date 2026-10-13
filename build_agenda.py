@@ -275,7 +275,7 @@ html = f'''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026</title>
+  <title>Official Summit Timetable | Vietnam Semiconductor Summit 2026</title>
   
   <!-- Anti-Cache Directives (Forces Browser Revalidation) -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -284,14 +284,14 @@ html = f'''<!DOCTYPE html>
   
   <!-- Canonical & Standard SEO Meta Tags -->
   <link rel="canonical" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
-  <meta name="title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="title" content="Official Summit Timetable | Vietnam Semiconductor Summit 2026">
+  <meta name="description" content="Dedicated timetable and strategic agenda for Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta name="thumbnail" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Schema.org for Google & Zalo -->
-  <meta itemprop="name" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
-  <meta itemprop="description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta itemprop="name" content="Official Summit Timetable | Vietnam Semiconductor Summit 2026">
+  <meta itemprop="description" content="Dedicated timetable and strategic agenda for Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta itemprop="image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Open Graph / Facebook / LinkedIn / Zalo -->
@@ -299,10 +299,10 @@ html = f'''<!DOCTYPE html>
   <meta property="og:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/agenda.html">
   <meta property="og:site_name" content="Vietnam Semiconductor Summit 2026">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="og:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
-  <meta property="og:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
-  <meta name="og:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta property="og:title" content="Official Summit Timetable | Vietnam Semiconductor Summit 2026">
+  <meta name="og:title" content="Official Summit Timetable | Vietnam Semiconductor Summit 2026">
+  <meta property="og:description" content="Dedicated timetable and strategic agenda for Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="og:description" content="Dedicated timetable and strategic agenda for Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta property="og:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta property="og:image:url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   <meta property="og:image:secure_url" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
@@ -310,13 +310,13 @@ html = f'''<!DOCTYPE html>
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The 1st Vietnam Semiconductor Summit 2026 Official Banner">
+  <meta property="og:image:alt" content="Vietnam Semiconductor Summit 2026 Official Banner">
   <link rel="image_src" href="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Official Summit Timetable | The 1st Vietnam Semiconductor Summit 2026">
-  <meta name="twitter:description" content="Dedicated timetable and strategic agenda for The 1st Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
+  <meta name="twitter:title" content="Official Summit Timetable | Vietnam Semiconductor Summit 2026">
+  <meta name="twitter:description" content="Dedicated timetable and strategic agenda for Vietnam Semiconductor Summit 2026 hosted by Marvell Technology. Monday, November 23, 2026, Ho Chi Minh City, Vietnam.">
   <meta name="twitter:image" content="https://minhnntrademkt.github.io/vietnam-semiconductor-summit-2026/images/og-banner.jpg?v=20260914_1315">
   
   <!-- Tailwind CSS CDN -->
@@ -350,7 +350,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261012_1625">
+  <link rel="stylesheet" href="styles.css?v=20261013_1256">
 
   <style>
     body {{
@@ -540,7 +540,7 @@ html = f'''<!DOCTYPE html>
 
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
         <span>&copy; 2026 Marvell Technology, Inc. All rights reserved.</span>
-        <span>The 1st Vietnam Semiconductor Summit &bull; Monday, November 23, 2026</span>
+        <span>Vietnam Semiconductor Summit &bull; Monday, November 23, 2026</span>
       </div>
     </div>
   </footer>
@@ -723,7 +723,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261012_1625"></script>
+  <script src="app.js?v=20261013_1256"></script>
 </body>
 </html>
 '''

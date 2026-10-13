@@ -2,397 +2,228 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Marvell Summit 2026 - Agenda Review Note</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Vietnam Semiconductor Summit 2026 - Bảng Đối Chiếu Agenda Dán Vào Email</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #0f172a;
-      padding: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      -webkit-font-smoothing: antialiased;
-    }
-    .card {
-      width: 1040px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.08);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(135deg, #050b18 0%, #0d1b38 50%, #0072ce 100%);
+    /* Nút copy trên trình duyệt (không bị dán vào email) */
+    .top-action-bar {
+      position: sticky;
+      top: 0;
+      background: #0f172a;
       color: #ffffff;
-      padding: 30px 36px;
-      position: relative;
-    }
-    .header-top {
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
-    }
-    .brand-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #00b5e2;
-    }
-    .date-badge {
-      font-size: 12px;
-      color: #94a3b8;
-      font-weight: 600;
-    }
-    .header h1 {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-    .header p {
-      font-size: 13px;
-      color: #cbd5e1;
-      font-weight: 500;
-    }
-    .content {
-      padding: 32px 36px;
-    }
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 14px;
-    }
-    .section-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 6px;
-      background: #eff6ff;
-      color: #0072ce;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      border: 1px solid #bfdbfe;
-    }
-    .notice-box {
-      background: #f8fafc;
-      border-left: 4px solid #0072ce;
-      border-radius: 0 8px 8px 0;
-      padding: 12px 18px;
-      margin-bottom: 20px;
-      font-size: 13px;
-      line-height: 1.55;
-      color: #334155;
-    }
-    .notice-box strong {
-      color: #0072ce;
-    }
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin-bottom: 28px;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    th {
-      background: #f8fafc;
-      padding: 12px 16px;
-      text-align: left;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #475569;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    td {
-      padding: 16px;
-      font-size: 13px;
-      line-height: 1.45;
-      border-bottom: 1px solid #f1f5f9;
-      vertical-align: top;
-    }
-    tr:last-child td {
-      border-bottom: none;
-    }
-    tr:nth-child(even) td {
-      background: #fafcff;
-    }
-    .time-tag {
-      font-family: monospace;
-      font-size: 12px;
-      font-weight: 700;
-      color: #0072ce;
-      background: #eff6ff;
-      padding: 3px 8px;
-      border-radius: 4px;
-      display: inline-block;
-      white-space: nowrap;
-    }
-    .speaker-name {
-      font-weight: 700;
-      color: #0f172a;
-      display: block;
-      margin-top: 2px;
-    }
-    .org-name {
-      font-size: 11px;
-      color: #64748b;
-      font-weight: 600;
-    }
-    .current-title {
-      color: #047857;
-      font-weight: 700;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      padding: 8px 12px;
       border-radius: 8px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      z-index: 100;
     }
-    .new-title {
-      color: #b45309;
-      font-weight: 700;
-      background: #fffbeb;
-      border: 1px solid #fde68a;
-      padding: 8px 12px;
-      border-radius: 8px;
-    }
-    .pill {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 2px 7px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-    .pill-green {
+    .btn-copy {
       background: #059669;
       color: #ffffff;
-    }
-    .pill-amber {
-      background: #d97706;
-      color: #ffffff;
-    }
-    .box-secondary {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 20px 24px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 24px;
-    }
-    .box-icon-clock {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #0072ce;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      shrink-0: 0;
-    }
-    .box-text h3 {
+      border: none;
+      padding: 10px 20px;
       font-size: 14px;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 4px;
-    }
-    .box-text p {
-      font-size: 13px;
-      color: #334155;
-      line-height: 1.5;
-    }
-    .footer {
-      border-top: 1px solid #e2e8f0;
-      padding: 16px 36px;
-      background: #f8fafc;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: #64748b;
-    }
-    .footer-left {
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       gap: 8px;
-      font-weight: 600;
+      transition: background 0.2s, transform 0.1s;
     }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-      display: inline-block;
+    .btn-copy:hover {
+      background: #047857;
+      transform: translateY(-1px);
+    }
+    .btn-copy:active {
+      transform: translateY(0);
+    }
+    #toast-msg {
+      display: none;
+      color: #34d399;
+      font-weight: 700;
+      font-size: 13px;
     }
   </style>
 </head>
-<body>
+<body style="margin: 0; padding: 24px 16px; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; -webkit-font-smoothing: antialiased;">
 
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="header-top">
-        <div class="brand-badge">MARVELL SUMMIT 2026 • LỊCH TRÌNH NGHỊ SỰ</div>
-        <div class="date-badge">Ho Chi Minh City • Nov 23, 2026</div>
+  <div style="max-width: 900px; margin: 0 auto;">
+
+    <!-- Thanh nút bấm hỗ trợ Copy nhanh -->
+    <div class="top-action-bar">
+      <div>
+        <strong style="font-size: 14px;">BẢNG ĐỐI CHIẾU AGENDA (ĐỊNH DẠNG EMAIL)</strong>
+        <div style="font-size: 12px; color: #94a3b8; margin-top: 2px;">Bấm nút bên phải, sau đó sang Gmail / Outlook bấm Ctrl + V</div>
       </div>
-      <h1>PHIẾU XÁC NHẬN ĐIỀU CHỈNH TIÊU ĐỀ & KHUNG GIỜ AGENDA</h1>
-      <p>Tổng hợp đối chiếu giữa hệ thống Website chính thức và bản ảnh cập nhật mới nhất từ Khách hàng</p>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span id="toast-msg">✅ Đã copy! Hãy dán (Ctrl + V) vào email</span>
+        <button class="btn-copy" onclick="copyTableSnippet()">
+          📋 Sao Chép Bảng Này
+        </button>
+      </div>
     </div>
 
-    <!-- Content -->
-    <div class="content">
-
-      <!-- Section 1 -->
-      <div class="section-title">
-        <span class="section-icon">1</span>
-        <span>ĐỐI CHIẾU TIÊU ĐỀ 3 PHIÊN DIỄN THUYẾT LỚN</span>
-      </div>
-
-      <div class="notice-box">
-        <strong>Lưu ý đối chiếu:</strong> Các tiêu đề ở cột màu xanh bên dưới là nội dung <strong>đã được duyệt cập nhật trước đó</strong> kèm bản tóm tắt tham luận chuyên sâu (Abstract). Trong bản ảnh mới của Quý khách có tiêu đề khác biệt. Xin gửi Quý khách đối chiếu để xác nhận xem đây là <em>bản thảo cũ chưa kịp đồng bộ</em> hay <em>Quý khách muốn cập nhật sang tiêu đề mới</em>.
-      </div>
-
-      <table>
+    <!-- KHU VỰC ĐƯỢC SAO CHÉP ĐỂ DÁN VÀO GIỮA EMAIL (INLINE CSS 100%) -->
+    <div id="email-table-snippet" style="background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 24px; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
+      
+      <!-- Bảng đối chiếu 3 cột -->
+      <table style="width: 100%; border-collapse: collapse; border: 1px solid #cbd5e1; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.5; color: #1e293b;">
         <thead>
-          <tr>
-            <th style="width: 130px;">Khung giờ</th>
-            <th style="width: 220px;">Đơn vị & Diễn giả</th>
-            <th>Tiêu đề HIỆN TẠI trên Web (Đang giữ nguyên)</th>
-            <th>Tiêu đề trong ẢNH MỚI của Khách hàng</th>
+          <tr style="background-color: #0f172a; color: #ffffff;">
+            <th style="padding: 12px 14px; border: 1px solid #cbd5e1; text-align: left; width: 26%; font-size: 12px; font-weight: bold; text-transform: uppercase;">
+              Khung giờ & Diễn giả
+            </th>
+            <th style="padding: 12px 14px; border: 1px solid #cbd5e1; text-align: left; width: 46%; font-size: 12px; font-weight: bold; text-transform: uppercase;">
+              Tiêu đề & Nội dung Abstract CHÍNH THỨC từ Diễn giả
+            </th>
+            <th style="padding: 12px 14px; border: 1px solid #cbd5e1; text-align: left; width: 28%; font-size: 12px; font-weight: bold; text-transform: uppercase;">
+              Tiêu đề trong FILE EXCEL MỚI của Khách
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <span class="time-tag">09:30 – 10:10</span>
-              <div style="font-size: 11px; color: #64748b; margin-top: 4px; font-weight: 600;">Keynote (40 phút)</div>
+          
+          <!-- Dòng 1: Marvell VP -->
+          <tr style="background-color: #ffffff;">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <strong style="color: #0072ce; font-family: Consolas, monospace; font-size: 13px;">09:30 – 10:10</strong><br>
+              <em style="color: #64748b; font-size: 11.5px;">(Keynote 1)</em><br><br>
+              <strong style="color: #0f172a; font-size: 13.5px;">Dr. Quang-Dam Le</strong><br>
+              <span style="color: #475569; font-size: 12px; line-height: 1.4; display: inline-block; margin-top: 2px;">
+                VP & General Director,<br>Marvell Vietnam
+              </span>
             </td>
-            <td>
-              <span class="org-name">MARVELL TECHNOLOGY</span>
-              <span class="speaker-name">Mr. Quang-Dam Le</span>
-              <span style="font-size: 11px; color: #64748b;">General Director, VP</span>
-            </td>
-            <td>
-              <span class="pill pill-green">ĐANG HIỂN THỊ</span>
-              <div class="current-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; margin-bottom: 8px; display: inline-block;">
                 Building What's Next: Vietnam's Semiconductor Journey
               </div>
+              <div style="background-color: #f8fafc; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 12px; color: #334155; line-height: 1.55; border-radius: 0 4px 4px 0;">
+                <strong style="color: #047857;">📝 Nội dung Abstract Diễn giả:</strong><br>
+                Hành trình 25 năm của Marvell Việt Nam (từ 5 kỹ sư đến hơn 650 kỹ sư), mục tiêu quốc gia 50.000 kỹ sư bán dẫn đến năm 2030, chiến lược đưa Việt Nam từ gia công thiết kế vươn lên làm chủ chip AI thế hệ mới.
+              </div>
             </td>
-            <td>
-              <span class="pill pill-amber">TRONG ẢNH MỚI</span>
-              <div class="new-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #fffbeb; color: #92400e; border: 1px solid #fde68a; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; display: inline-block;">
                 Marvell Semiconductor Leadership & Vietnam Vision
               </div>
             </td>
           </tr>
 
-          <tr>
-            <td>
-              <span class="time-tag">10:10 – 10:35</span>
-              <div style="font-size: 11px; color: #64748b; margin-top: 4px; font-weight: 600;">Industry (25 phút)</div>
+          <!-- Dòng 2: Intel Factory Director -->
+          <tr style="background-color: #fafcff;">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <strong style="color: #0072ce; font-family: Consolas, monospace; font-size: 13px;">14:30 – 14:55</strong><br>
+              <em style="color: #64748b; font-size: 11.5px;">(hoặc 10:10) • (Industry 1)</em><br><br>
+              <strong style="color: #0f172a; font-size: 13.5px;">Mr. Khanh Nguyen</strong><br>
+              <span style="color: #475569; font-size: 12px; line-height: 1.4; display: inline-block; margin-top: 2px;">
+                General Factory Director,<br>Intel Products Vietnam (IPV)
+              </span>
             </td>
-            <td>
-              <span class="org-name">INTEL VIETNAM</span>
-              <span class="speaker-name">Mr. Khanh Nguyen</span>
-              <span style="font-size: 11px; color: #64748b;">General Factory Director</span>
-            </td>
-            <td>
-              <span class="pill pill-green">ĐANG HIỂN THỊ</span>
-              <div class="current-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; margin-bottom: 8px; display: inline-block;">
                 Advanced Packaging Innovation – Enabling AI Growth
               </div>
+              <div style="background-color: #f8fafc; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 12px; color: #334155; line-height: 1.55; border-radius: 0 4px 4px 0;">
+                <strong style="color: #047857;">📝 Nội dung Abstract Diễn giả:</strong><br>
+                Tập trung chuyên sâu vào công nghệ Đóng gói Tiên tiến (Advanced Packaging), Heterogeneous Integration, kiến trúc Chiplet, Foveros 3D, EMIB và Co-Packaged Optics (CPO) phục vụ bùng nổ hạ tầng AI toàn cầu.
+              </div>
             </td>
-            <td>
-              <span class="pill pill-amber">TRONG ẢNH MỚI</span>
-              <div class="new-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #fffbeb; color: #92400e; border: 1px solid #fde68a; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; display: inline-block;">
                 IC Fabrication & ATP Engineering in Global Supply Chain
               </div>
             </td>
           </tr>
 
-          <tr>
-            <td>
-              <span class="time-tag">11:00 – 11:30</span>
-              <div style="font-size: 11px; color: #64748b; margin-top: 4px; font-weight: 600;">Academia (30 phút)</div>
+          <!-- Dòng 3: HUST Assoc. Prof. -->
+          <tr style="background-color: #ffffff;">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <strong style="color: #0072ce; font-family: Consolas, monospace; font-size: 13px;">11:00 – 11:30</strong><br>
+              <em style="color: #64748b; font-size: 11.5px;">(Academia 1)</em><br><br>
+              <strong style="color: #0f172a; font-size: 13.5px;">Assoc. Prof. Dr. Loan Pham-Nguyen</strong><br>
+              <span style="color: #475569; font-size: 12px; line-height: 1.4; display: inline-block; margin-top: 2px;">
+                Head of BKIC Lab,<br>HUST (ĐH Bách Khoa HN)
+              </span>
             </td>
-            <td>
-              <span class="org-name">HUST (BÁCH KHOA HÀ NỘI)</span>
-              <span class="speaker-name">Assoc. Prof. Dr. Loan Pham-Nguyen</span>
-              <span style="font-size: 11px; color: #64748b;">Head of IC Design Lab</span>
-            </td>
-            <td>
-              <span class="pill pill-green">ĐANG HIỂN THỊ</span>
-              <div class="current-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; margin-bottom: 8px; display: inline-block;">
                 IC Design Education at HUST-SEEE: A full-value chain approach and Biomedical IC Design Demonstration.
               </div>
+              <div style="background-color: #f8fafc; border-left: 3px solid #10b981; padding: 8px 12px; font-size: 12px; color: #334155; line-height: 1.55; border-radius: 0 4px 4px 0;">
+                <strong style="color: #047857;">📝 Nội dung Abstract Diễn giả:</strong><br>
+                Chương trình đào tạo toàn diện chuỗi giá trị bán dẫn tại SEEE-HUST (phòng sạch Class 1000, Cadence EDA) và <strong>demo thực tế chip ống nghe y tế điện tử đa phương thức (AFE, ECG, PPG, PCG)</strong> vỏ hình trống đồng.
+              </div>
             </td>
-            <td>
-              <span class="pill pill-amber">TRONG ẢNH MỚI</span>
-              <div class="new-title">
+            <td style="padding: 14px 12px; border: 1px solid #cbd5e1; vertical-align: top;">
+              <div style="background-color: #fffbeb; color: #92400e; border: 1px solid #fde68a; padding: 6px 10px; border-radius: 4px; font-weight: bold; font-family: Consolas, monospace; font-size: 12.5px; display: inline-block;">
                 Analog IC Design & Mixed-Signal IC Research
               </div>
             </td>
           </tr>
+
         </tbody>
       </table>
 
-      <!-- Section 2 -->
-      <div class="section-title">
-        <span class="section-icon">2</span>
-        <span>XÁC NHẬN PHIÊN ĐÓN KHÁCH SÁNG (08:00 – 09:00)</span>
-      </div>
-
-      <div class="box-secondary">
-        <div class="box-icon-clock">☕</div>
-        <div class="box-text">
-          <h3>Phiên tiếp đón & Dùng trà sáng (Welcome & Breakfast)</h3>
-          <p>
-            Trong bản ảnh mới, lịch trình bắt đầu trực tiếp từ <strong>09:00 (Opening speech)</strong>. Hệ thống hiện vẫn đang <strong>GIỮ LẠI phiên 08:00 – 09:00 (Welcome & Breakfast)</strong> trên website. 
-            <br>
-            👉 <em>Quý khách vui lòng xác nhận: Hội nghị có mở cửa đón khách từ 08:00 không, hay Quý khách muốn lược bỏ phiên này khỏi website?</em>
-          </p>
-        </div>
+      <!-- Hộp ghi chú thêm cho phiên ăn sáng -->
+      <div style="background-color: #eff6ff; border-left: 4px solid #0072ce; padding: 14px 18px; margin-top: 18px; border-radius: 6px; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.55;">
+        <strong style="color: #0072ce; text-transform: uppercase; font-size: 12px; letter-spacing: 0.03em; display: block; margin-bottom: 4px;">
+          Điểm phụ cần khách xác nhận thêm:
+        </strong>
+        <span style="color: #1e293b;">
+          • <strong>Phiên 08:00 – 09:00 (Welcome & Breakfast):</strong> Bản website hiện có đón khách và dùng trà sáng từ 08:00; trong khi file Excel bắt đầu thẳng từ 09:00 (Opening Speech).
+        </span>
       </div>
 
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-left">
-        <span class="status-dot"></span>
-        <span>The 1st Vietnam Semiconductor Summit 2026 • Marvell Technology</span>
-      </div>
-      <div>Localhost Preview: <strong>http://localhost:8080/#agenda</strong></div>
-    </div>
   </div>
+
+  <script>
+    function copyTableSnippet() {
+      const container = document.getElementById('email-table-snippet');
+      const htmlContent = container.innerHTML;
+      const textContent = container.innerText;
+
+      if (navigator.clipboard && window.ClipboardItem) {
+        const htmlBlob = new Blob([htmlContent], { type: 'text/html' });
+        const textBlob = new Blob([textContent], { type: 'text/plain' });
+        navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': htmlBlob,
+            'text/plain': textBlob
+          })
+        ]).then(() => {
+          showToast();
+        }).catch(() => {
+          manualSelectAndCopy(container);
+        });
+      } else {
+        manualSelectAndCopy(container);
+      }
+    }
+
+    function manualSelectAndCopy(elem) {
+      const range = document.createRange();
+      range.selectNode(elem);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      showToast();
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast-msg');
+      toast.style.display = 'inline-block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+  </script>
 
 </body>
 </html>

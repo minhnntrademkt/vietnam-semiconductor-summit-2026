@@ -79,19 +79,19 @@
     "id": 6,
     "from": "10:10",
     "to": "10:35",
-    "description": "Advanced Packaging Innovation – Enabling AI Growth",
+    "description": "Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles",
     "session": "morning",
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Khanh Nguyen",
-      "title": "General Factory Director",
-      "organization": "Intel Products Vietnam (IPV)",
-      "avatar": "images/speakers/nguyen-quang-khanh.jpg"
+      "name": "Khoa Tran",
+      "title": "General Director",
+      "organization": "Renesas Electronics Vietnam",
+      "avatar": "images/speakers/khoa-tran.jpg"
     },
     "sponsor": {
-      "name": "Intel Corporation",
-      "logo": "images/partners/intel.svg"
+      "name": "Renesas Electronics Corporation",
+      "logo": "images/partners/renesas.svg"
     }
   },
   {
@@ -183,7 +183,7 @@
       "name": "Bich-Yen Nguyen",
       "title": "Senior Fellow (IEEE Fellow) & Co-Founder",
       "organization": "VSAP-LAB / Soitec",
-      "avatar": "images/speakers/bich-yen-nguyen.jpg"
+      "avatar": "images/speakers/bich-yen-nguyen.jpg?v=20261013_1200"
     },
     "sponsor": null
   },
@@ -191,19 +191,19 @@
     "id": 13,
     "from": "14:30",
     "to": "14:55",
-    "description": "Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles",
+    "description": "Advanced Packaging Innovation – Enabling AI Growth",
     "session": "afternoon",
     "category": "industry",
     "speaker": {
       "prefix": "Mr.",
-      "name": "Khoa Tran",
-      "title": "General Director",
-      "organization": "Renesas Electronics Vietnam",
-      "avatar": "images/speakers/khoa-tran.jpg"
+      "name": "Khanh Nguyen",
+      "title": "General Factory Director",
+      "organization": "Intel Products Vietnam (IPV)",
+      "avatar": "images/speakers/nguyen-quang-khanh.jpg"
     },
     "sponsor": {
-      "name": "Renesas Electronics Corporation",
-      "logo": "images/partners/renesas.svg"
+      "name": "Intel Corporation",
+      "logo": "images/partners/intel.svg"
     }
   },
   {
@@ -269,7 +269,7 @@
         "name": "Noam Mizrahi",
         "title": "EVP & Corporate CTO (Panel Host)",
         "organization": "Marvell Technology, Inc.",
-        "avatar": "images/speakers/noam-mizrahi.jpg"
+        "avatar": "images/speakers/noam-mizrahi.jpg?v=20261013_1200"
       },
       {
         "prefix": "Dr.",
@@ -281,9 +281,9 @@
       {
         "prefix": "Dr.",
         "name": "Phung Nguyen",
-        "title": "Vice Chairman (Distinguished Panelist)",
+        "title": "Chairman (Distinguished Panelist)",
         "organization": "Saigon Hi-Tech Park (SHTP)",
-        "avatar": ""
+        "avatar": "images/speakers/nguyen-ky-phung.jpg?v=20261013_1200"
       },
       {
         "prefix": "Dr.",
@@ -306,7 +306,7 @@
       "prefix": "",
       "name": "Summit Leadership",
       "title": "Executive Committee",
-      "organization": "The 1st Vietnam Semiconductor Summit 2026",
+      "organization": "Vietnam Semiconductor Summit 2026",
       "avatar": ""
     },
     "sponsor": null

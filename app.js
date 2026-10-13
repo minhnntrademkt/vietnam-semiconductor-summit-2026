@@ -74,7 +74,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     title: 'Executive VP & Corporate Chief Technology Officer (CTO)',
     org: 'Marvell Technology, Inc. (NASDAQ: MRVL)',
     tag: 'PANEL HOST / HOST LEADERSHIP',
-    photo: 'images/speakers/noam-mizrahi.jpg',
+    photo: 'images/speakers/noam-mizrahi.jpg?v=20261013_1200',
     avatarText: 'NM',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Noam Mizrahi is Executive Vice President and Chief Technology Officer (CTO) at Marvell Technology. With over 25 years of engineering leadership, he orchestrates Marvell’s long-term technology vision, pioneering domain-specific compute architectures, advanced multi-die modular packaging (Chiplets), and optical interconnects (CPO) engineered for the accelerated AI cloud era.',
@@ -140,7 +140,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     title: 'Senior Fellow (IEEE Fellow) & Co-Founder',
     org: 'VSAP-LAB / Soitec',
     tag: 'STRATEGIC KEYNOTE 2 / ADVANCED PACKAGING',
-    photo: 'images/speakers/bich-yen-nguyen.jpg',
+    photo: 'images/speakers/bich-yen-nguyen.jpg?v=20261013_1200',
     avatarText: 'BYN',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Bich-Yen Nguyen is a distinguished Vietnamese electronics engineer recognized for pioneering contributions to advanced materials and integrated circuit technologies. She earned a bachelor’s degree in Chemical Engineering from The University of Texas at Austin in 1977. Beginning her career at Motorola in 1980, she contributed to CMOS and MIGFET development and later held a leadership role in the Crolles Alliance. In 2007, she joined Soitec as a Senior Fellow, advancing silicon-on-insulator (SOI) technologies widely adopted in smartphones and other applications. Her honors include Motorola’s Dan Noble Fellow distinction, the 2004 National Women in Technology Lifetime Achievement Award, IEEE Fellow elevation in 2020, and the 2024 IEEE Frederik Philips Award. In 2025, she co-founded VSAP Lab, launching Vietnam’s first advanced semiconductor packaging lab-fab project. She holds more than 230 patents worldwide and has authored over 350 scientific publications on semiconductor processes, devices, integration, and integrated circuits.',
@@ -165,7 +165,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     bio: 'Tran Dac Khoa, General Director of Renesas Electronics Vietnam, joined the company in 2005 as part of its first generation of engineers. He holds a bachelor’s degree in Electronics–Telecommunications from Ho Chi Minh City University of Technology (HCMUT) and brings over 20 years of semiconductor design experience. With deep expertise in System-on-Chip (SoC) hardware, he has contributed to major automotive projects and presented at A-SSCC 2008 in Japan. As the first Vietnamese General Director, he has expanded Renesas Vietnam’s role as a vital global R&D hub while actively fostering local engineering talent through university partnerships.',
     sessions: [
       {
-        time: '14:30 - 14:55',
+        time: '10:10 - 10:35',
         title: 'Advance the Development of System-on-Chip Architectures for Software-Defined Vehicles',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
@@ -216,13 +216,13 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     title: 'General Factory Director',
     org: 'Intel Products Vietnam (IPV)',
     tag: 'INDUSTRY / ADVANCED PACKAGING & ATP',
-    photo: 'images/speakers/nguyen-quang-khanh.jpg',
+    photo: 'images/speakers/nguyen-quang-khanh.jpg?v=20261013_1200',
     avatarText: 'QK',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: 'Khanh Nguyen is General Factory Director of Intel Vietnam Assembly Test Manufacturing, part of the Advanced Packaging Technology and Manufacturing organization. In his current role, he is responsible for Intel’s Assembly Test operations in Vietnam, driving operational excellence to deliver advanced packaging solutions for customers worldwide.',
     sessions: [
       {
-        time: '10:10 - 10:35',
+        time: '14:30 - 14:55',
         title: 'Advanced Packaging Innovation – Enabling AI Growth',
         room: 'Plenary Hall',
         category: 'Industry Presentation'
@@ -325,10 +325,10 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   },
   'nguyen-ky-phung': {
     name: 'Dr. Phung Nguyen',
-    title: 'Vice Chairman (Distinguished Panelist)',
+    title: 'Chairman (Distinguished Panelist)',
     org: 'Saigon Hi-Tech Park (SHTP)',
     tag: 'DISTINGUISHED PANELIST / SHTP',
-    photo: '',
+    photo: 'images/speakers/nguyen-ky-phung.jpg?v=20261013_1200',
     avatarText: 'NKP',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
     bio: '',
@@ -346,7 +346,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     title: 'Director',
     org: 'Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University',
     tag: 'ACADEMIA / ADVANCED MATERIALS & SENSORS',
-    photo: 'images/speakers/thuat-nguyen.jpg',
+    photo: 'images/speakers/thuat-nguyen.jpg?v=20261013_1200',
     avatarText: 'TN',
     colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
     bio: `Dr. Nguyen Tran Thuat is an Associate Professor of Physics at the University of Science, Vietnam National University, Hanoi (VNU-HUS). He earned his Master's and Ph.D. degrees in Physics from École Polytechnique, France, in 2009. He joined HUS as a researcher in 2014. Currently, he serves as Director of the Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University, while also holding the position of Vice Director and Senior Researcher at the Nano and Energy Center, Faculty of Physics, University of Science.\n\nHis main research focuses on developing high-efficiency solar energy harvesting systems, in-depth exploration of novel physics, and emerging electronic properties in two-dimensional (2D) organometal halide perovskites. These materials possess strong potential for applications in next-generation advanced optoelectronic devices and cutting-edge quantum devices. He also dedicates part of his research to investigating and modeling the electronic switching mechanisms of memristive devices for neuromorphic computing applications.\n\nIn parallel with his research, he is pursuing commercialization-oriented development of a new generation of thermal infrared image sensors/chips (microbolometer-type uncooled IR focal plane arrays) with significant potential for substantially reducing manufacturing costs. These sensors are designed for integration with neuromorphic computing technology based on memristive elements. The thermal infrared imaging chips are being developed and integrated into widely adopted mobile platforms, with the goal of rapidly establishing a spin-off company capable of scaling to mass production and deploying the technology in next-generation AI-powered thermal cameras.`,
@@ -876,7 +876,7 @@ function exportSummitIcs(attendee) {
     'DTSTAMP:20260911T000000Z',
     'DTSTART:20261123T010000Z', // 08:00 ICT = 01:00 UTC
     'DTEND:20261123T131000Z',   // 20:10 ICT = 13:10 UTC
-    'SUMMARY:The 1st Vietnam Semiconductor Summit 2026 | Marvell Technology',
+    'SUMMARY:Vietnam Semiconductor Summit 2026 | Marvell Technology',
     'DESCRIPTION:Inaugural Vietnam Semiconductor Summit hosted by Marvell Technology, Inc.\\nRegistration Code: ' + attendee.code + '\\nDelegate: ' + attendee.fullName + '\\nPass Tier: ' + attendee.tier,
     'LOCATION:Ho Chi Minh City, Vietnam',
     'STATUS:CONFIRMED',
