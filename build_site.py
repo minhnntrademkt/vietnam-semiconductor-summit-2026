@@ -381,7 +381,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261013_1256">
+  <link rel="stylesheet" href="styles.css?v=20261014_1457">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -705,7 +705,7 @@ html_content = f'''<!DOCTYPE html>
               </div>
               <h3 class="text-base font-bold text-white mb-2">Pioneering CPO & Optical Silicon</h3>
               <p class="text-xs text-slate-400 leading-relaxed">
-                Vietnamese engineering teams contribute directly to Marvell's industry-leading <strong>Co-Packaged Optics (CPO)</strong>, PAM4 Optical DSPs, PCIe Gen 6/7 Retimers, and custom accelerated compute silicon for hyperscale AI data centers.
+                Vietnamese engineering teams contribute directly to Marvell's industry-leading <strong>Near Packaged Optics (NPO), Co-Packaged Optics (CPO)</strong>, PAM4 Optical DSPs, Active Electrical Cable (AEC), uEmitter (uLED, uVCSEL), and custom accelerated compute silicon for hyperscale AI data centers.
               </p>
             </div>
 
@@ -715,7 +715,7 @@ html_content = f'''<!DOCTYPE html>
               </div>
               <h3 class="text-base font-bold text-white mb-2">600+ Engineers & Academic Alliances</h3>
               <p class="text-xs text-slate-400 leading-relaxed">
-                Total headcount of over 600+ specialized IC design and semiconductor engineers expanding rapidly, supported by comprehensive university lab sponsorships, EDA software grants, and graduate fellowships with VNU-HCM, HCMUT, and HUST.
+                Total headcount of over 600+ specialized IC design and semiconductor engineers expanding rapidly, supported by comprehensive academia partnerships with various universities in Ho Chi Minh City, Da Nang and Hanoi including internship recruitment, scholarship program, training curriculum and lab development.
               </p>
             </div>
 
@@ -1825,7 +1825,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261013_1256"></script>
+  <script src="app.js?v=20261014_1457"></script>
 </body>
 </html>
 '''
