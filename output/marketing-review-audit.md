@@ -102,3 +102,18 @@ Bản mới thay thế các giá trị rút gọn trong mục trước:
 ## Nghiệm thu và phát hành
 
 Người dùng đã xác nhận done. Bản phát hành dùng CSS và JS version 20261016_2139. Các trạng thái chưa deploy ở trên là nhật ký kiểm tra trước nghiệm thu.
+
+## Phương án hero đã được duyệt — bản local
+
+- Theo phê duyệt mới: nền tối #212322, vùng chữ bên trái trên desktop; ảnh chip gốc ở bên phải với gradient/mask chuyển tiếp. Loại bỏ grid/glow nền riêng hero để vùng đọc sạch hơn.
+- Desktop giữ nguyên nội dung và các khối date/venue/registration, countdown, Register Now; bố cục trong vùng trái 60%. Mobile giữ căn giữa, giảm độ nổi của ảnh.
+- Không chỉnh file ảnh, không tạo ảnh mới. QA độc lập xác nhận SHA256 ảnh và toàn bộ chữ không đổi; HTML ngoài hero chỉ thay CSS version.
+- Hai generator build thành công, git diff --check đạt. Browser đã xem desktop 1440px và mobile 390px; đo thêm 320/768/1024px: không tràn ngang hoặc cắt nội dung chữ hero.
+- CSS preview version 20261016_hero1. Ảnh đối chiếu: output/qa/hero-right-chip-desktop.jpg và hero-right-chip-mobile.jpg.
+- Mục hero quá rối có phương án local để nghiệm thu; chưa commit/push/deploy lượt sửa này.
+## Hero hoàn tất và được người dùng nghiệm thu done
+
+- Phương án cuối dùng nền Marvell Black #212322 phủ đen82%, gradient #060606 để hòa vùng tối của ảnh gốc; bố cục hero1 giữ nguyên. Bản xem trước hero2 đã được nghiệm thu.
+- Kiểm tra desktop1440/mobile390, không tràn ngang; QA độc lập xác nhận không đổi vị trí/asset/nội dung ngoài phạm vi.
+- Đã sửa email gửi Katie: Hero background nằm trong cập nhật hoàn tất; bỏ mục chờ ảnh hero, chỉ còn chờ quyền logo. Chữ ký Minh Nguyen.
+- Phát hành CSS/JS version 20261016_2153 theo lệnh done. Các trạng thái hero còn mở/chưa deploy ở trên thuộc các lượt trước.

@@ -360,7 +360,7 @@ html_content = f'''<!DOCTYPE html>
   <link rel="alternate icon" href="favicon.svg">
   
   <!-- Marvell Custom Design Tokens -->
-  <link rel="stylesheet" href="styles.css?v=20261016_2139">
+  <link rel="stylesheet" href="styles.css?v=20261016_2153">
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-[#0072ce] selection:text-white">
 
@@ -439,13 +439,12 @@ html_content = f'''<!DOCTYPE html>
        2. HERO SECTION (HIGH-CONTRAST PURE BLACK TECH SILICON GLOW)
        ========================================================================= -->
   <section id="hero" class="relative bg-[#212322] text-white pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden border-b border-slate-800">
-    <!-- Ambient Chip Background (Submerged Marvell Chip) -->
-    <div class="absolute inset-0 bg-cover bg-center opacity-100 pointer-events-none" style="background-image: url('images/hero-marvell-chip.jpg?v=20260914_1310');"></div>
-    <div class="absolute inset-0 bg-hero-grid opacity-15 pointer-events-none"></div>
-    <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#0072ce]/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#00b5e2]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Original chip image, composed to the right of the reading area. -->
+    <div class="hero-chip-background pointer-events-none" aria-hidden="true"></div>
+    <div class="hero-background-fade absolute inset-0 pointer-events-none" aria-hidden="true"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="hero-copy">
       
       <!-- Top Host Badge -->
       <p class="brand-eyebrow text-sm sm:text-base font-bold text-white tracking-widest uppercase mb-6">
@@ -523,13 +522,14 @@ html_content = f'''<!DOCTYPE html>
       </div>
 
       <!-- Hero Action Buttons -->
-      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="hero-actions mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#register" class="mrvll-btn-white w-full sm:w-auto justify-center text-sm py-4 px-8 open-rsvp-modal-btn">
           <span>Register Now</span>
           <svg class="btn-arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
 
+      </div>
     </div>
   </section>
 
@@ -1768,7 +1768,7 @@ html_content = f'''<!DOCTYPE html>
   </button>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261016_2139"></script>
+  <script src="app.js?v=20261016_2153"></script>
 </body>
 </html>
 '''

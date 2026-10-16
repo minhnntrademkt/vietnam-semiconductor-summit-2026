@@ -584,7 +584,46 @@ body {
 /* Customer PDF p1/p8/p9: remove only the specifically marked label boxes. */
 .brand-eyebrow { padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
 
-/* Customer PDF p1: improve marked hero copy; keep the original image and cards. */
+/* Approved hero composition: a quiet reading area and the original chip to the right. */
+#hero {
+  background-color: #212322;
+  background-image: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82));
+}
+#hero .hero-chip-background {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 100%;
+  background-image: url('images/hero-marvell-chip.jpg?v=20260914_1310');
+  background-repeat: no-repeat;
+  background-size: auto 420px;
+  background-position: right top;
+  opacity: 0.45;
+}
+#hero .hero-background-fade {
+  background: linear-gradient(90deg, #060606 0%, rgba(6,6,6,0.94) 45%, rgba(6,6,6,0.65) 100%);
+}
+@media (min-width: 1024px) {
+  #hero .hero-chip-background {
+    width: 65%;
+    top: 42%;
+    bottom: auto;
+    aspect-ratio: 1376 / 768;
+    transform: translateY(-42%);
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    mask-image: linear-gradient(0deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    opacity: 1;
+  }
+  #hero .hero-background-fade {
+    background: linear-gradient(90deg, #060606 0%, #060606 56%, rgba(6,6,6,0.85) 61%, rgba(6,6,6,0) 78%),
+      linear-gradient(0deg, #060606 0%, rgba(6,6,6,0) 28%, rgba(6,6,6,0) 75%, #060606 100%);
+  }
+  #hero .hero-copy { width: 60%; text-align: left; }
+  #hero .hero-copy > .mx-auto { margin-left: 0; margin-right: 0; }
+  #hero .hero-actions { align-items: flex-start; justify-content: flex-start; }
+}
+/* Customer PDF p1: improve marked hero copy and countdown legibility. */
 #hero p.text-slate-300 { color: #ffffff; }
 #hero [id^="count-"] { color: #ffffff; }
 
