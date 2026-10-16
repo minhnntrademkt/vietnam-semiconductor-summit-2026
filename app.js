@@ -45,12 +45,6 @@ const SPEAKER_BIOS = {
         category: 'Strategic Keynote'
       },
       {
-        time: '16:15 - 16:55',
-        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain (Moderator)',
-        room: 'Plenary Hall',
-        category: 'High-Level Panel'
-      },
-      {
         time: '16:55 - 17:05',
         title: 'Closing Strategic Remarks (with Summit Leadership)',
         room: 'Plenary Hall',
@@ -73,11 +67,11 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     name: 'Mr. Noam Mizrahi',
     title: 'Executive VP & Corporate Chief Technology Officer (CTO)',
     org: 'Marvell Technology, Inc. (NASDAQ: MRVL)',
-    tag: 'PANEL HOST / HOST LEADERSHIP',
+    tag: 'PANEL MODERATOR / HOST LEADERSHIP',
     photo: 'images/speakers/noam-mizrahi.jpg?v=20261013_1200',
     avatarText: 'NM',
     colorClass: 'text-[#00b5e2] border-cyan-500/50 bg-blue-950/80',
-    bio: 'Noam Mizrahi is Executive Vice President and Chief Technology Officer (CTO) at Marvell Technology. With over 25 years of engineering leadership, he orchestrates Marvell’s long-term technology vision, pioneering domain-specific compute architectures, advanced multi-die modular packaging (Chiplets), and optical interconnects (CPO) engineered for the accelerated AI cloud era.',
+    bio: 'Noam Mizrahi is Executive Vice President and Corporate Chief Technology Officer at Marvell. In this role he is responsible for the long-term technology vision and strategy for Marvell, overseeing the full span of technologies within the company. He has held several executive management roles at Marvell, as Senior Fellow and as Vice President of Technology, focused on cloud and AI datacenter, compute and network architectures, edge computing and future connected vehicles. Previously he served as Marvell’s Chief Architect and technical lead for the Smart Networked Devices and Solutions Business Group, a Chief Architect for Marvell’s Enterprise Multi-Processor SoCs and led the product definition and architecture team for the Network Processors Business Unit. Noam holds multiple patents and publications and has represented Marvell as an industry thought leader at conferences and technical events around the world. Noam serves at technical advisory board and venture funds and is a member of the Forbes Technology Council. Noam holds BSc in Computer and Software Engineering, Cum Laude, from the Technion, Israel Institute of Technology, and a MBA in Management Business Studies from College of Management Academic Studies, Cum Laude',
     sessions: [
       {
         time: '09:00 - 09:10',
@@ -87,7 +81,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
       },
       {
         time: '16:15 - 16:55',
-        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain (Panel Host & Moderator)',
+        title: 'Strategic Plenary Panel: Building Vietnam\'s National Semiconductor Value Chain (Moderator)',
         room: 'Plenary Hall',
         category: 'High-Level Panel'
       },
@@ -106,7 +100,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     tag: 'GUEST OF HONOR / GOVERNMENT',
     photo: 'images/speakers/nguyen-van-duoc.jpg',
     avatarText: 'NVD',
-    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    colorClass: 'text-teal-400 border-teal-500/50 bg-teal-950/80',
     bio: 'Chairman of Ho Chi Minh City People\'s Committee (2026–2031 tenure), spearheading municipal initiatives to position HCMC as a regional powerhouse for IC design incubation, semiconductor R&D, and high-tech innovation.',
     sessions: [
       {
@@ -124,7 +118,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     tag: 'DIPLOMATIC MISSION / STRATEGIC PARTNER',
     photo: 'images/speakers/melissa-brown.jpg',
     avatarText: 'MB',
-    colorClass: 'text-amber-400 border-amber-500/50 bg-amber-950/80',
+    colorClass: 'text-yellow-400 border-yellow-500/50 bg-yellow-950/80',
     bio: 'Senior representative of the United States government in Southern Vietnam, driving forward the U.S.–Vietnam Comprehensive Strategic Partnership in semiconductor supply chain resilience and advanced technology workforce initiatives.',
     sessions: [
       {
@@ -180,7 +174,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     tag: 'ACADEMIA / QUANTUM & AI IC DESIGN',
     photo: 'images/speakers/hoang-trang.jpg?v=20260922_0900',
     avatarText: 'TH',
-    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    colorClass: 'text-teal-400 border-teal-500/50 bg-teal-950/80',
     bio: 'Trang Hoang is an Associate Professor and Head of the Examination and Quality Assurance Office at Ho Chi Minh City University of Technology (HCMUT), VNU-HCM. He received his Ph.D. in Microelectronics from Université Joseph Fourier and CEA-LETI, France. Working on AI and quantum computing for IC design, he has led ten research projects (three national-level), published over 110 papers, edited 2 IEEE Press–Wiley books, 8 textbooks, and obtained 2 U.S. patents and 4 Vietnamese patents. He chaired the development of HCMUT\'s IC design programs. An IEEE Senior Member and Executive Committee member of the Ho Chi Minh City Semiconductor Industry Association (HSIA), he received the 2025 Hitachi Global Foundation Asia Innovation Award and VNU-HCM Outstanding Publication Awards (2024, 2025).',
     sessions: [
       {
@@ -252,11 +246,11 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   'pham-nguyen-thanh-loan': {
     name: 'Assoc. Prof. Dr. Loan Pham-Nguyen',
     title: 'Head of IC Design & Embedded Systems Laboratory',
-    org: 'Hanoi University of Science and Technology (HUST - SEEE)',
+    org: 'Hanoi University of Science and Technology (HUST)',
     tag: 'ACADEMIA / ANALOG & RF IC',
     photo: 'images/speakers/pham-nguyen-thanh-loan.jpg',
     avatarText: 'PTL',
-    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    colorClass: 'text-teal-400 border-teal-500/50 bg-teal-950/80',
     bio: `Assoc. Prof. Dr. Loan Pham-Nguyen (Member, IEEE) is an Associate Professor at the School of Electrical and Electronic Engineering (SEEE), Hanoi University of Science and Technology (HUST), Vietnam. She holds several key leadership roles, including Deputy Head of the Department of Electronics at SEEE since 2014, and recently served as the Director of the Smart Embedded System & IoT education program from 2022 to 2024. Within the IEEE community, she is the Chairman of the Vietnam chapter of the IEEE Power Electronics Society (PELS), Vice Chairman of the IEEE Circuit and System Society (CASS) and has been part of the IEEE Vietnam Section Secretariat since 2012. She received her engineer degree from École Centrale de Lyon (2005), her M.Sc. from Joseph Fourier University (2006), and her Ph.D. in Micro-Nanoelectronics from the Grenoble Institute of Technology (INPG), France (2009).\n\nSince 2010, Dr. Pham-Nguyen has led an Analog IC design research group (BKIC) at HUST, focusing on power management ICs and Analog-to-Digital Converters (ADCs) for biomedical applications and wearable devices. Her team works closely with international researchers from institutions like KAIST, CBNU, Korea, and UC San Diego, US on collaborative projects, such as designing wireless chargers, NFC tags, LED driver, TEG PMIC. She plays a significant role in educational quality assurance as a qualified AUN-QA Assessor and contributor to ABET-based programs. She is the author of 1 textbook, co-author of 1 book chapter, 2 patents, and over 60 journals and international conference papers.`,
     sessions: [
       {
@@ -308,11 +302,11 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
   'nguyen-thi-thanh-mai': {
     name: 'Dr. Mai Nguyen',
     title: 'President (Distinguished Panelist)',
-    org: 'VNU-HCM',
+    org: 'Viet Nam National University Ho Chi Minh City (VNU-HCM)',
     tag: 'ACADEMIA / WORKFORCE STRATEGY',
     photo: 'images/speakers/nguyen-thi-thanh-mai.jpg',
     avatarText: 'NTM',
-    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    colorClass: 'text-teal-400 border-teal-500/50 bg-teal-950/80',
     bio: 'President of VNU-HCM and eminent scholar, directing strategic talent initiatives to fulfill Vietnam’s national target of developing 50,000 semiconductor engineers by 2030 through university-enterprise alliances with Marvell and global industry partners.',
     sessions: [
       {
@@ -348,7 +342,7 @@ Vietnam is ready to aim higher: from contributing to the world's chips to leadin
     tag: 'ACADEMIA / ADVANCED MATERIALS & SENSORS',
     photo: 'images/speakers/thuat-nguyen.jpg?v=20261013_1200',
     avatarText: 'TN',
-    colorClass: 'text-emerald-400 border-emerald-500/50 bg-emerald-950/80',
+    colorClass: 'text-teal-400 border-teal-500/50 bg-teal-950/80',
     bio: `Dr. Nguyen Tran Thuat is an Associate Professor of Physics at the University of Science, Vietnam National University, Hanoi (VNU-HUS). He earned his Master's and Ph.D. degrees in Physics from École Polytechnique, France, in 2009. He joined HUS as a researcher in 2014. Currently, he serves as Director of the Semiconductors and Advanced Materials Institute at the Strategic Technology Institute, Vietnam National University, while also holding the position of Vice Director and Senior Researcher at the Nano and Energy Center, Faculty of Physics, University of Science.\n\nHis main research focuses on developing high-efficiency solar energy harvesting systems, in-depth exploration of novel physics, and emerging electronic properties in two-dimensional (2D) organometal halide perovskites. These materials possess strong potential for applications in next-generation advanced optoelectronic devices and cutting-edge quantum devices. He also dedicates part of his research to investigating and modeling the electronic switching mechanisms of memristive devices for neuromorphic computing applications.\n\nIn parallel with his research, he is pursuing commercialization-oriented development of a new generation of thermal infrared image sensors/chips (microbolometer-type uncooled IR focal plane arrays) with significant potential for substantially reducing manufacturing costs. These sensors are designed for integration with neuromorphic computing technology based on memristive elements. The thermal infrared imaging chips are being developed and integrated into widely adopted mobile platforms, with the goal of rapidly establishing a spin-off company capable of scaling to mass production and deploying the technology in next-generation AI-powered thermal cameras.`,
     sessions: [
       {

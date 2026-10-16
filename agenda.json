@@ -114,8 +114,8 @@
     "speaker": {
       "prefix": "Assoc. Prof. Dr.",
       "name": "Loan Pham-Nguyen",
-      "title": "Head of IC Design & Embedded Systems Lab",
-      "organization": "HUST (Bach Khoa Hanoi)",
+      "title": "Head of IC Design & Embedded Systems Laboratory",
+      "organization": "Hanoi University of Science and Technology (HUST)",
       "avatar": "images/speakers/pham-nguyen-thanh-loan.jpg"
     },
     "abstract": "Hanoi University of Science and Technology (HUST) provides a comprehensive semiconductor education program covering the entire industry value chain - from IC design and manufacturing to packaging, testing, and application development. Centered at the School of Electrical and Electronic Engineering ( SEEE), the curriculum emphasizes practical, research-based, and project-oriented learning supported by Class 1000 cleanrooms, Cadence EDA design suites, and FPGA prototyping labs. Adopting the philosophy of \"Application First, Chip Follows\", the BKIC Design Lab demonstrates this academic framework through a multimodal digital electronic stethoscope. The device integrates an Analog Front- End (AFE) stage for the simultaneous acquisition and conditioning of Phonocardiogram (PCG), Photoplethysmography (PPG), and Electrocardiogram (ECG) signals. Digitized and transmitted wirelessly via Bluetooth Low Energy (BLE), the chip achieves high signal clarity ( ECG SNR > 28dB, PCG SNR > 33dB) at low power consumption (132 mW) within a Vietnamese bronze drum-inspired enclosure. This work highlights SEEE-HUST's capability in bridging hands-on IC design education with practical biomedical applications.",
@@ -216,8 +216,8 @@
     "speaker": {
       "prefix": "Assoc. Prof.",
       "name": "Trang Hoang, Ph.D.",
-      "title": "Head of Examination & QA Office",
-      "organization": "HCMUT (Bach Khoa HCMC)",
+      "title": "Head of Examination & QA Office, Senior IC Design Faculty",
+      "organization": "Ho Chi Minh City University of Technology (HCMUT), VNU-HCM",
       "avatar": "images/speakers/hoang-trang.jpg?v=20260922_0900"
     },
     "sponsor": null
@@ -232,7 +232,7 @@
     "speaker": {
       "prefix": "Ms.",
       "name": "Loan Nguyen",
-      "title": "Co-Founder & CEO",
+      "title": "Co-Founder & Chief Executive Officer (CEO)",
       "organization": "Connexus",
       "avatar": "images/speakers/loan-nguyen.jpg?v=20260922_0900"
     },
@@ -256,26 +256,19 @@
     "session": "afternoon",
     "category": "panel",
     "moderator": {
-      "prefix": "Dr.",
-      "name": "Quang-Dam Le",
-      "title": "Vice President & General Director",
-      "organization": "Marvell Technology Vietnam, LLC",
-      "avatar": "images/speakers/le-quang-dam.jpg?v=20260922_0900",
+      "prefix": "Mr.",
+      "name": "Noam Mizrahi",
+      "title": "EVP & Corporate CTO",
+      "organization": "Marvell Technology, Inc.",
+      "avatar": "images/speakers/noam-mizrahi.jpg?v=20261013_1200",
       "is_moderator": true
     },
     "panelists": [
       {
-        "prefix": "Mr.",
-        "name": "Noam Mizrahi",
-        "title": "EVP & Corporate CTO (Panel Host)",
-        "organization": "Marvell Technology, Inc.",
-        "avatar": "images/speakers/noam-mizrahi.jpg?v=20261013_1200"
-      },
-      {
         "prefix": "Dr.",
         "name": "Mai Nguyen",
         "title": "President (Distinguished Panelist)",
-        "organization": "VNU-HCM",
+        "organization": "Viet Nam National University Ho Chi Minh City (VNU-HCM)",
         "avatar": "images/speakers/nguyen-thi-thanh-mai.jpg"
       },
       {

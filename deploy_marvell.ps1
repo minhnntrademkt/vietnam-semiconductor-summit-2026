@@ -1,4 +1,4 @@
-# ==============================================================================
+﻿# ==============================================================================
 # PRODUCTION DEPLOY SCRIPT (STRICT ZERO-LEAKAGE WHITELIST)
 # Target: vietnam-semiconductor-summit-2026.marvell.com
 # Server: 103.130.217.103 (cPanel / LiteSpeed)
@@ -72,6 +72,9 @@ $rootWhitelist = @(
     "agenda.json",
     "favicon.svg",
     "marvell-logo.svg",
+    "marvell-logo-white.svg",
+    "marvell-logo-stacked.svg",
+    "marvell-logo-stacked-white.svg",
     ".htaccess"
 )
 
@@ -89,6 +92,7 @@ Write-Output "`n=== 3. UPLOADING PRODUCTION IMAGES (WHITELIST ONLY) ==="
 $bannerWhitelist = @(
     "hero-marvell-chip.jpg",
     "marvell-plenary-chip.jpg",
+    "marvell-strategic-panel-production.jpg",
     "marvell-logo-black.png",
     "og-banner.jpg"
 )

@@ -139,10 +139,10 @@ for item in agenda_data:
         badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#0072ce] animate-pulse"></span>'
     elif category == 'closing':
         tag_label = 'CLOSING CEREMONY'
-        tag_class = 'bg-indigo-50 text-indigo-800 border border-indigo-200/80 font-bold'
-        spine_class = 'border-l-[5px] border-l-indigo-600'
-        icon_color = 'text-indigo-600'
-        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>'
+        tag_class = 'bg-blue-50 text-blue-800 border border-blue-200/80 font-bold'
+        spine_class = 'border-l-[5px] border-l-blue-600'
+        icon_color = 'text-blue-600'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>'
     elif category == 'keynote':
         tag_label = 'STRATEGIC KEYNOTE'
         tag_class = 'bg-blue-50 text-blue-700 border border-blue-200/80'
@@ -157,22 +157,22 @@ for item in agenda_data:
         badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>'
     elif category == 'academia':
         tag_label = 'ACADEMIA & RESEARCH'
-        tag_class = 'bg-emerald-50 text-emerald-800 border border-emerald-200/80'
-        spine_class = 'border-l-[5px] border-l-emerald-500'
-        icon_color = 'text-emerald-500'
-        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>'
+        tag_class = 'bg-teal-50 text-teal-800 border border-teal-200/80'
+        spine_class = 'border-l-[5px] border-l-teal-500'
+        icon_color = 'text-teal-500'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>'
     elif category == 'networking':
         tag_label = 'NETWORKING & BANQUET'
-        tag_class = 'bg-amber-50 text-amber-800 border border-amber-200/80'
-        spine_class = 'border-l-[5px] border-l-amber-500'
-        icon_color = 'text-amber-500'
-        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>'
+        tag_class = 'bg-yellow-50 text-yellow-800 border border-yellow-200/80'
+        spine_class = 'border-l-[5px] border-l-yellow-500'
+        icon_color = 'text-yellow-500'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>'
     elif category == 'panel':
         tag_label = 'HIGH-LEVEL PANEL'
-        tag_class = 'bg-purple-50 text-purple-800 border border-purple-200/80'
-        spine_class = 'border-l-[5px] border-l-[#8b5cf6]'
-        icon_color = 'text-[#8b5cf6]'
-        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]"></span>'
+        tag_class = 'bg-cyan-50 text-cyan-800 border border-cyan-200/80'
+        spine_class = 'border-l-[5px] border-l-[#00c7b1]'
+        icon_color = 'text-[#00c7b1]'
+        badge_dot = '<span class="w-1.5 h-1.5 rounded-full bg-[#00c7b1]"></span>'
     else:
         tag_label = 'CEREMONY & RECEPTION'
         tag_class = 'bg-slate-100 text-slate-700 border border-slate-200/80'
@@ -330,7 +330,7 @@ html = f'''<!DOCTYPE html>
               blue: '#0072ce',
               blueDark: '#005fa3',
               cyan: '#00b5e2',
-              lavender: '#c8a3ef',
+              teal: '#00c7b1',
               dark: '#05070a',
               cardDark: '#101726'
             }}
@@ -350,7 +350,7 @@ html = f'''<!DOCTYPE html>
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261014_1457">
+  <link rel="stylesheet" href="styles.css?v=20261016_2139">
 
   <style>
     body {{
@@ -370,10 +370,10 @@ html = f'''<!DOCTYPE html>
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo & Summit Title -->
-        <a href="index.html" class="flex items-center gap-3 sm:gap-4 shrink-0 group">
+        <a href="index.html" class="summit-brand-lockup flex items-center gap-3 sm:gap-4 min-w-0 group">
           <div class="flex items-center shrink-0">
             <!-- Marvell Official Black Logo -->
-            <img src="images/marvell-logo-black.png" alt="Marvell Technology Logo" class="h-8 sm:h-9 md:h-10 w-auto object-contain">
+            <img src="marvell-logo.svg?v=20261016_brand" alt="Marvell Technology Logo" class="brand-logo-horizontal h-12 sm:h-14 w-auto object-contain">
           </div>
           <div class="hidden sm:block h-6 w-px bg-slate-300 shrink-0"></div>
           <div class="hidden sm:flex flex-col">
@@ -431,8 +431,8 @@ html = f'''<!DOCTYPE html>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> Technical & Strategic Tracks</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 &ndash; 20:10 ICT</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Grand Ballroom & Tech Halls</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 100% Free RSVP</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Grand Ballroom & Tech Halls</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> 100% Free RSVP</span>
       </div>
     </div>
   </section>
@@ -464,15 +464,15 @@ html = f'''<!DOCTYPE html>
         <span>Industry</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="academia">
-        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span class="w-2 h-2 rounded-full bg-teal-500"></span>
         <span>Academia & Research</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="panel">
-        <span class="w-2 h-2 rounded-full bg-[#8b5cf6]"></span>
+        <span class="w-2 h-2 rounded-full bg-[#00c7b1]"></span>
         <span>Strategic Panel</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="networking">
-        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+        <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
         <span>Networking</span>
       </button>
     </div>
@@ -508,7 +508,7 @@ html = f'''<!DOCTYPE html>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-200">
         <div class="flex items-center gap-4">
-          <img src="images/marvell-logo-black.png" alt="Marvell Technology Logo" class="h-7 w-auto object-contain">
+          <img src="marvell-logo.svg?v=20261016_brand" alt="Marvell Technology Logo" class="h-7 w-auto object-contain">
           <span class="text-slate-400 font-mono text-[11px]">| Semiconductor Summit 2026</span>
         </div>
         <div class="flex items-center gap-6">
@@ -699,7 +699,7 @@ html = f'''<!DOCTYPE html>
 
         <div class="pt-2">
           <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2.5 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#c8a3ef]"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
             <span>SCHEDULED SESSIONS AT THE SUMMIT</span>
           </h4>
           <div id="speaker-modal-sessions" class="space-y-2.5">
@@ -723,7 +723,7 @@ html = f'''<!DOCTYPE html>
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261014_1457"></script>
+  <script src="app.js?v=20261016_2139"></script>
 </body>
 </html>
 '''

@@ -11,11 +11,10 @@
   
   /* Brand Accent Colors */
   --mrvll-cyan: #00b5e2;
-  --mrvll-lavender: #c8a3ef;
   --mrvll-teal: #00c7b1;
   
   /* Dark Tech Theme Backgrounds */
-  --mrvll-black: #05070a;
+  --mrvll-black: #212322;
   --mrvll-dark: #0c1017;
   --mrvll-dark-card: #121824;
   --mrvll-dark-border: rgba(255, 255, 255, 0.12);
@@ -33,9 +32,9 @@
   --mrvll-text-light-muted: #94a3b8;
   
   /* Functional Status Colors */
-  --mrvll-success: #12b76a;
-  --mrvll-warning: #f79009;
-  --mrvll-error: #d92d20;
+  --mrvll-success: #00816d;
+  --mrvll-warning: #ffa400;
+  --mrvll-error: #e0004d;
   
   /* Hierarchical Modern Radius System */
   --mrvll-radius-sm: 6px;
@@ -408,8 +407,8 @@ body {
   background: radial-gradient(circle at 50% 50%, rgba(0, 114, 206, 0.18) 0%, rgba(5, 7, 10, 0) 70%);
 }
 
-.chip-glow-lavender {
-  background: radial-gradient(circle at 50% 50%, rgba(200, 163, 239, 0.15) 0%, rgba(5, 7, 10, 0) 70%);
+.chip-glow-cyan {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 181, 226, 0.15) 0%, rgba(5, 7, 10, 0) 70%);
 }
 
 /* Card Hover Elevation & Modern Softness */
@@ -466,23 +465,23 @@ body {
 }
 
 .tag-government {
-  background-color: rgba(200, 163, 239, 0.15);
-  color: #9333ea;
-  border: 1px solid rgba(200, 163, 239, 0.35);
+  background-color: rgba(0, 181, 226, 0.15);
+  color: #0072ce;
+  border: 1px solid rgba(0, 181, 226, 0.35);
   border-radius: 6px;
 }
 
 .tag-academia {
   background-color: rgba(0, 199, 177, 0.12);
-  color: #0d9488;
+  color: #00816d;
   border: 1px solid rgba(0, 199, 177, 0.25);
   border-radius: 6px;
 }
 
 .tag-networking {
-  background-color: rgba(247, 144, 9, 0.12);
-  color: #d97706;
-  border: 1px solid rgba(247, 144, 9, 0.25);
+  background-color: rgba(255, 164, 0, 0.12);
+  color: #63666a;
+  border: 1px solid rgba(255, 164, 0, 0.25);
   border-radius: 6px;
 }
 
@@ -562,3 +561,93 @@ body {
 }
 
 
+
+/* Customer PDF p1/p3: square the marked hero controls and pillar cards only. */
+#hero [class*="rounded"]:not(.rounded-full),
+#hero .mrvll-btn-white,
+#pillars [class*="rounded"],
+#pillars .mrvll-light-card { border-radius: 0 !important; }
+
+/* Customer PDF p1: full two-line header lockup, without the edition subtitle. */
+.summit-brand-lockup { min-width: 0; }
+.summit-brand-name {
+  min-width: 0;
+  font-size: clamp(0.7rem, 1.05vw, 1rem);
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: normal;
+  overflow: visible;
+}
+.summit-brand-name > span { display: block; }
+.brand-logo-horizontal { width: clamp(88px, 10vw, 140px); height: auto; flex-shrink: 0; }
+
+/* Customer PDF p1/p8/p9: remove only the specifically marked label boxes. */
+.brand-eyebrow { padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
+
+/* Customer PDF p1: improve marked hero copy; keep the original image and cards. */
+#hero p.text-slate-300 { color: #ffffff; }
+#hero [id^="count-"] { color: #ffffff; }
+
+/* Customer PDF p2/p3: Blue statistic values and larger pillar eyebrow labels. */
+#metrics .text-4xl { color: #0072ce; }
+#pillars span.uppercase { font-size: 0.8125rem; }
+
+/* User review: retain visible outlines on the four pillar cards. */
+#pillars .mrvll-light-card { border: 1px solid #c8c9c7; }
+#pillars .mrvll-light-card:hover { border-color: #0072ce; }
+
+/* Customer PDF p4: increase contrast and size inside the Marvell host block. */
+.brand-host-about p { font-size: 0.9375rem; line-height: 1.75; }
+.brand-host-about :is(.text-slate-300, .text-slate-400) { color: #d9d9d6; }
+
+/* Customer PDF p5: the marked speakers eyebrow is too small. */
+#speakers > div > .text-center > span.uppercase { font-size: 0.875rem; }
+
+/* Customer PDF p6: primary Cyan accents; original white names remain white. */
+#speakers .speaker-tier-primary .speaker-card { border-top-color: #00b5e2; }
+#speakers .speaker-tier-primary .speaker-card > div > p.font-semibold,
+#speakers .speaker-tier-primary .speaker-card .font-semibold.flex { color: #00b5e2; }
+
+/* Responsive QA: keep the existing speaker details visible instead of ellipses. */
+#speakers .speaker-card > div:first-child > p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  -webkit-line-clamp: unset;
+}
+
+/* Customer PDF p6: industry text white; company name Cyan on hover. */
+#speakers .speaker-tier-industry .speaker-card :is(h4, p, span, .border-t) { color: #ffffff; }
+#speakers .speaker-tier-industry .speaker-card:hover .speaker-organization { color: #00b5e2; }
+#speakers .speaker-tier-industry .speaker-card :is(.speaker-organization, .speaker-role) {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  -webkit-line-clamp: unset;
+}
+#speakers .speaker-tier-industry .speaker-organization {
+  margin-top: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#speakers .speaker-tier-industry .speaker-role {
+  margin-top: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Customer PDF p8: panelist text stays, while pill backgrounds/borders go. */
+.panelist-list > * { padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
+.panelist-list .text-slate-400 { color: #d9d9d6; font-size: 0.8125rem; }
+
+/* Explicit user-approved Option 11 trial: unchanged photograph, central 4:5 view. */
+.strategic-panel-image-frame { aspect-ratio: 4 / 5; }
+.strategic-panel-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+
+@media (max-width: 640px) {
+  .brand-logo-horizontal { width: 88px; }
+  .summit-brand-name { font-size: 0.6875rem; }
+}

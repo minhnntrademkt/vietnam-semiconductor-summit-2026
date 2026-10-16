@@ -58,7 +58,7 @@
               blue: '#0072ce',
               blueDark: '#005fa3',
               cyan: '#00b5e2',
-              lavender: '#c8a3ef',
+              teal: '#00c7b1',
               dark: '#05070a',
               cardDark: '#101726'
             }
@@ -78,7 +78,7 @@
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20261014_1457">
+  <link rel="stylesheet" href="styles.css?v=20261016_2139">
 
   <style>
     body {
@@ -98,10 +98,10 @@
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand Logo & Summit Title -->
-        <a href="index.html" class="flex items-center gap-3 sm:gap-4 shrink-0 group">
+        <a href="index.html" class="summit-brand-lockup flex items-center gap-3 sm:gap-4 min-w-0 group">
           <div class="flex items-center shrink-0">
             <!-- Marvell Official Black Logo -->
-            <img src="images/marvell-logo-black.png" alt="Marvell Technology Logo" class="h-8 sm:h-9 md:h-10 w-auto object-contain">
+            <img src="marvell-logo.svg?v=20261016_brand" alt="Marvell Technology Logo" class="brand-logo-horizontal h-12 sm:h-14 w-auto object-contain">
           </div>
           <div class="hidden sm:block h-6 w-px bg-slate-300 shrink-0"></div>
           <div class="hidden sm:flex flex-col">
@@ -159,8 +159,8 @@
       <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#0072ce]"></span> Technical & Strategic Tracks</span>
         <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#00b5e2]"></span> 08:00 &ndash; 20:10 ICT</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Grand Ballroom & Tech Halls</span>
-        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 100% Free RSVP</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Grand Ballroom & Tech Halls</span>
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> 100% Free RSVP</span>
       </div>
     </div>
   </section>
@@ -192,15 +192,15 @@
         <span>Industry</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="academia">
-        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span class="w-2 h-2 rounded-full bg-teal-500"></span>
         <span>Academia & Research</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="panel">
-        <span class="w-2 h-2 rounded-full bg-[#8b5cf6]"></span>
+        <span class="w-2 h-2 rounded-full bg-[#00c7b1]"></span>
         <span>Strategic Panel</span>
       </button>
       <button class="agenda-filter-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900 text-xs font-medium transition-all" data-category="networking">
-        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+        <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
         <span>Networking</span>
       </button>
     </div>
@@ -218,17 +218,17 @@
     <!-- Official Timetable Sessions List -->
     <div id="agenda-cards-container" class="space-y-3.5">
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-amber-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="1">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-yellow-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="1">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">08:00 &ndash; 09:00</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-yellow-50 text-yellow-800 border border-yellow-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
             <span>NETWORKING & BANQUET</span>
           </div>
         </div>
@@ -477,17 +477,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-amber-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="7">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-yellow-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="7">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">10:35 &ndash; 11:00</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-yellow-50 text-yellow-800 border border-yellow-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
             <span>NETWORKING & BANQUET</span>
           </div>
         </div>
@@ -504,17 +504,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-emerald-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="academia" data-session-id="8">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-teal-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="academia" data-session-id="8">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">11:00 &ndash; 11:30</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-teal-50 text-teal-800 border border-teal-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
             <span>ACADEMIA & RESEARCH</span>
           </div>
         </div>
@@ -532,8 +532,8 @@
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         <span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>
         <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Dr. Loan Pham-Nguyen</div>
-        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Head of IC Design & Embedded Systems Lab</div>
-        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">HUST (Bach Khoa Hanoi)</div>
+        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Head of IC Design & Embedded Systems Laboratory</div>
+        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Hanoi University of Science and Technology (HUST)</div>
       </div>
       <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </div>
@@ -667,17 +667,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-amber-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="11">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-yellow-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="morning" data-category="networking" data-session-id="11">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">12:20 &ndash; 13:50</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-yellow-50 text-yellow-800 border border-yellow-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
             <span>NETWORKING & BANQUET</span>
           </div>
         </div>
@@ -797,17 +797,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-emerald-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="academia" data-session-id="14">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-teal-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="academia" data-session-id="14">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-teal-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">14:55 &ndash; 15:20</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-teal-50 text-teal-800 border border-teal-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
             <span>ACADEMIA & RESEARCH</span>
           </div>
         </div>
@@ -825,8 +825,8 @@
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         <span class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider block leading-none mb-0.5">Assoc. Prof.</span>
         <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Trang Hoang, Ph.D.</div>
-        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Head of Examination & QA Office</div>
-        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">HCMUT (Bach Khoa HCMC)</div>
+        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Head of Examination & QA Office, Senior IC Design Faculty</div>
+        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Ho Chi Minh City University of Technology (HCMUT), VNU-HCM</div>
       </div>
       <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </div>
@@ -868,7 +868,7 @@
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         
         <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Ms. Loan Nguyen</div>
-        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Co-Founder & CEO</div>
+        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Co-Founder & Chief Executive Officer (CEO)</div>
         <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Connexus</div>
       </div>
       <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -883,17 +883,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-amber-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="networking" data-session-id="16">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-yellow-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="networking" data-session-id="16">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">15:45 &ndash; 16:15</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-yellow-50 text-yellow-800 border border-yellow-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
             <span>NETWORKING & BANQUET</span>
           </div>
         </div>
@@ -910,17 +910,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-[#8b5cf6] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="panel" data-session-id="17">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-[#00c7b1] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="panel" data-session-id="17">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-[#8b5cf6] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-[#00c7b1] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">16:15 &ndash; 16:55</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-purple-50 text-purple-800 border border-purple-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-cyan-50 text-cyan-800 border border-cyan-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00c7b1]"></span>
             <span>HIGH-LEVEL PANEL</span>
           </div>
         </div>
@@ -933,27 +933,15 @@
           
         <div class="mt-3 flex flex-wrap items-center gap-3">
           
-    <div class="speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" data-speaker-id="le-quang-dam" title="Click to view Dr. Quang-Dam Le profile & presentation abstract">
+    <div class="speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" data-speaker-id="noam-mizrahi" title="Click to view Mr. Noam Mizrahi profile & presentation abstract">
       <div class="relative shrink-0 flex items-center justify-center">
-        <img src="images/speakers/le-quang-dam.jpg?v=20260922_0900" alt="Dr. Quang-Dam Le" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border-2 border-[#0072ce] shadow-sm" style="object-position: center top;">
+        <img src="images/speakers/noam-mizrahi.jpg?v=20261013_1200" alt="Mr. Noam Mizrahi" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border-2 border-[#0072ce] shadow-sm" style="object-position: center top;">
         <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 py-[0.5px] rounded bg-[#0072ce] text-white text-[7.5px] font-extrabold tracking-wider uppercase leading-none shadow-xs whitespace-nowrap z-10 pointer-events-none">MODERATOR</span>
       </div>
       <div class="flex flex-col min-w-0 flex-1 justify-center">
         
-        <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Dr. Quang-Dam Le</div>
-        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">Vice President & General Director</div>
-        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Marvell Technology Vietnam, LLC</div>
-      </div>
-      <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-    </div>
-    
-
-    <div class="speaker-card cursor-pointer group/spk hover:border-[#0072ce] hover:bg-blue-50/70 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 w-full sm:w-[285px] min-h-[64px] py-2 px-2.5 flex items-center gap-2.5 rounded-xl bg-slate-50/90 border border-slate-200/80 shrink-0" data-speaker-id="noam-mizrahi" title="Click to view Mr. Noam Mizrahi profile & presentation abstract">
-      <img src="images/speakers/noam-mizrahi.jpg?v=20261013_1200" alt="Mr. Noam Mizrahi" class="w-11 h-11 rounded-full object-cover object-top shrink-0 border border-blue-200 ring-1 ring-blue-50 shadow-sm" style="object-position: center top;">
-      <div class="flex flex-col min-w-0 flex-1 justify-center">
-        
         <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Mr. Noam Mizrahi</div>
-        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">EVP & Corporate CTO (Panel Host)</div>
+        <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">EVP & Corporate CTO</div>
         <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Marvell Technology, Inc.</div>
       </div>
       <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -966,7 +954,7 @@
         
         <div class="text-[13px] font-bold text-slate-900 group-hover/spk:text-[#0072ce] tracking-tight truncate transition-colors">Dr. Mai Nguyen</div>
         <div class="text-[11px] font-semibold text-[#0072ce] leading-snug mt-0.5">President (Distinguished Panelist)</div>
-        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">VNU-HCM</div>
+        <div class="text-[10px] text-slate-500 font-medium leading-snug mt-0.5">Viet Nam National University Ho Chi Minh City (VNU-HCM)</div>
       </div>
       <svg class="w-3.5 h-3.5 text-slate-400 group-hover/spk:text-[#0072ce] group-hover/spk:translate-x-0.5 transition-all shrink-0 opacity-60 group-hover/spk:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </div>
@@ -1004,17 +992,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-indigo-600 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="closing" data-session-id="18">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-blue-600 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="afternoon" data-category="closing" data-session-id="18">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">16:55 &ndash; 17:05</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-indigo-50 text-indigo-800 border border-indigo-200/80 font-bold">
-            <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-blue-50 text-blue-800 border border-blue-200/80 font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
             <span>CLOSING CEREMONY</span>
           </div>
         </div>
@@ -1051,17 +1039,17 @@
     </div>
     
 
-    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-amber-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="evening" data-category="networking" data-session-id="19">
+    <div class="agenda-item-card group p-5 sm:p-6 rounded-2xl bg-white border border-slate-200/90 border-l-[5px] border-l-yellow-500 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,114,206,0.09)] hover:-translate-y-0.5 transition-all duration-200" data-session="evening" data-category="networking" data-session-id="19">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6">
         
         <!-- Left Column: Time & Category Key Badge (Vertically Centered, Right Bordered) -->
         <div class="shrink-0 md:w-64 flex flex-col items-start justify-center gap-2 pb-3 md:pb-0 border-b md:border-b-0 md:border-r border-slate-100 md:pr-6">
           <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="w-4 h-4 text-yellow-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="font-mono text-base font-extrabold text-slate-900 tracking-tight whitespace-nowrap">17:05 &ndash; 20:00</span>
           </div>
-          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200/80">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <div class="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-yellow-50 text-yellow-800 border border-yellow-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
             <span>NETWORKING & BANQUET</span>
           </div>
         </div>
@@ -1095,7 +1083,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-200">
         <div class="flex items-center gap-4">
-          <img src="images/marvell-logo-black.png" alt="Marvell Technology Logo" class="h-7 w-auto object-contain">
+          <img src="marvell-logo.svg?v=20261016_brand" alt="Marvell Technology Logo" class="h-7 w-auto object-contain">
           <span class="text-slate-400 font-mono text-[11px]">| Semiconductor Summit 2026</span>
         </div>
         <div class="flex items-center gap-6">
@@ -1286,7 +1274,7 @@
 
         <div class="pt-2">
           <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2.5 flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#c8a3ef]"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#00b5e2]"></span>
             <span>SCHEDULED SESSIONS AT THE SUMMIT</span>
           </h4>
           <div id="speaker-modal-sessions" class="space-y-2.5">
@@ -1310,6 +1298,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=20261014_1457"></script>
+  <script src="app.js?v=20261016_2139"></script>
 </body>
 </html>
