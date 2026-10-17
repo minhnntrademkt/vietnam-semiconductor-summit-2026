@@ -593,10 +593,10 @@ body {
   position: absolute;
   inset: 0 0 0 auto;
   width: 100%;
-  background-image: url('images/hero-marvell-chip.jpg?v=20260914_1310');
+  background-image: url('images/hero-marvell-chip-getty.png?v=20261017_1142');
   background-repeat: no-repeat;
   background-size: auto 420px;
-  background-position: right top;
+  background-position: 30% top;
   opacity: 0.45;
 }
 #hero .hero-background-fade {
@@ -609,8 +609,8 @@ body {
     bottom: auto;
     aspect-ratio: 1376 / 768;
     transform: translateY(-42%);
-    background-size: cover;
-    background-position: center;
+    background-size: 170% auto;
+    background-position: 16% 25%;
     -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
     mask-image: linear-gradient(0deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
     opacity: 1;

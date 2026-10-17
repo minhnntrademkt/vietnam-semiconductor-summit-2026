@@ -91,6 +91,7 @@ Write-Output "`n=== 3. UPLOADING PRODUCTION IMAGES (WHITELIST ONLY) ==="
 # 3.1 Banner images in root images/
 $bannerWhitelist = @(
     "hero-marvell-chip.jpg",
+    "hero-marvell-chip-getty.png",
     "marvell-plenary-chip.jpg",
     "marvell-strategic-panel-production.jpg",
     "marvell-logo-black.png",

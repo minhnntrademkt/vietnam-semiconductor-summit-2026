@@ -117,3 +117,7 @@ Người dùng đã xác nhận done. Bản phát hành dùng CSS và JS version
 - Kiểm tra desktop1440/mobile390, không tràn ngang; QA độc lập xác nhận không đổi vị trí/asset/nội dung ngoài phạm vi.
 - Đã sửa email gửi Katie: Hero background nằm trong cập nhật hoàn tất; bỏ mục chờ ảnh hero, chỉ còn chờ quyền logo. Chữ ký Minh Nguyen.
 - Phát hành CSS/JS version 20261016_2153 theo lệnh done. Các trạng thái hero còn mở/chưa deploy ở trên thuộc các lượt trước.
+## 2026-10-17 — thử ảnh Getty mới cho hero
+
+User yêu cầu thay thử ảnh GettyImages-2245555912_RGB (3).png, nhấn chip và crop gần hero trước. Copy nguyênfile sang images/hero-marvell-chip-getty.png; SHA256 khớp nguồn. Crop CSS desktop170%/16%25%, mobileauto420/30%top; giữ vị trí/layout/màu/gradient và toàn bộ nội dung. CSS preview20261017_hero1; hai generator build thành công và QA mã nguồn độc lập đạt. Chưa kiểm tra trực quan: browser bị policy block; server local3000 được khởi động lại. Chưa commit/push/deploy. File gốc18.15MB đang dùng cho thử local; chưa tạo bản nén web.
+Người dùng đã nghiệm thu phương án ảnh mới và yêu cầu deploy trực tiếp. Phiên bản phát hành CSS/JS/ảnh: 20261017_1142. Giữ file Getty nguyên gốc và crop CSS đã duyệt. Các trạng thái chưa deploy ở mục trên là lịch sử trước phê duyệt này.
